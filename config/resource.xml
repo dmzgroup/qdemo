@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<runtime>
+<resource-map>
+   <search>
+      <path value="../../assets/qdemo/terrain"/>
+   </search>
+   <resource name="dust-trail" file="particle.png"/>
+   <resource name="city" file="city.ive"/>
+   <resource name="sky dome" file="skydome.ive"/>
+   <resource name="heightmap" file="heightmap4.png"/>
+   <resource name="heightmap-texture" file="texture2.png"/>
+   <resource name="ocean" file="ocean.png"/>
+</resource-map>
+</runtime>
+</dmz>

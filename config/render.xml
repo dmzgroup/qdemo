@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<plugin-list>
+   <!--
+      Note: Setting this module to unload="false" stops the crash on exit
+            under Linux. This seems to be cause by an "on exit" call in
+            OSG.
+   -->
+   <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="win32|macos"/>
+   <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="linux" unload="false"/>
+   <plugin name="dmzRenderModuleIsectOSG"/>
+   <plugin name="dmzRenderModulePortalOSG" scope="render"/>
+   <plugin name="dmzRenderPluginStaticTerrainOSG" scope="terrain"/>
+   <plugin name="dmzRenderPluginHeightMapOSG" scope="terrain"/>
+   <plugin name="dmzRenderPluginObjectOSG"/>
+   <plugin name="dmzRenderPluginHighlightOSG" scope="render"/>
+   <plugin name="dmzRenderPluginParticleEffectsOSG"/>
+   <plugin name="dmzRenderPluginArticulateOSG"/>
+   <plugin name="dmzRenderPluginDisableObjectIsect"/>
+   <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
+   <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>
+</plugin-list>
+<render>
+   <osg-up value="z"/>
+   <plugin-list>
+      <plugin name="dmzRenderExtViewerOSG" scope="viewer"/>
+   </plugin-list>
+   <viewer>
+      <window-title value="DMZ: Demo"/>
+      <aa samples="4"/>
+   </viewer>
+   <visibility fov="60.0" near="1.0" far="32000.0"/>
+   <light value="0">
+      <position x="-10000" y="-10000" z="10000"/>
+      <direction x="1" y="1" z="-1"/>
+      <ambient r="1" g="1" b="1"/>
+      <specular r="0" g="0" b="0"/>
+      <diffuse r="1" g="1" b="1"/>
+   </light>
+   <highlight attribute="Object_Select_Attribute">
+      <emission r="1" g="1" b="1"/>
+   </highlight>
+   <highlight attribute="Object_Highlight_Attribute">
+      <emission r="1" g="1" b="0"/>
+   </highlight>
+</render>
+<terrain>
+   <model resource="city"/>
+   <model resource="sky dome" isect="false"/>
+   <height-map
+      x="-2800"
+      y="-2000"
+      z="-10"
+      r="0.1"
+      g="0.1"
+      b="0.1"
+      min="-40"
+      max="20"
+      interval-x2="11.71875"
+      interval-y2="11.71875"
+      interval-x="23.4375"
+      interval-y="23.4375"
+      resource="heightmap"
+      texture="heightmap-texture"
+   />
+   <height-map
+      x="-20000"
+      y="-20000"
+      z="-10"
+      r="0.1"
+      g="0.1"
+      b="0.2"
+      min="-2"
+      max="-1"
+      interval-x="5000"
+      interval-y="5000"
+      resource="ocean"
+   />
+</terrain>
+</dmz>
