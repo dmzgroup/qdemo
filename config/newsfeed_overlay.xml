@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<render>
+   <viewer>
+      <window width="852" height="480"/>
+      <window width="1280" height="720"/>
+   </viewer>
+</render>
+<javascript>
+   <instance name="newsfeedOverlay"/>
+</javascript>
+<overlay>
+   <node type="group" name="ticker group"/>
+   <color name="ticker text color" r="1.0" g="0.7" b="0" a="1"/>
+   <node type="transform" name="black bar">
+      <node type="box">
+         <max x="1" y="42"/>
+         <color r="0" g="0" b="0"/>
+      </node>
+   </node>
+   <auto-scale node="black bar">
+      <x ratio="1.01"/>
+      <y type="fixed"/>
+   </auto-scale>
+   <template name="news ticker">
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <position x="0" y="10"/>
+            <node type="text" name="text">
+               <font resource="news ticker font"/>
+               <color name="ticker text color"/>
+               <height value="32"/>
+               <depth value="3"/>
+            </node>
+         </node>
+      </node>
+   </template>
+   <template name="news ticker time">
+      <node type="switch" name="switch">
+         <node type="transform" name="transform">
+            <position x="0" y="10"/>
+            <node type="text" name="text">
+               <font resource="news ticker font"/>
+               <color r="1" g="1" b="1"/>
+               <height value="32"/>
+               <depth value="3"/>
+            </node>
+         </node>
+      </node>
+   </template>
+</overlay>
+</dmz>

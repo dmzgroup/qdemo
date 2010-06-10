@@ -5,12 +5,17 @@
    <search>
       <path value="../../assets/qdemo/terrain"/>
    </search>
+   <search name="font">
+      <path value="../../assets/qdemo/fonts"/>
+      <path value="./assets/"/>
+   </search>
    <resource name="dust-trail" file="particle.png"/>
    <resource name="city" file="city.ive"/>
    <resource name="sky dome" file="skydome.ive"/>
    <resource name="heightmap" file="heightmap4.png"/>
    <resource name="heightmap-texture" file="texture2.png"/>
    <resource name="ocean" file="ocean.png"/>
+   <resource name="news ticker font" file="Sansation_Regular.ttf" path="font"/>
 </resource-map>
 </runtime>
 </dmz>
