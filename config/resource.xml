@@ -4,18 +4,31 @@
 <resource-map>
    <search>
       <path value="../../assets/qdemo/terrain"/>
+      <path value="../../assets/qdemo/models"/>
+      <path value="./assets/"/>
    </search>
    <search name="font">
       <path value="../../assets/qdemo/fonts"/>
       <path value="./assets/"/>
    </search>
-   <resource name="dust-trail" file="particle.png"/>
+   <search name="images">
+      <path value="../../assets/qdemo/images"/>
+      <path value="./assets/"/>
+   </search>
+   <resource name="smoke" file="particle.png" path="images"/>
+   <resource name="fire" file="particle.png" path="images"/>
    <resource name="city" file="city.ive"/>
    <resource name="sky dome" file="skydome.ive"/>
    <resource name="heightmap" file="heightmap4.png"/>
    <resource name="heightmap-texture" file="texture2.png"/>
    <resource name="ocean" file="ocean.png"/>
-   <resource name="news ticker font" file="Sansation_Regular.ttf" path="font"/>
+   <resource name="cargo-ship" file="cship.ive"/>
+   <resource name="_news ticker font" file="Sansation_Regular.ttf" path="font"/>
+   <resource name="news ticker font" file="communist.ttf" path="font"/>
+   <resource name="live" file="LIVE.png" path="images"/>
+   <resource name="logo" file="newslogo.png" path="images"/>
+   <resource name="breaking" file="breaking.png" path="images"/>
+   <resource name="red" file="red.png" path="images"/>
 </resource-map>
 </runtime>
 </dmz>

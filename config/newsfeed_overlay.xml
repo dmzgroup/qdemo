@@ -16,12 +16,78 @@
       <node type="box">
          <max x="1" y="42"/>
          <color r="0" g="0" b="0"/>
+         <depth value="2"/>
       </node>
    </node>
    <auto-scale node="black bar">
       <x ratio="1.01"/>
       <y type="fixed"/>
    </auto-scale>
+   <node type="transform" name="logo">
+      <node type="box">
+         <max x="200" y="200"/>
+         <color r="1" g="1" b="1"/>
+         <texture resource="logo"/>
+         <depth value="1"/>
+      </node>
+   </node>
+   <layout node="logo">
+      <x type="relative" value="0.02"/>
+      <y type="absolute" value="115"/>
+   </layout>
+   <node type="transform" name="breaking">
+      <node type="box">
+         <min x="-256" y="0"/>
+         <max x="256" y="64"/>
+         <color r="1" g="1" b="1"/>
+         <texture resource="breaking"/>
+         <depth value="1"/>
+      </node>
+   </node>
+   <layout node="breaking">
+      <x type="relative" value="0.5"/>
+      <y type="absolute" value="100"/>
+   </layout>
+   <node type="transform" name="red bar">
+      <node type="box">
+         <min x="0" y="42"/>
+         <max x="1" y="100"/>
+         <color r="1" g="1" b="1"/>
+         <texture resource="red"/>
+         <depth value="1"/>
+      </node>
+   </node>
+   <auto-scale node="red bar">
+      <x ratio="1.01"/>
+      <y type="fixed"/>
+   </auto-scale>
+   <node type="transform" name="breaking text transform">
+      <node type="text" name="breaking text">
+         <text value="THIS IS WHAT IS HAPPENING!"/>
+         <alignment value="center"/>
+         <font resource="news ticker font"/>
+         <color name="ticker text color"/>
+         <color r="1" g="1" b="1"/>
+         <height value="38"/>
+         <depth value="3"/>
+      </node>
+   </node>
+   <layout node="breaking text transform">
+      <x type="relative" value="0.5"/>
+      <y type="absolute" value="55"/>
+   </layout>
+   <node type="transform" name="live">
+      <node type="box">
+         <min x="-128" y="-128"/>
+         <max x="0" y="0"/>
+         <color r="1" g="1" b="1"/>
+         <texture resource="live"/>
+      </node>
+   </node>
+   <layout node="live">
+      <x type="relative" value="0.98"/>
+      <y type="relative" value="1.0"/>
+   </layout>
    <template name="news ticker">
       <node type="switch" name="switch">
          <node type="transform" name="transform">
