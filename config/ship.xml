@@ -3,7 +3,20 @@
 <archive>
    <object type="cargo-ship">
       <attributes>
-         <position x="0" y="0" z="0"/>
+         <position x="-803.55" y="-8.08" z="269.54"/>
+         <orientation
+            v0="1.0" v1="0.0" v2="0.0"
+            v3="0.0" v4="1.0" v5="0.0"
+            v6="0.0" v7="0.0" v8="1.0"
+         />
+         <velocity x="0.0" y="0.0" z="0.0"/>
+         <acceleration x="0.0" y="0.0" z="0.0"/>
+      </attributes>
+   </object>
+   <object type="fire-object">
+      <attributes>
+         <state value="Fire|Smoking"/>
+         <position x="-802.88" y="-6.48" z="241.96"/>
          <orientation
             v0="1.0" v1="0.0" v2="0.0"
             v3="0.0" v4="1.0" v5="0.0"
