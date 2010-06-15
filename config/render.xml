@@ -13,6 +13,7 @@
    <plugin name="dmzRenderPluginStaticTerrainOSG" scope="terrain"/>
    <plugin name="dmzRenderPluginHeightMapOSG" scope="terrain"/>
    <plugin name="dmzRenderPluginObjectOSG"/>
+   <plugin name="dmzRenderPluginObjectTextOSG"/>
    <plugin name="dmzRenderPluginHighlightOSG" scope="render"/>
    <plugin name="dmzRenderPluginParticleEffectsOSG"/>
    <plugin name="dmzRenderPluginArticulateOSG"/>

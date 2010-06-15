@@ -8,7 +8,6 @@
    <state name="Dead"/>
    <state name="Smoking"/>
    <state name="Fire"/>
-   <state name="Air_Born"/>
    <event-type name="Event_Launch">
       <audio resource="launch-sound"/>
       <net>
@@ -26,6 +25,14 @@
          <enum value="18"/>
       </net>
    </event-type>
+   <object-type name="glyph">
+      <glyph value="true"/>
+   </object-type>
+   <object-type name="field-report" parent="glyph">
+      <render>
+         <model resource="field-report"/>
+      </render>
+   </object-type>
    <object-type name="spectator">
    </object-type>
    <object-type name="cargo-ship">
