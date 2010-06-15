@@ -23,7 +23,8 @@
    <resource name="heightmap-texture" file="texture2.png"/>
    <resource name="ocean" file="ocean.png"/>
    <resource name="cargo-ship" file="cship.ive"/>
-   <resource name="field-report" file="fieldreport.ive"/>
+   <resource name="field-report" file="frtop.ive"/>
+   <resource name="field-report-point" file="frbottom.ive"/>
    <resource name="news ticker font" file="communist.ttf" path="font"/>
    <resource name="live" file="LIVE.png" path="images"/>
    <resource name="logo" file="newslogo.png" path="images"/>

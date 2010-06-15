@@ -31,6 +31,15 @@
    <object-type name="field-report" parent="glyph">
       <render>
          <model resource="field-report"/>
+         <text font="news ticker font" height="6" attribute="field-report-text">
+            <offset y="5"/>
+         </text>
+      </render>
+   </object-type>
+   <object-type name="field-report-point" parent="glyph">
+      <center-offset y="5"/>
+      <render>
+         <model resource="field-report-point"/>
       </render>
    </object-type>
    <object-type name="spectator">

@@ -19,6 +19,7 @@
    <plugin name="dmzRenderPluginArticulateOSG"/>
    <plugin name="dmzRenderPluginDisableObjectIsect"/>
    <plugin name="dmzRenderPluginLightingOSG" scope="render"/>
+   <plugin name="dmzRenderPluginLinkOSG" scope="render"/>
    <plugin name="dmzRenderModuleOverlayOSG" scope="overlay"/>
 </plugin-list>
 <render>
@@ -34,7 +35,7 @@
    <light value="0">
       <position x="-10000" y="-10000" z="10000"/>
       <direction x="1" y="1" z="-1"/>
-      <ambient r="1" g="1" b="1"/>
+      <ambient r="0.5" g="0.5" b="0.5"/>
       <specular r="0" g="0" b="0"/>
       <diffuse r="1" g="1" b="1"/>
    </light>
@@ -44,6 +45,7 @@
    <highlight attribute="Object_Highlight_Attribute">
       <emission r="1" g="1" b="0"/>
    </highlight>
+   <link attribute="field-report" r="0" g="0" b="1" radius="2" sides="8"/>
 </render>
 <terrain>
    <model resource="city"/>
