@@ -4,7 +4,8 @@
    <time>
       <frequency value="0.0"/>
    </time>
-   <state name="Engine_On"/>
+   <state name="Yellow"/>
+   <state name="Red"/>
    <state name="Dead"/>
    <state name="Smoking"/>
    <state name="Fire"/>
@@ -28,10 +29,14 @@
    <object-type name="glyph">
       <glyph value="true"/>
    </object-type>
+   <object-type name="environment"/>
+   <object-type name="location"/>
    <object-type name="field-report" parent="glyph">
       <render>
          <model resource="field-report"/>
-         <text font="news ticker font" height="6" attribute="field-report-text">
+         <model resource="field-report-yellow" state="Yellow"/>
+         <model resource="field-report-red" state="Red"/>
+         <text font="news ticker font" height="10" attribute="field-report-text">
             <offset y="5"/>
          </text>
       </render>

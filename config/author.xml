@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<plugin-list>
+   <plugin name="dmzPluginMsgDump"/>
+   <plugin name="dmzRenderModulePickBasic"/>
+   <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-report-object"/>
+   <plugin name="dmzMBRAPluginPropertyEditor" scope="report-properties"/>
+</plugin-list>
+<javascript>
+   <instance name="author"/>
+</javascript>
+<runtime>
+   <object-type name="location">
+      <render>
+         <model resource="field-report-point"/>
+         <text font="news ticker font" height="12" attribute="location-text">
+            <offset y="11"/>
+         </text>
+      </render>
+   </object-type>
+</runtime>
+<create-report-object>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+   </input>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="released"
+               message="Create_Location_Message"
+               next="first"
+         >
+            <attribute type="position" name="position"/>
+            <attribute type="object" name="object"/>
+         </condition>
+      </state>
+   </converter>
+</create-report-object>
+<report-properties>
+   <frame>
+      <widget>
+         <minimum-size width="350" height="250"/>
+      </widget>
+   </frame>
+   <object-type-list>
+      <object-type name="location"/>
+   </object-type-list>
+   <title value="Location Properties"/>
+   <edit-message name="Edit_Location_Attributes_Message"/>
+   <property-list>
+      <property type="line" name="Name" attribute="Location_Name"/>
+      <property
+         type="scalar"
+         name="Population"
+         attribute="Location_Population"
+         default="100"
+         decimals="0"
+         min="0"
+         max="10000"
+         step="5"
+      />
+   </property-list>
+</report-properties>
+<pick>
+   <source name="DMZ_Render_Main_Portal"/>
+</pick>
+</dmz>

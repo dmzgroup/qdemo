@@ -4,9 +4,9 @@
    <plugin name="dmzPluginMsgDump"/>
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
-   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-detonation-event"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-report-object"/>
 </plugin-list>
-<create-detonation-event>
+<create-report-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
    </input>
@@ -16,16 +16,14 @@
                button="1"
                result="position"
                action="released"
-               message="CreateDetonationMessage"
+               message="Create_Report_Message"
                next="first"
          >
             <attribute type="position" name="position"/>
-            <attribute type="normal" name="normal"/>
-            <attribute type="object" name="object"/>
          </condition>
       </state>
    </converter>
-</create-detonation-event>
+</create-report-object>
 <pick>
    <source name="DMZ_Render_Main_Portal"/>
 </pick>
