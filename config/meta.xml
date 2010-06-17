@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+   <archive>
+      <object type="location" uuid="acdbe9f2-bc39-47fc-8565-f5dbe4b17813">
+         <attributes>
+            <position x="-329.250140" y="168.574335" z="-133.405103"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="National Bank"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="National Bank: 2000"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="2000.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="56.803543"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="f1057b16-203c-4803-9cd7-a2af5253ea83">
+         <attributes>
+            <position x="-268.066253" y="129.906986" z="25.547408"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Federal Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Federal Building: 5016"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="5016.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="61.943436"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="52a42463-64cf-4734-a662-57d5af4f0185">
+         <attributes>
+            <position x="-298.659267" y="145.167725" z="188.140892"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Building X"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Building X: 500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="42.560852"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="1c8893b6-af65-4ed5-aa7e-b3802886f8ca">
+         <attributes>
+            <position x="-123.892403" y="131.046257" z="53.894191"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="City Hall"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="City Hall: 200"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="200.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="38.104973"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="bdcdd333-b8a6-481b-a25e-4b3dcdd57f2d">
+         <attributes>
+            <position x="-110.538964" y="181.220083" z="-12.336173"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Business Center"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Business Center: 4012"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="4012.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="61.477421"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0fb985dc-e1fd-45c0-b74d-8b67c0193f28">
+         <attributes>
+            <position x="-61.583945" y="170.593743" z="118.701383"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Big Corporation"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Big Corporation: 1045"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="1045.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="60.823166"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="b75c6ded-8367-4266-9cc0-b0578c4f2fc4">
+         <attributes>
+            <position x="-107.802703" y="180.825807" z="257.040120"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="We B Rich Bank"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="We B Rich Bank: 4012"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="4012.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="60.355499"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5406783f-ade7-4228-9d25-b6c7a66b13b7">
+         <attributes>
+            <position x="-183.996943" y="175.540162" z="237.273692"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Big Box Store"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Big Box Store: 1500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="1500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="54.292191"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="593072fb-85cd-4ca2-926f-0bf39db2f644">
+         <attributes>
+            <position x="-42.754965" y="186.834712" z="350.716702"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Drug Company"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Drug Company: 540"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="540.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="55.187790"/>
+         </attributes>
+         <attributes name="Object_Highlight_Attribute">
+            <flag value="false"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="6b00edd8-b736-4cd7-9223-585eac5177c2">
+         <attributes>
+            <position x="53.371184" y="146.282243" z="226.655210"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Fire Station 1"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Fire Station 1: 20"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="20.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="46.530609"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="6232c7ab-be86-4d09-8998-c1fac0939968">
+         <attributes>
+            <position x="43.824916" y="136.254766" z="324.184349"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Police"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Police: 500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="31.819824"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c31fdbb4-7af9-45a7-a431-4da0da0d6965">
+         <attributes>
+            <position x="10.200945" y="138.311269" z="409.375822"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartments"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartments: 300"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="51.083008"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="147e3a22-066b-4e12-8b57-84e4468dfa7c">
+         <attributes>
+            <position x="-234.742202" y="171.229142" z="433.313960"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="High Rise"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="High Rise: 5000"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="5000.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.978119"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0094795a-53f5-4205-8f52-76e7fb3d49af">
+         <attributes>
+            <position x="-296.722220" y="126.064812" z="291.348059"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Shipping Company"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Shipping Company: 340"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="340.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="66.426102"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0262fe3b-742a-4517-aa5c-f8b8cba5b8fa">
+         <attributes>
+            <position x="49.281754" y="147.536253" z="85.180113"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Import/Export Co"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Import/Export Co: 500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="62.860619"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="e00581d1-dbec-4909-b0b7-7f564121cea4">
+         <attributes>
+            <position x="-9.644276" y="163.468741" z="-135.892278"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="University"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="University: 1024"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="1024.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="45.350204"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c82c45b8-656a-4f15-b0ba-97ae024abcd3">
+         <attributes>
+            <position x="229.248721" y="173.102404" z="217.054776"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="High School"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="High School: 500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="47.956039"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c0083733-0973-41a5-ba44-2c1392700cd7">
+         <attributes>
+            <position x="259.776713" y="117.889404" z="-12.374403"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Shopping Mall"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Shopping Mall: 500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="54.665192"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="ec8871d1-98c6-4b9a-8efb-741b0b5fbc62">
+         <attributes>
+            <position x="-128.163686" y="141.217279" z="-95.099370"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Shopping Mall"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Shopping Mall: 600"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="600.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="54.665184"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="bf81a871-6146-44f9-909f-cdc6db816bef">
+         <attributes>
+            <position x="-401.374417" y="176.671859" z="-256.718757"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Finacial Center"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Finacial Center: 8000"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="8000.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="59.981537"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="9aa24d71-69ff-4f29-9081-b8d6bd15ec54">
+         <attributes>
+            <position x="-168.754927" y="182.727292" z="-275.498480"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Engineering Co."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Engineering Co.: 600"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="600.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="58.396545"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="3a66be8c-8b3c-426a-8a58-3ef824dda3e3">
+         <attributes>
+            <position x="-164.159068" y="168.902821" z="-190.367980"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Software Inc."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Software Inc.: 602"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="602.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="52.661812"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="953f061c-e2db-4329-be9e-a24ccf892143">
+         <attributes>
+            <position x="-196.797519" y="146.516111" z="45.358023"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="News Paper"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="News Paper: 300"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="47.168091"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="eacef588-9983-48c1-9dd4-c9e61d0b9601">
+         <attributes>
+            <position x="-423.290770" y="64.627339" z="-202.398532"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Harbor Police"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Harbor Police: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="50.824615"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="127977c4-7cdd-4d5f-a63b-99f3627ab7cc">
+         <attributes>
+            <position x="-301.267555" y="146.289422" z="115.134327"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Embassy"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Embassy: 250"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="250.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="38.422882"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5d8507a5-6019-429b-aca5-b67690589f3b">
+         <attributes>
+            <position x="-243.443022" y="147.126700" z="-120.253516"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Car Co."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Car Co.: 5002"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="5002.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="38.098969"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="3c69f548-9272-43a4-aa05-fbbfaf246230">
+         <attributes>
+            <position x="-163.551020" y="138.596056" z="169.684005"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Bike Co."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Bike Co.: 400"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="400.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="37.769043"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="193294c1-0547-4a05-9b6e-9f01ee7cec35">
+         <attributes>
+            <position x="-512.259080" y="56.695184" z="-187.682538"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Office Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Office Building: 214"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="214.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="55.970886"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="1ead64e0-8c06-4dcc-89ac-47d08aa007cc">
+         <attributes>
+            <position x="-506.078508" y="150.742426" z="-239.164130"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 64"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="64.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.374176"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="e2348126-6bbf-454d-9879-8427abebd8e0">
+         <attributes>
+            <position x="-431.825403" y="71.062009" z="-440.060511"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Taxi Co"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Taxi Co: 500"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="500.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="35.350098"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="79cdbe2d-a33e-437a-accd-e6421cffac89">
+         <attributes>
+            <position x="-197.532088" y="176.948955" z="-455.433597"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Bank"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Bank: 534"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="534.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="27.869476"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5c11a17d-0c02-413b-bc87-676eb9aa149b">
+         <attributes>
+            <position x="-203.309798" y="79.719464" z="-422.099186"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Business Center"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Business Center: 679"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="679.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="58.298943"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="79aad09a-ba45-4287-9e59-e548009cdda7">
+         <attributes>
+            <position x="117.433292" y="123.613274" z="18.280039"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Shipping Co."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Shipping Co.: 600"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="600.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="50.191208"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="814a8197-c61c-4ee5-ac79-8dab3b306b61">
+         <attributes>
+            <position x="396.727335" y="198.587275" z="146.620277"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 40"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="40.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.560364"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="9a72abb1-2f10-4f52-bab6-8f0799dcdc91">
+         <attributes>
+            <position x="77.644936" y="106.828857" z="-343.702818"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 40"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="40.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.560364"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="fa3b12c2-08ea-4f88-bf1f-47d0776640d0">
+         <attributes>
+            <position x="-261.210710" y="126.916859" z="502.824590"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="School"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="School: 130"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="130.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="31.954865"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="7b21bb02-bee9-4abe-9e7b-df6b3291d0b8">
+         <attributes>
+            <position x="-236.610049" y="168.285884" z="-468.418004"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="School"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="School: 150"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="150.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="32.140808"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="3964a366-2f4d-40cc-b693-87bf2625f463">
+         <attributes>
+            <position x="182.485850" y="199.448717" z="429.004556"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Office Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Office Building: 5000"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="5000.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="61.570007"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0419bb36-12d5-4270-8584-8cbcaa010afb">
+         <attributes>
+            <position x="338.819136" y="184.828478" z="431.603918"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 50"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="50.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.374176"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="2adc5769-ad08-4892-8b00-618a150bed3d">
+         <attributes>
+            <position x="-125.432272" y="173.956167" z="501.331531"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 40"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="40.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.560364"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="59616f58-9cfc-4ab4-a2ef-a0d7c6619d3b">
+         <attributes>
+            <position x="-7.011750" y="137.134270" z="21.695286"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment 30"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment 30: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="55.747761"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5175e2eb-b90b-46c0-881c-aea0097289e2">
+         <attributes>
+            <position x="152.203389" y="188.338857" z="-121.128531"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="News Paper"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="News Paper: 230"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="230.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="46.795441"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="29167646-d4b4-4078-bdf1-fd5e14963a19">
+         <attributes>
+            <position x="-235.954539" y="126.604486" z="-10.795141"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Port Athority"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Port Athority: 130"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="130.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="49.259720"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c1499f5e-e067-4232-9c3b-7572c771e113">
+         <attributes>
+            <position x="133.960466" y="180.797464" z="-528.417568"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Trade School"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Trade School: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="49.484741"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="fe069ac4-d53d-4fb2-a5fb-bf04074832e7">
+         <attributes>
+            <position x="277.996454" y="170.352177" z="50.254166"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Some other location"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Some other location: 600"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="600.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="70.643471"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="b6fe3fa1-644c-457b-af70-402197e46344">
+         <attributes>
+            <position x="101.237918" y="176.397208" z="553.205940"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Enertainment Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Enertainment Building: 230"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="230.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="75.771606"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="35989938-8de4-44e0-859e-c0d706053a33">
+         <attributes>
+            <position x="-669.047322" y="145.341916" z="-228.734019"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Tading Co."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Tading Co.: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="43.304382"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0d394fd2-62fd-4172-8b2e-8d415d7d5c91">
+         <attributes>
+            <position x="-613.266264" y="190.837150" z="-341.676917"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Trade Center"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Trade Center: 340"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="340.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="50.419037"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="fabbb375-1bda-4b7a-ae92-db3f7b5d4198">
+         <attributes>
+            <position x="-736.699335" y="184.788198" z="-252.447826"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 30"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="30.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.187988"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="b08654f7-53ff-44ce-8072-8fc6b82dcebc">
+         <attributes>
+            <position x="-716.558406" y="193.813842" z="-356.084529"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="school"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="school: 140"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="140.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="31.768951"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c9dab16e-9f72-4b4f-8eec-c85032b3b29b">
+         <attributes>
+            <position x="-830.614080" y="190.976886" z="-433.900795"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Universtiy"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Universtiy: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="41.817566"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="bc5cf50b-a686-49aa-a022-350b14475eb2">
+         <attributes>
+            <position x="-576.984405" y="176.543952" z="-570.846346"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Bank"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Bank: 120"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="120.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="26.572144"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="f1322168-20aa-4b12-9bc9-fb8bbb76f73e">
+         <attributes>
+            <position x="-345.052189" y="170.348628" z="-481.649431"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Trade Center"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Trade Center: 1200"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="1200.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="52.848740"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="8770366d-6689-4a10-b9b5-a842eaab1506">
+         <attributes>
+            <position x="-555.992578" y="174.965576" z="-242.890563"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Big Company"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Big Company: 304"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="304.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="50.563858"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="284d910d-3e38-4f27-8b99-f2f0fcf7a406">
+         <attributes>
+            <position x="-358.216033" y="158.621194" z="-623.602164"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Tire Company"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Tire Company: 450"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="450.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="52.986908"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="59fa0a73-4154-408b-a095-2c71d5b5716c">
+         <attributes>
+            <position x="-538.449081" y="176.421370" z="-461.281231"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 34"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="34.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="44.187988"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="20dc2901-0b44-43a0-bfc2-6c4944ac1a00">
+         <attributes>
+            <position x="-693.388609" y="181.962911" z="-655.194183"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Some Place"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Some Place: 3"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="3.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="38.471786"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0e5587b7-3b53-4dc9-a6e0-969a2ebe0f36">
+         <attributes>
+            <position x="-653.684177" y="192.008653" z="-725.409741"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Crime Inc."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Crime Inc.: 123"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="123.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="41.121964"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d4a847db-53e1-44df-9ac7-72bdfd446d90">
+         <attributes>
+            <position x="-809.991237" y="191.379139" z="-554.649748"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Macrohard Inc."/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Macrohard Inc.: 1234"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="1234.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="58.458252"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d1c1224c-ec1d-4234-82f7-50d5f3d719a4">
+         <attributes>
+            <position x="-881.549630" y="194.458218" z="-280.489868"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartments"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartments: 45"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="45.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="47.354431"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c22f50a6-f035-428b-82e8-5e2454ef5493">
+         <attributes>
+            <position x="-388.872681" y="167.849844" z="-132.397713"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Skinny Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Skinny Building: 24"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="24.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="54.105682"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="8c5f5f10-bd85-42fd-a551-7cc6ef678910">
+         <attributes>
+            <position x="-209.683751" y="76.385600" z="-355.275100"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Small Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Small Building: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="53.173370"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="397c5df4-09e2-4911-b95d-b60ff5b4b8be">
+         <attributes>
+            <position x="-727.832180" y="59.787585" z="-522.279432"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Appartment"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Appartment: 2340"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="2340.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="51.642548"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="f8c70f6d-40a9-46dc-b107-3d60d7a4c7cb">
+         <attributes>
+            <position x="-527.725359" y="114.254759" z="-410.017548"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Retirement Home"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Retirement Home: 100"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="62.038452"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="ee8bb1b5-a1e2-4e69-8c45-032db67e738b">
+         <attributes>
+            <position x="-400.246076" y="129.274785" z="-581.707191"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Building"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Building: 2340"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="2340.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="41.074493"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c69e646d-d7c1-4758-8937-8b3daf23051f">
+         <attributes>
+            <position x="-344.803946" y="109.898544" z="441.660221"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Rich People"/>
+         </attributes>
+         <attributes name="Location_Text">
+            <text value="Rich People: 459"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="459.000000"/>
+         </attributes>
+         <attributes name="Object_Bounding_Volume_Radius_Attribute">
+            <scalar value="47.025146"/>
+         </attributes>
+      </object>
+   </archive>
+</dmz>

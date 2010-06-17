@@ -71,7 +71,7 @@ dmz.object.text.observe(self, "Location_Name", function (obj, attr, value) {
 
    if (pop) { value = value + ": " + pop.toFixed(); }
 
-   dmz.object.text(obj, "location-text", value);
+   dmz.object.text(obj, "Location_Text", value);
 });
 
 dmz.object.scalar.observe(self, "Location_Population", function (obj, attr, value) {
@@ -82,5 +82,5 @@ dmz.object.scalar.observe(self, "Location_Population", function (obj, attr, valu
 
    if (loc) { str = loc + ": " + str; }
 
-   dmz.object.text(obj, "location-text", str);
+   dmz.object.text(obj, "Location_Text", str);
 });

@@ -20,8 +20,11 @@
 -->
 </plugin-list>
 <dmzArchivePluginObject>
-   <archive>
+   <archive mode="export">
       <attribute name="Last_Network_Value" contains="True"/>
+      <object-type-set>
+         <object-type name="spectator" exclude="true"/>
+      </object-type-set>
    </archive>
 </dmzArchivePluginObject>
 </dmz>

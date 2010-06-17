@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmz>
 <plugin-list>
+<!--
    <plugin name="dmzPluginMsgDump"/>
+-->
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
-   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-report-object"/>
-   <plugin name="dmzMBRAPluginPropertyEditor" scope="report-properties"/>
+   <plugin name="dmzObjectPluginHighlight"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="mouse-move-event"/>
+   <plugin name="dmzMBRAPluginPropertyEditor" scope="location-properties"/>
 </plugin-list>
 <javascript>
    <instance name="author"/>
@@ -14,13 +18,31 @@
    <object-type name="location">
       <render>
          <model resource="field-report-point"/>
-         <text font="news ticker font" height="12" attribute="location-text">
+         <text font="news ticker font" height="12" attribute="Location_Text">
             <offset y="11"/>
          </text>
       </render>
    </object-type>
 </runtime>
-<create-report-object>
+<mouse-move-event>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+   </input>
+   <target name="dmzObjectPluginHighlight"/>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               action="moved"
+               result="position"
+               next="first"
+               message="Mouse_Move_Message"
+         >
+            <attribute type="object" name="handle"/>
+         </condition>
+      </state>
+   </converter>
+</mouse-move-event>
+<create-location-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
    </input>
@@ -38,8 +60,8 @@
          </condition>
       </state>
    </converter>
-</create-report-object>
-<report-properties>
+</create-location-object>
+<location-properties>
    <frame>
       <widget>
          <minimum-size width="350" height="250"/>
@@ -63,7 +85,7 @@
          step="5"
       />
    </property-list>
-</report-properties>
+</location-properties>
 <pick>
    <source name="DMZ_Render_Main_Portal"/>
 </pick>
