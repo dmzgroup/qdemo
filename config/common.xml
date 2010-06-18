@@ -22,6 +22,8 @@
 <dmzArchivePluginObject>
    <archive mode="export">
       <attribute name="Last_Network_Value" contains="True"/>
+      <attribute name="Object_Bounding_Volume_Radius_Attribute"/>
+      <attribute name="Location_Text"/>
       <object-type-set>
          <object-type name="spectator" exclude="true"/>
       </object-type-set>
