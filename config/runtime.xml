@@ -30,7 +30,7 @@
       <glyph value="true"/>
    </object-type>
    <object-type name="environment"/>
-   <object-type name="location"/>
+   <object-type name="location" parent="glyph"/>
    <object-type name="field-report" parent="glyph">
       <render>
          <model resource="field-report"/>
