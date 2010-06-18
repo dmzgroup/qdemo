@@ -22,7 +22,7 @@
    <resource name="heightmap" file="heightmap4.png"/>
    <resource name="heightmap-texture" file="texture2.png"/>
    <resource name="ocean" file="ocean.png"/>
-   <resource name="cargo-ship" file="truck.ive"/>
+   <resource name="cargo-ship" file="cship.ive"/>
    <resource name="field-report" file="frtop.ive"/>
    <resource name="field-report-yellow" file="frtop_yellow.ive"/>
    <resource name="field-report-red" file="frtop_red.ive"/>
