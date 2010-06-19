@@ -12,9 +12,11 @@ var dmz =
        , data: require("dmz/runtime/data")
        , util: require("dmz/types/util")
        }
-  , locations = {}
+  , location = {}
   , animate = {}
 //  Constants
+  , MaxHeight = 250
+  , LinkAttr = dmz.defs.createNamedHandle("field-report")
   , LocationType = dmz.objectType.lookup("location")
   , ReportType = dmz.objectType.lookup("field-report")
   , ReportPointType = dmz.objectType.lookup("field-report-point")
@@ -26,18 +28,44 @@ self.shutdown = function () {
 
 };
 
+dmz.time.setRepeatingTimer(self, function (time) {
+
+   var keys = Object.keys(animate);
+
+   keys.forEach(function (key) {
+
+      var obj = animate[key].bottom
+        , pos = dmz.object.position(obj.handle)
+        ;
+
+      if (pos && obj.target) {
+
+         if (pos.y > obj.target.y) {
+
+            pos.y -= time * obj.rate;
+
+            if (pos.y < obj.target.y) {
+
+               delete animate[obj.handle];
+               pos.y = obj.target.y;
+            }
+
+            dmz.object.position(obj.handle, null, pos);
+         }
+      }
+   });
+});
+
 dmz.object.create.observe(self, function (object, type) {
 
    var report
      , pos
-     , frobj
-     , point
      ;
 
    if (type.isOfType (LocationType)) {
 
       report = {
-         top: { handle: dmz.object.create(ReportType) }
+         top: { handle: dmz.object.create(ReportType) },
          bottom: { handle: dmz.object.create(ReportPointType) }
       };
 
@@ -45,13 +73,16 @@ dmz.object.create.observe(self, function (object, type) {
 
       if (pos) {
 
+         report.bottom.target = pos.copy();
+         report.bottom.rate = (MaxHeight - pos.y) * 0.75;
+         pos.y = MaxHeight;
          dmz.object.position(report.bottom.handle, null, pos);
-         pos.y += 10;
          dmz.object.position(report.top.handle, null, pos);
       }
 
       dmz.object.activate(report.top.handle);
       dmz.object.activate(report.bottom.handle);
+      dmz.object.link(LinkAttr, report.top.handle, report.bottom.handle);
 
       animate[object] = report;
 
