@@ -12,6 +12,9 @@
          <velocity x="0.0" y="0.0" z="0.0"/>
          <acceleration x="0.0" y="0.0" z="0.0"/>
       </attributes>
+      <attributes name="Plume_Source">
+         <flag value="true"/>
+      </attributes>
    </object>
    <object type="fire-object">
       <attributes>
@@ -24,34 +27,6 @@
          />
          <velocity x="0.0" y="0.0" z="0.0"/>
          <acceleration x="0.0" y="0.0" z="0.0"/>
-      </attributes>
-   </object>
-   <object type="field-report-point" name="report-bottom">
-      <attributes>
-         <position x="-802.88" y="-6.48" z="251.96"/>
-         <orientation
-            v0="1.0" v1="0.0" v2="0.0"
-            v3="0.0" v4="1.0" v5="0.0"
-            v6="0.0" v7="0.0" v8="1.0"
-         />
-      </attributes>
-   </object>
-   <object type="field-report" name="report-top">
-      <attributes>
-         <position x="-802.88" y="30.48" z="251.96"/>
-         <orientation
-            v0="1.0" v1="0.0" v2="0.0"
-            v3="0.0" v4="1.0" v5="0.0"
-            v6="0.0" v7="0.0" v8="1.0"
-         />
-      </attributes>
-      <attributes name="field-report">
-         <links>
-            <object name="report-bottom"/>
-         </links>
-      </attributes>
-      <attributes name="field-report-text">
-         <text value="54%"/>
       </attributes>
    </object>
 </archive>

@@ -14,6 +14,7 @@ var dmz =
        }
   , location = {}
   , animate = {}
+  , plume //  = { pos: dmz.vector.create(), handle: 0, radius: 0}
 //  Constants
   , MaxHeight = 250
   , LinkAttr = dmz.defs.createNamedHandle("field-report")
@@ -29,6 +30,10 @@ self.shutdown = function () {
 };
 
 dmz.time.setRepeatingTimer(self, function (time) {
+
+   if (plume) {
+
+   }
 
    var keys = Object.keys(animate);
 
@@ -103,7 +108,19 @@ dmz.object.destroy.observe(self, function (object) {
    }
 });
 
+/*
 dmz.object.position.observe(self, function (object, attr, value) {
 
 });
+*/
 
+dmz.object.flag.observe(self, "Plume_Source", function (object, attr, value) {
+
+   if (value) {
+
+      plume.handle = object;
+      plume.pos  = dmz.object.position(object);
+
+      if (!plume.pos) { plume.pos = dmz.vector.create(); }
+   }
+});
