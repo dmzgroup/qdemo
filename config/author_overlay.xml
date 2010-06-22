@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<javascript>
+   <instance name="authorOverlay"/>
+</javascript>
+<overlay>
+   <color name="text color" r="1.0" g="1.0" b="1.0" a="4.0"/>
+   <node type="transform" name="spectator slider">
+      <position x="0" y="0"/>
+      <node type="text">
+         <text value="Tool: "/>
+         <position x="50" y="40"/>
+         <alignment value="right"/>
+         <font resource="spectator font"/>
+         <height value="16"/>
+         <color name="text color"/>
+      </node>
+      <node type="text" name="tool">
+         <text value="Object"/>
+         <position x="50" y="40"/>
+         <font resource="spectator font"/>
+         <height value="16"/>
+         <color name="text color"/>
+      </node>
+      <node type="text">
+         <text value="Pos: "/>
+         <position x="50" y="22"/>
+         <alignment value="right"/>
+         <font resource="spectator font"/>
+         <height value="16"/>
+         <color name="text color"/>
+      </node>
+      <node type="text" name="pos">
+         <text value="0 0 0"/>
+         <position x="50" y="22"/>
+         <font resource="spectator font"/>
+         <height value="16"/>
+         <color name="text color"/>
+      </node>
+      <node type="text">
+         <text value="Ori: "/>
+         <position x="50" y="4"/>
+         <alignment value="right"/>
+         <font resource="spectator font"/>
+         <height value="16"/>
+         <color name="text color"/>
+      </node>
+      <node type="text" name="ori">
+         <text value="0 0 0"/>
+         <position x="50" y="4"/>
+         <font resource="spectator font"/>
+         <height value="16"/>
+         <color name="text color"/>
+      </node>
+   </node>
+</overlay>
+</dmz>

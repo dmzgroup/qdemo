@@ -8,6 +8,9 @@
    -->
    <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="win32|macos"/>
    <plugin name="dmzRenderModuleCoreOSGBasic" scope="render" platform="linux" unload="false"/>
+<!--
+   <plugin name="dmzRenderExtViewerQtOSG" scope="render.viewer"/>
+-->
    <plugin name="dmzRenderModuleIsectOSG"/>
    <plugin name="dmzRenderModulePortalOSG" scope="render"/>
    <plugin name="dmzRenderPluginStaticTerrainOSG" scope="terrain"/>

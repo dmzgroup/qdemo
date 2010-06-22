@@ -6,15 +6,21 @@
 -->
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
+   <plugin name="dmzInputPluginChannelSwitch" scope="tool-switch"/>
+   <plugin name="dmzInputPluginChannelMessage" scope="tool-name"/>
+   <plugin name="dmzObjectModuleSelectBasic"/>
    <plugin name="dmzObjectPluginHighlight"/>
-   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
+   <plugin name="dmzObjectPluginSelect"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="mouse-move-event"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="select-object"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
    <plugin name="dmzMBRAPluginPropertyEditor" scope="location-properties"/>
 </plugin-list>
 <javascript>
    <instance name="author"/>
 </javascript>
 <runtime>
+   <message name="Update_Tool_Name" monostate="true"/>
    <object-type name="location">
       <render>
          <model resource="field-report-point"/>
@@ -24,6 +30,29 @@
       </render>
    </object-type>
 </runtime>
+<tool-switch> 
+   <switch> 
+      <channel name="select-tool"/> 
+      <channel name="location-tool"/> 
+<!--
+      <channel name="create-tool"/> 
+      <channel name="move-tool"/> 
+      <channel name="delete-tool"/> 
+-->
+   </switch> 
+</tool-switch>
+<tool-name>
+   <channel name="select-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Select"/>
+      </attribute>
+   </channel>
+   <channel name="location-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Location"/>
+      </attribute>
+   </channel>
+</tool-name>
 <mouse-move-event>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
@@ -42,9 +71,29 @@
       </state>
    </converter>
 </mouse-move-event>
+<select-object>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+   </input>
+   <target name="dmzObjectPluginSelect"/>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="released"
+               message="Object_Select_Message"
+               next="first"
+         >
+            <attribute type="object" name="handle"/>
+         </condition>
+      </state>
+   </converter>
+</select-object>
 <create-location-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
+      <channel name="location-tool"/>
    </input>
    <converter start="first">
       <state name="first" type="basic">

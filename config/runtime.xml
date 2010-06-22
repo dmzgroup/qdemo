@@ -56,8 +56,13 @@
    </object-type>
    <object-type name="fire-object">
       <render>
-         <particle-effect type="smoking"/>
-         <particle-effect type="fire"/>
+         <particle-effect type="smoking" scale="40" intensity="0.6" time-out="20">
+            <offset y="30"/>
+            <start-color r="0.3" g="0" b="0"/>
+            <end-color r="0" g="0" b="0"/>
+            <alpha-range min="0.3" max="0.01"/>
+         </particle-effect>
+         <particle-effect type="fire" scale="20"/>
       </render>
    </object-type>
    </runtime>

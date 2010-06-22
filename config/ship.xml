@@ -29,6 +29,11 @@
          <acceleration x="0.0" y="0.0" z="0.0"/>
       </attributes>
    </object>
+   <object type="environment">
+      <attributes name="Env_Wind_Direction">
+         <vector x="2.5" y="0" z="-2.5"/>
+      </attributes>
+   </object>
 </archive>
 </dmz>
   
