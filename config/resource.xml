@@ -19,8 +19,8 @@
    <resource name="fire" file="particle.png" path="images"/>
    <resource name="city" file="city.ive"/>
    <resource name="sky dome" file="skydome.ive"/>
-   <resource name="heightmap" file="heightmap4.png"/>
-   <resource name="heightmap-texture" file="texture2.png"/>
+   <resource name="heightmap" file="heightmap.png"/>
+   <resource name="heightmap-texture" file="texture.png"/>
    <resource name="ocean" file="ocean.png"/>
    <resource name="cargo-ship" file="cship.ive"/>
    <resource name="field-report" file="frtop.ive"/>
