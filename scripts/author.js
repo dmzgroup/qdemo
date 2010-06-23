@@ -11,6 +11,7 @@ var dmz =
        , defs: require("dmz/runtime/definitions")
        , data: require("dmz/runtime/data")
        , util: require("dmz/types/util")
+       , undo: require("dmz/runtime/undo")
        }
   , editMsg = dmz.messaging.create("Edit_Location_Attributes_Message")
 //  Constants
@@ -30,6 +31,7 @@ dmz.messaging.subscribe("Create_Location_Message", self,  function (data) {
    var pos
      , obj
      , out
+     , undo
      ;
 
    if (dmz.data.isTypeOf(data)) {
@@ -48,7 +50,10 @@ dmz.messaging.subscribe("Create_Location_Message", self,  function (data) {
             if (!dmz.object.type(obj).isOfType(LocationType)) { obj = 0; }
          }
 
+
          if (obj === 0) {
+
+            undo = dmz.undo.startRecord("Create Location");
 
             obj = dmz.object.create("location");
             dmz.object.position(obj, null, pos);
@@ -56,10 +61,16 @@ dmz.messaging.subscribe("Create_Location_Message", self,  function (data) {
 
             out.handle("created", 0, obj);
          }
+         else {
+
+            undo = dmz.undo.startRecord("Edit Location");
+         }
 
          out.handle("object", 0, obj);
 
          editMsg.send(out);
+
+         if (undo) { dmz.undo.stopRecord(undo); }
       }
    }
 });

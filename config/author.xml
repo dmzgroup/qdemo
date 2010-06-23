@@ -4,6 +4,8 @@
 <!--
    <plugin name="dmzPluginMsgDump"/>
 -->
+   <plugin name="dmzPluginUndo"/>
+   <plugin name="dmzObjectPluginUndo"/>
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
    <plugin name="dmzInputPluginChannelSwitch" scope="tool-switch"/>
@@ -11,13 +13,22 @@
    <plugin name="dmzObjectModuleSelectBasic"/>
    <plugin name="dmzObjectPluginHighlight"/>
    <plugin name="dmzObjectPluginSelect"/>
+   <plugin name="dmzObjectPluginSelectIsect" scope="tool-name"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="mouse-move-event"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="select-object"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="move-object"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="create-object"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="delete-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
    <plugin name="dmzMBRAPluginPropertyEditor" scope="location-properties"/>
+   <plugin name="dmzToolsPluginSelectObjectType"/>
+   <plugin name="dmzToolsPluginObjectEditQt"/>
 </plugin-list>
 <javascript>
    <instance name="author"/>
+   <instance name="move"/>
+   <instance name="create"/>
+   <instance name="delete"/>
 </javascript>
 <runtime>
    <message name="Update_Tool_Name" monostate="true"/>
@@ -30,14 +41,25 @@
       </render>
    </object-type>
 </runtime>
+<key-messages>
+   <channel>
+      <converter key="u">
+         <target name="dmzPluginUndo" message="Plugin_Undo_Message"/>
+      </converter>
+      <converter key="U">
+         <target name="dmzPluginUndo" message="Plugin_Redo_Message"/>
+      </converter>
+   </channel>
+</key-messages>
 <tool-switch> 
    <switch> 
       <channel name="select-tool"/> 
+      <channel name="move-tool"/> 
+      <channel name="create-tool"/> 
+      <channel name="delete-tool"/> 
       <channel name="location-tool"/> 
 <!--
       <channel name="create-tool"/> 
-      <channel name="move-tool"/> 
-      <channel name="delete-tool"/> 
 -->
    </switch> 
 </tool-switch>
@@ -45,6 +67,21 @@
    <channel name="select-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Select"/>
+      </attribute>
+   </channel>
+   <channel name="move-tool" message="Update_Tool_Name" isect="false"> 
+      <attribute type="string" name="String">
+         <element value="Move"/>
+      </attribute>
+   </channel>
+   <channel name="create-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Create"/>
+      </attribute>
+   </channel>
+   <channel name="delete-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Delete"/>
       </attribute>
    </channel>
    <channel name="location-tool" message="Update_Tool_Name"> 
@@ -74,6 +111,7 @@
 <select-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
+      <channel name="select-tool"/>
    </input>
    <target name="dmzObjectPluginSelect"/>
    <converter start="first">
@@ -90,6 +128,78 @@
       </state>
    </converter>
 </select-object>
+<move-object>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+      <channel name="move-tool"/>
+   </input>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="pressed"
+               message="Object_First_Move_Message"
+               next="next"
+         >
+            <attribute type="position" name="vector"/>
+         </condition>
+      </state>
+      <state name="next" type="basic">
+         <condition
+               result="position"
+               action="moved"
+               message="Object_Move_Message"
+         >
+            <attribute type="position" name="vector"/>
+         </condition>
+         <condition
+               button="1"
+               action="released"
+               next="first"
+         />
+      </state>
+   </converter>
+</move-object>
+<create-object>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+      <channel name="create-tool"/>
+   </input>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="released"
+               message="Object_Create_Object_Message"
+               next="first"
+         >
+            <attribute type="position" name="vector"/>
+         </condition>
+      </state>
+   </converter>
+</create-object>
+<delete-object>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+      <channel name="delete-tool"/>
+   </input>
+   <target name="delete"/>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="object"
+               action="released"
+               message="Object_Delete_Message"
+               next="first"
+         >
+            <attribute type="object" name="handle"/>
+         </condition>
+      </state>
+   </converter>
+</delete-object>
 <create-location-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
