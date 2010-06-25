@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmz>
+<plugin-list>
+   <plugin name="dmzInputPluginChannelSwitch" scope="spectator-switch"/>
+</plugin-list>
+<javascript>
+   <instance name="autoFly"/>
+</javascript>
+<freefly>
+   <input>
+      <channel name="freefly"/>
+   </input>
+</freefly>
+<spectator-switch>
+   <switch>
+      <channel name="freefly"/>
+      <channel name="bread-crumb-follow"/>
+   </switch>
+</spectator-switch>
+</dmz>

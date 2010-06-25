@@ -57,5 +57,6 @@
       <emission r="1" g="1" b="0"/>
    </highlight>
    <link attribute="field-report" r="0" g="0" b="1" radius="2" sides="8"/>
+   <link attribute="Bread_Crumb_Attribute" r="1" g="0" b="0" radius="1" sides="3"/>
 </render>
 </dmz>

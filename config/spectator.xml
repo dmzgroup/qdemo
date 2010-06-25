@@ -2,15 +2,17 @@
 <dmz>
 <plugin-list>
    <plugin name="dmzEntityPluginFreeFly" scope="freefly"/>
-   <plugin name="dmzEntityPluginPortalTether" scope="freefly"/>
+   <plugin name="dmzEntityPluginPortalTether" scope="tether"/>
    <plugin name="dmzEntityPluginTeleport"/>
    <plugin name="dmzObjectPluginTimeout"/>
    <plugin name="dmzEntityModulePortalBasic"/>
 </plugin-list>
 <freefly>
    <movement speed="100" turn-rate="2.4"/>
-   <offset x="0.0" y="0.0" z="0.0"/>
 </freefly>
+<tether>
+   <offset x="0.0" y="0.0" z="0.0"/>
+</tether>
 <archive>
    <object type="spectator">
       <attributes>

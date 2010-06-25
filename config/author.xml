@@ -30,6 +30,7 @@
    <instance name="move"/>
    <instance name="create"/>
    <instance name="delete"/>
+   <instance name="breadCrumbs"/>
 </javascript>
 <runtime>
    <message name="Update_Tool_Name" monostate="true"/>
