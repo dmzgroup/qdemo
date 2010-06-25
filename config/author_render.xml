@@ -12,8 +12,6 @@
    <plugin name="dmzRenderExtViewerQtOSG" scope="render.viewer"/>
    <plugin name="dmzRenderModuleIsectOSG"/>
    <plugin name="dmzRenderModulePortalOSG" scope="render"/>
-   <plugin name="dmzRenderPluginStaticTerrainOSG" scope="terrain"/>
-   <plugin name="dmzRenderPluginHeightMapOSG" scope="terrain"/>
    <plugin name="dmzRenderPluginObjectOSG"/>
    <plugin name="dmzRenderPluginObjectTextOSG"/>
    <plugin name="dmzRenderPluginHighlightOSG" scope="render"/>
@@ -41,7 +39,7 @@
 <render>
    <osg-up value="z"/>
    <viewer>
-      <window-title value="DMZ: Demo"/>
+      <window-title value="DMZ Authoring"/>
       <aa samples="4"/>
    </viewer>
    <visibility fov="60.0" near="1.0" far="32000.0"/>
@@ -60,37 +58,4 @@
    </highlight>
    <link attribute="field-report" r="0" g="0" b="1" radius="2" sides="8"/>
 </render>
-<terrain>
-   <model resource="city"/>
-   <model resource="sky dome" isect="false"/>
-   <height-map
-      x="-3000"
-      y="-3000"
-      z="0"
-      r="0.5"
-      g="0.5"
-      b="0.5"
-      min="-40"
-      max="25"
-      interval-x2="11.71875"
-      interval-y2="11.71875"
-      interval-x="23.4375"
-      interval-y="23.4375"
-      resource="heightmap"
-      texture="heightmap-texture"
-   />
-   <height-map
-      x="-20000"
-      y="-20000"
-      z="0"
-      r="0.1"
-      g="0.1"
-      b="0.2"
-      min="-2"
-      max="0"
-      interval-x="5000"
-      interval-y="5000"
-      resource="ocean"
-   />
-</terrain>
 </dmz>
