@@ -17,6 +17,7 @@ dmz.messaging.subscribe("Object_Create_Object_Message", self,  function (data) {
 
    var pos
      , obj
+     , undo
      ;
 
    if (currentType && data) {
@@ -25,10 +26,12 @@ dmz.messaging.subscribe("Object_Create_Object_Message", self,  function (data) {
 
       if (pos) {
 
+         undo = dmz.undo.startRecord("Create: " + currentType);
          obj = dmz.object.create(currentType);
          dmz.object.position(obj, null, pos);
          dmz.object.activate(obj);
          dmz.object.select(obj);
+         dmz.undo.stopRecord(undo);
       }
    }
 });
@@ -39,6 +42,5 @@ dmz.messaging.subscribe("Tools_Current_Object_Type_Message", self,  function (da
    var type = dmz.objectType.lookup(dmz.data.unwrapString(data));
      ;
 
-self.log.error(type);
    if (type) { currentType = type; }
 });

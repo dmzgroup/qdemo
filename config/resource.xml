@@ -22,7 +22,6 @@
    <resource name="heightmap" file="heightmap.png"/>
    <resource name="heightmap-texture" file="texture.png"/>
    <resource name="ocean" file="ocean.png"/>
-   <resource name="cargo-ship" file="cship.ive"/>
    <resource name="field-report" file="frtop.ive"/>
    <resource name="field-report-yellow" file="frtop_yellow.ive"/>
    <resource name="field-report-red" file="frtop_red.ive"/>
@@ -33,6 +32,34 @@
    <resource name="logo" file="newslogo.png" path="images"/>
    <resource name="breaking" file="breaking.png" path="images"/>
    <resource name="red" file="red.png" path="images"/>
+   <resource name="cargo-ship" file="cship.ive"/>
+   <resource name="school-bus" file="schoolbus_good.ive"/>
+   <resource name="minivan" file="minivan_good.ive"/>
+   <resource name="newsvan" file="newsvan.ive"/>
+   <resource name="car" file="nissan_primera_good.ive"/>
+   <resource name="car-black" file="nissan_primera_good_black.ive"/>
+   <resource name="car-blue" file="nissan_primera_good_blue.ive"/>
+   <resource name="car-green" file="nissan_primera_good_green.ive"/>
+   <resource name="car-red" file="nissan_primera_good_red.ive"/>
+   <resource name="car-yellow" file="nissan_primera_good_yellow.ive"/>
+   <resource name="van" file="panel_van_good.ive"/>
+   <resource name="suv-black" file="suv_black_good.ive"/>
+   <resource name="suv-blue" file="suv_blue_good.ive"/>
+   <resource name="suv-green" file="suv_green_good.ive"/>
+   <resource name="suv-red" file="suv_red_good.ive"/>
+   <resource name="suv-white" file="suv_white_good.ive"/>
+   <resource name="tardis" file="tardis.ive"/>
+   <resource name="truck" file="toyota_truck_good.ive"/>
+   <resource name="truck-black" file="toyota_truck_good_black.ive"/>
+   <resource name="truck-blue" file="toyota_truck_good_blue.ive"/>
+   <resource name="truck-gold" file="toyota_truck_good_gold.ive"/>
+   <resource name="truck-green" file="toyota_truck_good_green.ive"/>
+   <resource name="truck-red" file="toyota_truck_good_red.ive"/>
+   <resource name="truck-white" file="toyota_truck_good_white.ive"/>
+   <resource name="wagon" file="volvo_stationwagon_good.ive"/>
+   <resource name="wagon-blue" file="volvo_stationwagon_blue_good.ive"/>
+   <resource name="wagon-brown" file="volvo_stationwagon_brown_good.ive"/>
+   <resource name="wagon-white" file="volvo_stationwagon_white_good.ive"/>
 </resource-map>
 </runtime>
 </dmz>

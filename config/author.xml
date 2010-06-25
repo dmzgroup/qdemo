@@ -14,6 +14,7 @@
    <plugin name="dmzObjectPluginHighlight"/>
    <plugin name="dmzObjectPluginSelect"/>
    <plugin name="dmzObjectPluginSelectIsect" scope="tool-name"/>
+   <plugin name="dmzObjectPluginSelectSimilar"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="mouse-move-event"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="select-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="move-object"/>
@@ -48,6 +49,18 @@
       </converter>
       <converter key="U">
          <target name="dmzPluginUndo" message="Plugin_Redo_Message"/>
+      </converter>
+      <converter key="p">
+         <target
+            name="dmzObjectPluginSelectSimilar"
+            message="Object_Select_Similar_Message"
+         />
+      </converter>
+      <converter key="P">
+         <target
+            name="dmzObjectPluginSelectSimilar"
+            message="Object_Select_Exact_Message"
+         />
       </converter>
    </channel>
 </key-messages>
@@ -242,6 +255,18 @@
          min="0"
          max="10000"
          step="5"
+      />
+      <property
+         type="scalar"
+         name="Report Probability"
+         attribute="Location_Probability"
+         default="0.2"
+         scale="100"
+         decimals="0"
+         min="0"
+         max="100"
+         step="1"
+         suffix="%"
       />
    </property-list>
 </location-properties>

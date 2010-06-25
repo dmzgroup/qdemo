@@ -65,5 +65,141 @@
          <particle-effect type="fire" scale="20"/>
       </render>
    </object-type>
-   </runtime>
+   <object-type name="vehicle">
+   </object-type>
+   <object-type name="ground-vehicle" parent="vehicle">
+   </object-type>
+   <object-type name="school-bus" parent="ground-vehicle">
+      <render>
+         <model resource="school-bus"/>
+      </render>
+   </object-type>
+   <object-type name="newsvan" parent="ground-vehicle">
+      <render>
+         <model resource="newsvan"/>
+      </render>
+   </object-type>
+   <object-type name="car" parent="ground-vehicle">
+      <render>
+         <model resource="car"/>
+      </render>
+   </object-type>
+   <object-type name="car-black" parent="car">
+      <render>
+         <model resource="car-black"/>
+      </render>
+   </object-type>
+   <object-type name="car-blue" parent="car">
+      <render>
+         <model resource="car-blue"/>
+      </render>
+   </object-type>
+   <object-type name="car-green" parent="car">
+      <render>
+         <model resource="car-green"/>
+      </render>
+   </object-type>
+   <object-type name="car-red" parent="car">
+      <render>
+         <model resource="car-red"/>
+      </render>
+   </object-type>
+   <object-type name="car-yellow" parent="car">
+      <render>
+         <model resource="car-yellow"/>
+      </render>
+   </object-type>
+   <object-type name="van" parent="ground-vehicle">
+      <render>
+         <model resource="van"/>
+      </render>
+   </object-type>
+   <object-type name="suv" parent="ground-vehicle">
+   </object-type>
+   <object-type name="suv-black" parent="suv">
+      <render>
+         <model resource="suv-black"/>
+      </render>
+   </object-type>
+   <object-type name="suv-blue" parent="suv">
+      <render>
+         <model resource="suv-blue"/>
+      </render>
+   </object-type>
+   <object-type name="suv-green" parent="suv">
+      <render>
+         <model resource="suv-green"/>
+      </render>
+   </object-type>
+   <object-type name="suv-red" parent="suv">
+      <render>
+         <model resource="suv-red"/>
+      </render>
+   </object-type>
+   <object-type name="suv-white" parent="suv">
+      <render>
+         <model resource="suv-white"/>
+      </render>
+   </object-type>
+   <object-type name="tardis">
+      <render>
+         <model resource="tardis"/>
+      </render>
+   </object-type>
+   <object-type name="truck" parent="ground-vehicle">
+      <render>
+         <model resource="truck"/>
+      </render>
+   </object-type>
+   <object-type name="truck-black" parent="truck">
+      <render>
+         <model resource="truck-black"/>
+      </render>
+   </object-type>
+   <object-type name="truck-blue" parent="truck">
+      <render>
+         <model resource="truck-blue"/>
+      </render>
+   </object-type>
+   <object-type name="truck-gold" parent="truck">
+      <render>
+         <model resource="truck-gold"/>
+      </render>
+   </object-type>
+   <object-type name="truck-green" parent="truck">
+      <render>
+         <model resource="truck-green"/>
+      </render>
+   </object-type>
+   <object-type name="truck-red" parent="truck">
+      <render>
+         <model resource="truck-red"/>
+      </render>
+   </object-type>
+   <object-type name="truck-white" parent="truck">
+      <render>
+         <model resource="truck-white"/>
+      </render>
+   </object-type>
+   <object-type name="truck-blue" parent="truck">
+      <render>
+         <model resource="truck-blue"/>
+      </render>
+   </object-type>
+   <object-type name="wagon" parent="ground-vehicle">
+      <render>
+         <model resource="wagon"/>
+      </render>
+   </object-type>
+   <object-type name="wagon-brown" parent="wagon">
+      <render>
+         <model resource="wagon-brown"/>
+      </render>
+   </object-type>
+   <object-type name="wagon-white" parent="wagon">
+      <render>
+         <model resource="wagon-white"/>
+      </render>
+   </object-type>
+</runtime>
 </dmz>

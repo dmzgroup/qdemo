@@ -24,6 +24,8 @@
       <attribute name="Last_Network_Value" contains="True"/>
       <attribute name="Object_Bounding_Volume_Radius_Attribute"/>
       <attribute name="Location_Text"/>
+      <attribute name="Object_Highlight_Attribute"/>
+      <attribute name="Object_Select_Attribute"/>
       <object-type-set>
          <object-type name="spectator" exclude="true"/>
       </object-type-set>
