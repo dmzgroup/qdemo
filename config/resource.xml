@@ -15,6 +15,16 @@
       <path value="../../assets/qdemo/images"/>
       <path value="./assets/"/>
    </search>
+   <resource name="DMZ Vehicle">
+      <render>
+         <articulate>
+            <attribute type="scalar" name="Entity_Wheel_Right_1" node="dmz_dof_wheel_fr" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Right_2" node="dmz_dof_wheel_br" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_1" node="dmz_dof_wheel_fl" axis="x"/>
+            <attribute type="scalar" name="Entity_Wheel_Left_2" node="dmz_dof_wheel_bl" axis="x"/>
+         </articulate>
+      </render>
+   </resource>
    <resource name="smoke" file="particle.png" path="images"/>
    <resource name="fire" file="particle.png" path="images"/>
    <resource name="city" file="city.ive"/>
@@ -35,6 +45,11 @@
    <resource name="cargo-ship" file="cship.ive"/>
    <resource name="school-bus" file="schoolbus_good.ive"/>
    <resource name="minivan" file="minivan_good.ive"/>
+   <resource name="police-car" file="police.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
    <resource name="newsvan" file="newsvan.ive"/>
    <resource name="car" file="nissan_primera_good.ive"/>
    <resource name="car-black" file="nissan_primera_good_black.ive"/>

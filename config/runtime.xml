@@ -70,6 +70,12 @@
    </object-type>
    <object-type name="ground-vehicle" parent="vehicle">
    </object-type>
+   <object-type name="police-car" parent="ground-vehicle">
+      <render>
+         <model resource="police-car"/>
+      </render>
+      <wheels pairs="2" radius="0.25"/>
+   </object-type>
    <object-type name="school-bus" parent="ground-vehicle">
       <render>
          <model resource="school-bus"/>
