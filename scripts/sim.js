@@ -21,13 +21,14 @@ var dmz =
   , RedState = dmz.defs.lookupState("Red")
   , YellowState = dmz.defs.lookupState("Yellow")
   , AllState = RedState.or(YellowState)
-  , MaxHeight = 250
-  , PlumeRate = 1
+  , MaxHeight = 80
+  , PlumeRate = 2
   , LinkAttr = dmz.defs.createNamedHandle("field-report")
   , TextAttr = dmz.defs.createNamedHandle("field-report-text")
   , NameAttr = dmz.defs.createNamedHandle("Location_Name")
   , PopulationAttr = dmz.defs.createNamedHandle("Location_Population")
   , CasualtiesAttr = dmz.defs.createNamedHandle("Location_Casualties")
+  , ProbablityAttr = dmz.defs.createNamedHandle("Location_Probability")
   , LocationType = dmz.objectType.lookup("location")
   , ReportType = dmz.objectType.lookup("field-report")
   , ReportPointType = dmz.objectType.lookup("field-report-point")
@@ -95,6 +96,7 @@ dmz.time.setRepeatingTimer(self, function (time) {
            , casualties
            , percent
            , state
+           , probability
            ;
 
          if (!obj.inPlume) {
@@ -103,8 +105,11 @@ dmz.time.setRepeatingTimer(self, function (time) {
 
                obj.inPlume = true;
 
-               if (Math.random() < 0.3) { createReport(obj); }
-               else { createReport(obj); }
+               probability = dmz.object.scalar(obj.handle, ProbablityAttr);
+
+               if (!probability) { probability = 0; }
+
+               if (Math.random() <= probability) { createReport(obj); }
             }
          }
 
@@ -133,8 +138,8 @@ dmz.time.setRepeatingTimer(self, function (time) {
                if (state) { state = state.unset(AllState); }
                else { state = dmz.mask.create(); }
 
-               if (percent > 20) { state = state.or(RedState); }
-               else if (percent > 10) { state = state.or(YellowState); }
+               if (percent > 80) { state = state.or(RedState); }
+               else if (percent > 50) { state = state.or(YellowState); }
 
                dmz.object.state(obj.report.top.handle, null, state);
 
@@ -208,7 +213,7 @@ dmz.object.flag.observe(self, "Plume_Source", function (object, attr, value) {
 
    if (value) {
 
-      plume = { handle: object, pos: dmz.object.position(object), radius: 500 };
+      plume = { handle: object, pos: dmz.object.position(object), radius: 320 };
 
       if (!plume.pos) { plume.pos = dmz.vector.create(); }
    }

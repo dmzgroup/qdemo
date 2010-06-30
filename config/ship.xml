@@ -1,39 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dmz>
 <archive>
-   <object type="cargo-ship">
+   <object type="cargo-ship" uuid="d25f152a-174d-4df3-a363-b67cd7ba6435">
       <attributes>
-         <position x="-803.55" y="-8.08" z="269.54"/>
-         <orientation
-            v0="1.0" v1="0.0" v2="0.0"
-            v3="0.0" v4="1.0" v5="0.0"
-            v6="0.0" v7="0.0" v8="1.0"
-         />
-         <velocity x="0.0" y="0.0" z="0.0"/>
-         <acceleration x="0.0" y="0.0" z="0.0"/>
+         <position x="-1213.440000" y="2.750000" z="591.170000"/>
+         <orientation v0="0.748956" v1="0.000000" v2="0.662620" v3="0.000000" v4="1.000000" v5="0.000000" v6="-0.662620" v7="0.000000" v8="0.748956"/>
       </attributes>
       <attributes name="Plume_Source">
          <flag value="true"/>
       </attributes>
    </object>
-   <object type="fire-object">
+   <object type="fire-object" uuid="62ccd876-97f7-4ae4-a097-11c3301f737f">
       <attributes>
-         <state value="Fire|Smoking"/>
-         <position x="-802.88" y="-6.48" z="241.96"/>
-         <orientation
-            v0="1.0" v1="0.0" v2="0.0"
-            v3="0.0" v4="1.0" v5="0.0"
-            v6="0.0" v7="0.0" v8="1.0"
-         />
-         <velocity x="0.0" y="0.0" z="0.0"/>
-         <acceleration x="0.0" y="0.0" z="0.0"/>
+         <state value="Smoking | Fire"/>
+         <position x="-1230.959538" y="6.000923" z="573.172788"/>
       </attributes>
    </object>
+<!--
    <object type="environment">
       <attributes name="Env_Wind_Direction">
          <vector x="2.5" y="0" z="-2.5"/>
       </attributes>
    </object>
+-->
 </archive>
 </dmz>
   

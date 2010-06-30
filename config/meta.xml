@@ -1,661 +1,289 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmz>
    <archive>
-      <object type="location" uuid="acdbe9f2-bc39-47fc-8565-f5dbe4b17813">
+      <object type="location" uuid="287310fe-35ff-46e8-81c0-9f00bbb6c469">
          <attributes>
-            <position x="-329.250140" y="168.574335" z="-133.405103"/>
+            <position x="-974.792879" y="11.651328" z="918.536274"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="National Bank"/>
+            <text value="City Park"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="2000.000000"/>
+            <scalar value="112.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="1.000000"/>
          </attributes>
       </object>
-      <object type="location" uuid="f1057b16-203c-4803-9cd7-a2af5253ea83">
+      <object type="location" uuid="8f08bcf7-5325-4ec3-a85c-f08a7b91819e">
          <attributes>
-            <position x="-268.066253" y="129.906986" z="25.547408"/>
+            <position x="-741.474997" y="41.253057" z="521.427202"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Hospital"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="212.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="1.000000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0e6f6469-fba2-48f2-943a-07cb3a906f54">
+         <attributes>
+            <position x="-980.855470" y="44.232863" z="185.064505"/>
          </attributes>
          <attributes name="Location_Name">
             <text value="Federal Building"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="5016.000000"/>
+            <scalar value="88.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.800000"/>
          </attributes>
       </object>
-      <object type="location" uuid="52a42463-64cf-4734-a662-57d5af4f0185">
+      <object type="location" uuid="0f850903-3e28-4829-8917-6b07a620370d">
          <attributes>
-            <position x="-298.659267" y="145.167725" z="188.140892"/>
+            <position x="-691.201062" y="34.526675" z="167.763091"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Building X"/>
+            <text value="Town Hall"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="500.000000"/>
+            <scalar value="56.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.900000"/>
          </attributes>
       </object>
-      <object type="location" uuid="1c8893b6-af65-4ed5-aa7e-b3802886f8ca">
+      <object type="location" uuid="45a31ae8-c751-4c4f-8714-91bad4a39230">
          <attributes>
-            <position x="-123.892403" y="131.046257" z="53.894191"/>
+            <position x="-947.161908" y="35.796871" z="2.356114"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="City Hall"/>
+            <text value="School"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="200.000000"/>
+            <scalar value="230.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.800000"/>
          </attributes>
       </object>
-      <object type="location" uuid="bdcdd333-b8a6-481b-a25e-4b3dcdd57f2d">
+      <object type="location" uuid="bf0fc00a-ace5-47f8-a873-ae9bc1c3eb32">
          <attributes>
-            <position x="-110.538964" y="181.220083" z="-12.336173"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Business Center"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="4012.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="0fb985dc-e1fd-45c0-b74d-8b67c0193f28">
-         <attributes>
-            <position x="-61.583945" y="170.593743" z="118.701383"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Big Corporation"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="1045.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="b75c6ded-8367-4266-9cc0-b0578c4f2fc4">
-         <attributes>
-            <position x="-107.802703" y="180.825807" z="257.040120"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="We B Rich Bank"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="4012.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="5406783f-ade7-4228-9d25-b6c7a66b13b7">
-         <attributes>
-            <position x="-183.996943" y="175.540162" z="237.273692"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Big Box Store"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="1500.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="593072fb-85cd-4ca2-926f-0bf39db2f644">
-         <attributes>
-            <position x="-42.754965" y="186.834712" z="350.716702"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Drug Company"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="540.000000"/>
-         </attributes>
-         <attributes name="Object_Highlight_Attribute">
-            <flag value="false"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="6b00edd8-b736-4cd7-9223-585eac5177c2">
-         <attributes>
-            <position x="53.371184" y="146.282243" z="226.655210"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Fire Station 1"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="20.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="6232c7ab-be86-4d09-8998-c1fac0939968">
-         <attributes>
-            <position x="43.824916" y="136.254766" z="324.184349"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Police"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="500.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="c31fdbb4-7af9-45a7-a431-4da0da0d6965">
-         <attributes>
-            <position x="10.200945" y="138.311269" z="409.375822"/>
+            <position x="-729.699668" y="40.851599" z="45.073218"/>
          </attributes>
          <attributes name="Location_Name">
             <text value="Apartments"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="300.000000"/>
+            <scalar value="56.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
          </attributes>
       </object>
-      <object type="location" uuid="147e3a22-066b-4e12-8b57-84e4468dfa7c">
+      <object type="location" uuid="3979b29b-448d-4b5f-a8ee-bfb97dbc8fb6">
          <attributes>
-            <position x="-234.742202" y="171.229142" z="433.313960"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="High Rise"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="5000.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="0094795a-53f5-4205-8f52-76e7fb3d49af">
-         <attributes>
-            <position x="-296.722220" y="126.064812" z="291.348059"/>
+            <position x="-882.150816" y="45.794893" z="436.762770"/>
          </attributes>
          <attributes name="Location_Name">
             <text value="Shipping Company"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="340.000000"/>
+            <scalar value="112.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
          </attributes>
       </object>
-      <object type="location" uuid="0262fe3b-742a-4517-aa5c-f8b8cba5b8fa">
+      <object type="location" uuid="d30747f6-6ba0-4bbb-8076-6e34cf70d451">
          <attributes>
-            <position x="49.281754" y="147.536253" z="85.180113"/>
+            <position x="-836.801066" y="42.214163" z="313.033504"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Import/Export Co"/>
+            <text value="Trading Company"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="500.000000"/>
+            <scalar value="78.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
          </attributes>
       </object>
-      <object type="location" uuid="e00581d1-dbec-4909-b0b7-7f564121cea4">
+      <object type="location" uuid="34b9652a-8efa-402a-8eab-ea92a253fea4">
          <attributes>
-            <position x="-9.644276" y="163.468741" z="-135.892278"/>
+            <position x="-1046.516967" y="30.427327" z="183.607505"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Port Authority"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="34.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c4774455-2306-4bc8-bb95-3ce6e25a5e04">
+         <attributes>
+            <position x="-810.704287" y="30.982783" z="222.314872"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Office Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="45.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="9f522592-6160-4196-abab-f29235695d46">
+         <attributes>
+            <position x="-788.873610" y="36.015105" z="465.818542"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Police Headquarters"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="112.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.900000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c0497434-7b87-4972-b886-812270e2c7fb">
+         <attributes>
+            <position x="-588.142455" y="45.572060" z="556.990274"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Nautical Museum"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="12.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="9493e6f2-d3b4-4330-9fdd-749b824e1b68">
+         <attributes>
+            <position x="-549.399197" y="35.453323" z="481.031064"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="International Trade Center"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="312.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5d0e4903-866c-4cd1-8bae-c7f45698e83b">
+         <attributes>
+            <position x="-877.325290" y="32.600243" z="131.032092"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Software Company"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="256.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.640000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c46e41f9-9b01-4341-9384-947fab9888c7">
+         <attributes>
+            <position x="-737.683401" y="45.077089" z="293.777086"/>
          </attributes>
          <attributes name="Location_Name">
             <text value="University"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="1024.000000"/>
+            <scalar value="312.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.600000"/>
          </attributes>
       </object>
-      <object type="location" uuid="c82c45b8-656a-4f15-b0ba-97ae024abcd3">
+      <object type="location" uuid="269d7184-7420-4790-b022-c6aaeef16054">
          <attributes>
-            <position x="229.248721" y="173.102404" z="217.054776"/>
+            <position x="-910.303305" y="32.764963" z="688.753357"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="High School"/>
+            <text value="Warehouse"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="500.000000"/>
+            <scalar value="12.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
          </attributes>
       </object>
-      <object type="location" uuid="c0083733-0973-41a5-ba44-2c1392700cd7">
+      <object type="location" uuid="d54d13fb-3109-4921-98ed-353547668d20">
          <attributes>
-            <position x="259.776713" y="117.889404" z="-12.374403"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Shopping Mall"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="500.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="ec8871d1-98c6-4b9a-8efb-741b0b5fbc62">
-         <attributes>
-            <position x="-128.163686" y="141.217279" z="-95.099370"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Shopping Mall"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="600.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="bf81a871-6146-44f9-909f-cdc6db816bef">
-         <attributes>
-            <position x="-401.374417" y="176.671859" z="-256.718757"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Finacial Center"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="8000.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="9aa24d71-69ff-4f29-9081-b8d6bd15ec54">
-         <attributes>
-            <position x="-168.754927" y="182.727292" z="-275.498480"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Engineering Co."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="600.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="3a66be8c-8b3c-426a-8a58-3ef824dda3e3">
-         <attributes>
-            <position x="-164.159068" y="168.902821" z="-190.367980"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Software Inc."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="602.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="953f061c-e2db-4329-be9e-a24ccf892143">
-         <attributes>
-            <position x="-196.797519" y="146.516111" z="45.358023"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="News Paper"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="300.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="eacef588-9983-48c1-9dd4-c9e61d0b9601">
-         <attributes>
-            <position x="-423.290770" y="64.627339" z="-202.398532"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Harbor Police"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="100.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="127977c4-7cdd-4d5f-a63b-99f3627ab7cc">
-         <attributes>
-            <position x="-301.267555" y="146.289422" z="115.134327"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Embassy"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="250.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="5d8507a5-6019-429b-aca5-b67690589f3b">
-         <attributes>
-            <position x="-243.443022" y="147.126700" z="-120.253516"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Car Co."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="5002.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="3c69f548-9272-43a4-aa05-fbbfaf246230">
-         <attributes>
-            <position x="-163.551020" y="138.596056" z="169.684005"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Bike Co."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="400.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="193294c1-0547-4a05-9b6e-9f01ee7cec35">
-         <attributes>
-            <position x="-512.259080" y="56.695184" z="-187.682538"/>
+            <position x="-868.709728" y="44.818662" z="549.190879"/>
          </attributes>
          <attributes name="Location_Name">
             <text value="Office Building"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="214.000000"/>
+            <scalar value="54.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
          </attributes>
       </object>
-      <object type="location" uuid="1ead64e0-8c06-4dcc-89ac-47d08aa007cc">
+      <object type="location" uuid="8e7a0506-c120-435f-9226-7259148f95a8">
          <attributes>
-            <position x="-506.078508" y="150.742426" z="-239.164130"/>
+            <position x="-1166.122331" y="46.609315" z="218.326827"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Apartment"/>
+            <text value="High-rise Apartments"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="64.000000"/>
+            <scalar value="32.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
          </attributes>
       </object>
-      <object type="location" uuid="e2348126-6bbf-454d-9879-8427abebd8e0">
+      <object type="location" uuid="68343060-d91c-4ad2-9fcf-492a4aac12cc">
          <attributes>
-            <position x="-431.825403" y="71.062009" z="-440.060511"/>
+            <position x="-921.690488" y="45.516004" z="-383.237702"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Taxi Co"/>
+            <text value="Prison"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="500.000000"/>
+            <scalar value="612.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.300000"/>
          </attributes>
       </object>
-      <object type="location" uuid="79cdbe2d-a33e-437a-accd-e6421cffac89">
+      <object type="location" uuid="6b327b07-6953-4411-8bfc-e4323f5aed83">
          <attributes>
-            <position x="-197.532088" y="176.948955" z="-455.433597"/>
+            <position x="-683.413181" y="39.887228" z="-121.612365"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Bank"/>
+            <text value="Shopping Mall"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="534.000000"/>
+            <scalar value="303.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.600000"/>
          </attributes>
       </object>
-      <object type="location" uuid="5c11a17d-0c02-413b-bc87-676eb9aa149b">
+      <object type="location" uuid="5e16bc4c-1ac8-4b5e-a64e-74a2a5fc4d4d">
          <attributes>
-            <position x="-203.309798" y="79.719464" z="-422.099186"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Business Center"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="679.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="79aad09a-ba45-4287-9e59-e548009cdda7">
-         <attributes>
-            <position x="117.433292" y="123.613274" z="18.280039"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Shipping Co."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="600.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="814a8197-c61c-4ee5-ac79-8dab3b306b61">
-         <attributes>
-            <position x="396.727335" y="198.587275" z="146.620277"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="40.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="9a72abb1-2f10-4f52-bab6-8f0799dcdc91">
-         <attributes>
-            <position x="77.644936" y="106.828857" z="-343.702818"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="40.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="fa3b12c2-08ea-4f88-bf1f-47d0776640d0">
-         <attributes>
-            <position x="-261.210710" y="126.916859" z="502.824590"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="School"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="130.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="7b21bb02-bee9-4abe-9e7b-df6b3291d0b8">
-         <attributes>
-            <position x="-236.610049" y="168.285884" z="-468.418004"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="School"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="150.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="3964a366-2f4d-40cc-b693-87bf2625f463">
-         <attributes>
-            <position x="182.485850" y="199.448717" z="429.004556"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Office Building"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="5000.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="0419bb36-12d5-4270-8584-8cbcaa010afb">
-         <attributes>
-            <position x="338.819136" y="184.828478" z="431.603918"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="50.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="2adc5769-ad08-4892-8b00-618a150bed3d">
-         <attributes>
-            <position x="-125.432272" y="173.956167" z="501.331531"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="40.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="59616f58-9cfc-4ab4-a2ef-a0d7c6619d3b">
-         <attributes>
-            <position x="-7.011750" y="137.134270" z="21.695286"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment 30"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="100.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="5175e2eb-b90b-46c0-881c-aea0097289e2">
-         <attributes>
-            <position x="152.203389" y="188.338857" z="-121.128531"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="News Paper"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="230.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="29167646-d4b4-4078-bdf1-fd5e14963a19">
-         <attributes>
-            <position x="-235.954539" y="126.604486" z="-10.795141"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Port Athority"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="130.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="c1499f5e-e067-4232-9c3b-7572c771e113">
-         <attributes>
-            <position x="133.960466" y="180.797464" z="-528.417568"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Trade School"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="100.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="fe069ac4-d53d-4fb2-a5fb-bf04074832e7">
-         <attributes>
-            <position x="277.996454" y="170.352177" z="50.254166"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Some other location"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="600.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="b6fe3fa1-644c-457b-af70-402197e46344">
-         <attributes>
-            <position x="101.237918" y="176.397208" z="553.205940"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Enertainment Building"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="230.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="35989938-8de4-44e0-859e-c0d706053a33">
-         <attributes>
-            <position x="-669.047322" y="145.341916" z="-228.734019"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Tading Co."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="100.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="0d394fd2-62fd-4172-8b2e-8d415d7d5c91">
-         <attributes>
-            <position x="-613.266264" y="190.837150" z="-341.676917"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Trade Center"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="340.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="fabbb375-1bda-4b7a-ae92-db3f7b5d4198">
-         <attributes>
-            <position x="-736.699335" y="184.788198" z="-252.447826"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="30.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="b08654f7-53ff-44ce-8072-8fc6b82dcebc">
-         <attributes>
-            <position x="-716.558406" y="193.813842" z="-356.084529"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="school"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="140.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="c9dab16e-9f72-4b4f-8eec-c85032b3b29b">
-         <attributes>
-            <position x="-830.614080" y="190.976886" z="-433.900795"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Universtiy"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="100.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="bc5cf50b-a686-49aa-a022-350b14475eb2">
-         <attributes>
-            <position x="-576.984405" y="176.543952" z="-570.846346"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Bank"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="120.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="f1322168-20aa-4b12-9bc9-fb8bbb76f73e">
-         <attributes>
-            <position x="-345.052189" y="170.348628" z="-481.649431"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Trade Center"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="1200.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="8770366d-6689-4a10-b9b5-a842eaab1506">
-         <attributes>
-            <position x="-555.992578" y="174.965576" z="-242.890563"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Big Company"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="304.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="284d910d-3e38-4f27-8b99-f2f0fcf7a406">
-         <attributes>
-            <position x="-358.216033" y="158.621194" z="-623.602164"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Tire Company"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="450.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="59fa0a73-4154-408b-a095-2c71d5b5716c">
-         <attributes>
-            <position x="-538.449081" y="176.421370" z="-461.281231"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Apartment"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="34.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="20dc2901-0b44-43a0-bfc2-6c4944ac1a00">
-         <attributes>
-            <position x="-693.388609" y="181.962911" z="-655.194183"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Some Place"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="3.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="0e5587b7-3b53-4dc9-a6e0-969a2ebe0f36">
-         <attributes>
-            <position x="-653.684177" y="192.008653" z="-725.409741"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Crime Inc."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="123.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="d4a847db-53e1-44df-9ac7-72bdfd446d90">
-         <attributes>
-            <position x="-809.991237" y="191.379139" z="-554.649748"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Macrohard Inc."/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="1234.000000"/>
-         </attributes>
-      </object>
-      <object type="location" uuid="d1c1224c-ec1d-4234-82f7-50d5f3d719a4">
-         <attributes>
-            <position x="-881.549630" y="194.458218" z="-280.489868"/>
+            <position x="-782.038477" y="43.359042" z="-23.827072"/>
          </attributes>
          <attributes name="Location_Name">
             <text value="Apartments"/>
@@ -663,71 +291,764 @@
          <attributes name="Location_Population">
             <scalar value="45.000000"/>
          </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
       </object>
-      <object type="location" uuid="c22f50a6-f035-428b-82e8-5e2454ef5493">
+      <object type="location" uuid="4e0e1cd3-7d3b-4ee4-917a-9c6326c7ec35">
          <attributes>
-            <position x="-388.872681" y="167.849844" z="-132.397713"/>
+            <position x="-645.249905" y="33.262083" z="466.050099"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Skinny Building"/>
+            <text value="Office Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="208.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.300000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="a83ebe2d-ba9c-48d3-b559-835e60e77b14">
+         <attributes>
+            <position x="-826.059297" y="28.576048" z="389.848595"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Embassy"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="45.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.800000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="9802bcd9-a9b2-4cab-86eb-e1506e29211f">
+         <attributes>
+            <position x="-653.247793" y="41.244122" z="718.497402"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Ship Builders Inc.,"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="88.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="7ca0383a-5019-46fe-b53a-3cd4999a8a18">
+         <attributes>
+            <position x="-960.448249" y="29.498852" z="798.856358"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Public Library"/>
          </attributes>
          <attributes name="Location_Population">
             <scalar value="24.000000"/>
          </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
       </object>
-      <object type="location" uuid="8c5f5f10-bd85-42fd-a551-7cc6ef678910">
+      <object type="location" uuid="6ec83afa-452c-4081-850a-e84fcbc8a2c6">
          <attributes>
-            <position x="-209.683751" y="76.385600" z="-355.275100"/>
+            <position x="-874.273224" y="38.182718" z="777.976244"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Small Building"/>
+            <text value="State Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="34.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.700000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="a626af0d-4b89-4d3b-b11a-85383d9341f4">
+         <attributes>
+            <position x="-776.107447" y="41.217262" z="790.979047"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Natural History Museum"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="56.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c3b0c2ee-0367-4976-b5bf-7809cffa3b2f">
+         <attributes>
+            <position x="-888.712593" y="46.282735" z="634.553702"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Financial Company"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="120.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="6b1ecc01-d997-4e31-897c-227397404174">
+         <attributes>
+            <position x="-532.781892" y="42.124765" z="51.657742"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="School"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="200.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.800000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5a3e79c0-444d-4474-af29-4b78cf4fa6a0">
+         <attributes>
+            <position x="-1134.739164" y="42.546847" z="68.920106"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Office Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5af09912-bd9e-4397-a2f2-8bb075fbf700">
+         <attributes>
+            <position x="-1376.332462" y="37.057723" z="184.422529"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Stock Exchange"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="156.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.900000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="ca9e7f40-c680-4dfa-af24-c4f0318b2179">
+         <attributes>
+            <position x="-1301.690321" y="28.728960" z="201.621811"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Apartments"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="38.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.300000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="a8a7f0d8-4581-4019-a9b1-c2e81f3fcfd9">
+         <attributes>
+            <position x="-1229.370141" y="32.541899" z="164.701312"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Hospital"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.900000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="181e96c8-1c87-40e3-962e-f0760ad6bc2f">
+         <attributes>
+            <position x="-683.161411" y="44.162801" z="358.643226"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Financial Institution"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="120.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="b3ce99e1-2902-4f6d-8344-6cc889cd9db4">
+         <attributes>
+            <position x="-774.258880" y="45.407460" z="405.238137"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="City College"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="340.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.700000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="41ecba6a-5e42-4561-a9b9-2a9725fd1fbe">
+         <attributes>
+            <position x="-763.451984" y="36.017557" z="592.699459"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Fire Station"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="32.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.800000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c64c6c71-7960-408b-bb40-25b6d9f1e044">
+         <attributes>
+            <position x="-1150.746103" y="38.042474" z="159.578283"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Office Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="240.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="c79de05f-8278-4243-9ada-f12cbe300f1e">
+         <attributes>
+            <position x="-1061.958922" y="43.446511" z="50.434084"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="TV Station"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="112.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.700000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="3a4119cf-e2dd-4ee3-89cd-1cb2eb18ac22">
+         <attributes>
+            <position x="-957.139757" y="41.904654" z="55.375341"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="City Records"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="12.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="54207fd4-b011-437b-bf4d-30160ec21303">
+         <attributes>
+            <position x="-872.451463" y="34.041776" z="29.301058"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="DMV"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="141.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.900000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="e9119869-d19a-4a44-a4c9-acad5bc48e76">
+         <attributes>
+            <position x="-653.458575" y="42.984382" z="248.835767"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Public Works"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="400.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.900000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="dd1dd51d-5bde-408d-92f4-eeaf78ac926e">
+         <attributes>
+            <position x="-908.244668" y="38.101749" z="-146.896331"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Police Station"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="120.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.600000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="6fd13094-9002-487d-87c7-971757feae0b">
+         <attributes>
+            <position x="-553.084405" y="34.874912" z="298.829637"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Grocery Store"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="57.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="a0521739-3500-409e-a4ed-4e3edc24c0e9">
+         <attributes>
+            <position x="-664.342752" y="29.645086" z="539.111214"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Big Box Store"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="115.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="8b4a740f-cf8a-404a-922d-e3492bac8892">
+         <attributes>
+            <position x="-469.239948" y="39.029812" z="518.374792"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Big Cylinder Store"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="78.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0c9f6c44-e95e-46f2-966d-1ed61267ea58">
+         <attributes>
+            <position x="-515.779990" y="48.760296" z="357.266561"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="High School"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="234.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.600000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="a2801389-37be-44cd-8758-a077e073355f">
+         <attributes>
+            <position x="-577.961193" y="46.364883" z="209.842065"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Junior High School"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="320.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.600000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="4acde400-ea28-48da-9c83-9788e27889ab">
+         <attributes>
+            <position x="-713.677120" y="45.299575" z="227.052542"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Tourism Center"/>
          </attributes>
          <attributes name="Location_Population">
             <scalar value="100.000000"/>
          </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
       </object>
-      <object type="location" uuid="397c5df4-09e2-4911-b95d-b60ff5b4b8be">
+      <object type="location" uuid="535ddfcc-63da-4c87-b21d-b0f537ceab2c">
          <attributes>
-            <position x="-727.832180" y="59.787585" z="-522.279432"/>
+            <position x="-1023.948320" y="41.480677" z="-27.910165"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Apartment"/>
+            <text value="Transportation Center"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="2340.000000"/>
+            <scalar value="210.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
          </attributes>
       </object>
-      <object type="location" uuid="f8c70f6d-40a9-46dc-b107-3d60d7a4c7cb">
+      <object type="location" uuid="33f334a1-1786-4881-85e9-b6e59ecdc9ab">
          <attributes>
-            <position x="-527.725359" y="114.254759" z="-410.017548"/>
+            <position x="-1102.703459" y="27.351358" z="-43.646542"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Retirement Home"/>
+            <text value="City Planning"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="36.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0e348472-338f-4113-a3a7-2abb5e14e06d">
+         <attributes>
+            <position x="-1210.824728" y="42.327754" z="119.751656"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Assisted Living Center"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="400.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="27025157-bd10-4cec-8e2b-727c41679a8c">
+         <attributes>
+            <position x="-802.819318" y="48.426179" z="125.880974"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Movie Studio"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.600000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="1e52dc06-be76-48c3-894e-e0251356d367">
+         <attributes>
+            <position x="-743.225570" y="38.642652" z="662.475359"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Car Dealership"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="23.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d9e71965-bafd-4ce8-bad7-b64353eb0d8b">
+         <attributes>
+            <position x="-564.646749" y="38.097566" z="645.561636"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Waste Management"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="67.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="ee67f132-969e-4e0c-8c5a-d3fe18086ba7">
+         <attributes>
+            <position x="-704.578319" y="37.492671" z="415.998478"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Night School"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="2.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="5fb2f31c-5d6c-4b60-86ff-8e964add3f31">
+         <attributes>
+            <position x="-745.363946" y="36.396648" z="146.000642"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Court House"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="87.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.500000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="71b5f656-a79a-4a27-a405-47b6ab2b1631">
+         <attributes>
+            <position x="-654.889486" y="40.110499" z="81.483078"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Theater"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="20.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="55fe7676-5a2d-4ff4-9044-5443cfe41696">
+         <attributes>
+            <position x="-804.341881" y="45.163750" z="509.496420"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Opera House"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="30.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="0029a6cc-544d-4a4c-a76c-b26f4a690f4d">
+         <attributes>
+            <position x="-933.531379" y="40.124863" z="-40.356199"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Business School"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="145.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="bb95367f-389a-4312-a5ac-e5127a119a0c">
+         <attributes>
+            <position x="-858.050493" y="29.897086" z="-11.159370"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Apartments"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="45.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="2a7f9774-2ea4-4b7a-9678-a2cb02d65952">
+         <attributes>
+            <position x="-828.651751" y="34.127358" z="-108.495306"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Apartments"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="34.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="8cf82fc1-5407-4541-a8ec-400fa160bf51">
+         <attributes>
+            <position x="-789.931774" y="36.334822" z="-178.432603"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Government Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="230.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="4c71e668-49af-40a9-89ec-c1be72fcdba3">
+         <attributes>
+            <position x="-636.278348" y="45.957290" z="9.349225"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Movie Theater Megaplex"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.500000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="6e1c4109-4953-4c08-91e4-b4d7a37b15e4">
+         <attributes>
+            <position x="-436.675152" y="41.983752" z="402.910043"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Meag Store"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="128.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.300000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="3d135582-4c90-492e-8213-c299067b6007">
+         <attributes>
+            <position x="-652.875707" y="40.133374" z="797.300468"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Computer Company"/>
          </attributes>
          <attributes name="Location_Population">
             <scalar value="100.000000"/>
          </attributes>
-      </object>
-      <object type="location" uuid="ee8bb1b5-a1e2-4e69-8c45-032db67e738b">
-         <attributes>
-            <position x="-400.246076" y="129.274785" z="-581.707191"/>
-         </attributes>
-         <attributes name="Location_Name">
-            <text value="Building"/>
-         </attributes>
-         <attributes name="Location_Population">
-            <scalar value="2340.000000"/>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
          </attributes>
       </object>
-      <object type="location" uuid="c69e646d-d7c1-4758-8937-8b3daf23051f">
+      <object type="location" uuid="d2d2a48b-e29a-49ed-bbca-f9027b26fb04">
          <attributes>
-            <position x="-344.803946" y="109.898544" z="441.660221"/>
+            <position x="-740.804817" y="48.469955" z="1059.685802"/>
          </attributes>
          <attributes name="Location_Name">
-            <text value="Rich People"/>
+            <text value="Water Station"/>
          </attributes>
          <attributes name="Location_Population">
-            <scalar value="459.000000"/>
+            <scalar value="34.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.500000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d7ab9c7e-ec6c-4123-9386-0c50918bede7">
+         <attributes>
+            <position x="-105.660959" y="40.183521" z="1023.390647"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Power Company"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="100.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d187ed78-4990-489d-a126-9e0b8844dda3">
+         <attributes>
+            <position x="-548.730202" y="28.146049" z="822.753863"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Un-boxed Store"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="200.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d495a180-c625-4e41-88a0-8e201e9585fa">
+         <attributes>
+            <position x="-473.993513" y="36.742806" z="708.053506"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Government Building"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="219.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="31050d18-dc85-4dd6-84e2-79709c60626e">
+         <attributes>
+            <position x="-411.028433" y="52.282672" z="559.841918"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Transportation Authority"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="84.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="fc74bb84-9c35-4904-b9c5-b524bf842b4d">
+         <attributes>
+            <position x="-274.076013" y="49.237373" z="443.351376"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Apartments"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="34.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.200000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="43246e31-e827-41db-b716-6b910bf6b9f3">
+         <attributes>
+            <position x="-511.119429" y="41.386821" z="263.752333"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Shoe Store"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="18.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="d16140f9-895b-4f42-9ab5-b7596a2953e2">
+         <attributes>
+            <position x="-407.527789" y="41.372268" z="219.155188"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Consumer Products Company"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="300.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.400000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="538e6776-3cfe-4224-8a47-63e832b7a32a">
+         <attributes>
+            <position x="-544.640254" y="35.048181" z="114.900549"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Mass Transit Station"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="167.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.300000"/>
+         </attributes>
+      </object>
+      <object type="location" uuid="9d7d240a-103c-4ae8-8119-d3db780decfe">
+         <attributes>
+            <position x="-995.387933" y="31.666677" z="-168.741197"/>
+         </attributes>
+         <attributes name="Location_Name">
+            <text value="Apartments"/>
+         </attributes>
+         <attributes name="Location_Population">
+            <scalar value="23.000000"/>
+         </attributes>
+         <attributes name="Location_Probability">
+            <scalar value="0.100000"/>
          </attributes>
       </object>
    </archive>
