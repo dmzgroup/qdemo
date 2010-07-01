@@ -75,7 +75,7 @@
       <render>
          <model resource="police-car"/>
       </render>
-      <wheels pairs="2" radius="0.25"/>
+      <wheels pairs="2" radius="0.34"/>
    </object-type>
    <object-type name="school-bus" parent="ground-vehicle">
       <render>

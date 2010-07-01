@@ -53,5 +53,29 @@
          <color name="text color"/>
       </node>
    </node>
+   <node type="switch" name="measure switch">
+      <node type="transform" name="measure layout">
+         <node type="text">
+           <text value="Measure Tool"/>
+           <position x="-4" y="26"/>
+           <alignment value="right"/>
+           <font resource="spectator font"/>
+           <height value="16"/>
+           <color name="text color"/>
+         </node>
+         <node type="text" name="measure text">
+           <text value=""/>
+           <position x="-4" y="6"/>
+           <alignment value="right"/>
+           <font resource="spectator font"/>
+           <height value="16"/>
+           <color name="text color"/>
+         </node>
+      </node>
+   </node>
+   <layout node="measure layout">
+      <x type="relative" value="1"/>
+      <y type="relative" value="0"/>
+   </layout>
 </overlay>
 </dmz>

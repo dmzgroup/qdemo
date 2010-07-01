@@ -44,6 +44,11 @@
          </text>
       </render>
    </object-type>
+   <object-type name="bread-crumb">
+      <render>
+         <model resource="bread-crumb"/>
+      </render>
+   </object-type>
 </runtime>
 <key-messages>
    <channel>
