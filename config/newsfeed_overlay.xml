@@ -63,7 +63,7 @@
    </auto-scale>
    <node type="transform" name="breaking text transform">
       <node type="text" name="breaking text">
-         <text value="THIS IS WHAT IS HAPPENING!"/>
+         <text value="CONTAINER SHIP ENGULFED IN FLAMES"/>
          <alignment value="center"/>
          <font resource="news ticker font"/>
          <color name="ticker text color"/>

@@ -20,6 +20,7 @@
    <plugin name="dmzInputPluginMouseEventToMessage" unique="move-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="create-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="delete-object"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="measure-tool"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
    <plugin name="dmzMBRAPluginPropertyEditor" scope="location-properties"/>
    <plugin name="dmzToolsPluginSelectObjectType"/>
@@ -30,6 +31,7 @@
    <instance name="move"/>
    <instance name="create"/>
    <instance name="delete"/>
+   <instance name="measure"/>
    <instance name="breadCrumbs"/>
 </javascript>
 <runtime>
@@ -71,6 +73,7 @@
       <channel name="move-tool"/> 
       <channel name="create-tool"/> 
       <channel name="delete-tool"/> 
+      <channel name="measure-tool"/> 
       <channel name="location-tool"/> 
 <!--
       <channel name="create-tool"/> 
@@ -96,6 +99,11 @@
    <channel name="delete-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Delete"/>
+      </attribute>
+   </channel>
+   <channel name="measure-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Measure"/>
       </attribute>
    </channel>
    <channel name="location-tool" message="Update_Tool_Name"> 
@@ -214,6 +222,41 @@
       </state>
    </converter>
 </delete-object>
+<measure-tool>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+      <channel name="measure-tool"/>
+   </input>
+   <activate message="Activate_Measure_Tool_Message"/>
+   <deactivate message="Deactivate_Measure_Tool_Message"/>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="pressed"
+               message="First_Measure_Message"
+               next="next"
+         >
+            <attribute type="position" name="vector"/>
+         </condition>
+      </state>
+      <state name="next" type="basic">
+         <condition
+               result="position"
+               action="moved"
+               message="Measure_Message"
+         >
+            <attribute type="position" name="vector"/>
+         </condition>
+         <condition
+               button="1"
+               action="released"
+               next="first"
+         />
+      </state>
+   </converter>
+</measure-tool>
 <create-location-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
