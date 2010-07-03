@@ -120,8 +120,12 @@
 <mouse-move-event>
    <input>
       <source name="DMZ_Render_Main_Portal"/>
+      <channel name="select-tool"/>
+      <channel name="delete-tool"/>
+      <channel name="location-tool"/>
    </input>
    <target name="dmzObjectPluginHighlight"/>
+   <deactivate message="Object_Highlight_Deactivate_Message"/>
    <converter start="first">
       <state name="first" type="basic">
          <condition

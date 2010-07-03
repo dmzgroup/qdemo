@@ -71,7 +71,25 @@
    </object-type>
    <object-type name="ground-vehicle" parent="vehicle">
    </object-type>
-   <object-type name="police-car" parent="ground-vehicle">
+   <object-type name="emergency-vehicle" parent="ground-vehicle">
+      <net>
+         <enum value="1.1"/>
+         <state name="Dead" mask="0x001"/>
+         <state name="Smoking" mask="0x002"/>
+         <state name="Fire" mask="0x004"/>
+         <rule type="heartbeat" value="2.0"/>
+         <rule type="zero-velocity"/>
+         <rule type="rate-limit"/>
+         <rule type="skew" value="1.0"/>
+         <rule type="orientation"/>
+         <rule type="velocity"/>
+         <rule type="state"/>
+      </net>
+   </object-type>
+   <object-type name="police-car" parent="emergency-vehicle">
+      <net>
+         <enum value="1.1.1"/>
+      </net>
       <render>
          <model resource="police-car"/>
       </render>
