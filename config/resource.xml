@@ -36,7 +36,8 @@
    <resource name="field-report-yellow" file="frtop_yellow.ive"/>
    <resource name="field-report-red" file="frtop_red.ive"/>
    <resource name="field-report-point" file="frbottom.ive"/>
-   <resource name="bread-crumb" file="breadcrumb.ive"/>
+   <resource name="bread-crumb" file="red_cube.ive"/>
+   <resource name="path-node" file="green_cube.ive"/>
    <resource name="news ticker font" file="communist.ttf" path="font"/>
    <resource name="spectator font" file="communist.ttf" path="font"/>
    <resource name="live" file="LIVE.png" path="images"/>

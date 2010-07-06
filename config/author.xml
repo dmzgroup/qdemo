@@ -21,6 +21,7 @@
    <plugin name="dmzInputPluginMouseEventToMessage" unique="create-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="delete-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="measure-tool"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="path-tool"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
    <plugin name="dmzMBRAPluginPropertyEditor" scope="location-properties"/>
    <plugin name="dmzToolsPluginSelectObjectType"/>
@@ -32,6 +33,7 @@
    <instance name="create"/>
    <instance name="delete"/>
    <instance name="measure"/>
+   <instance name="path"/>
    <instance name="breadCrumbs"/>
 </javascript>
 <runtime>
@@ -47,6 +49,11 @@
    <object-type name="bread-crumb">
       <render>
          <model resource="bread-crumb"/>
+      </render>
+   </object-type>
+   <object-type name="path">
+      <render>
+         <model resource="path-node"/>
       </render>
    </object-type>
 </runtime>
@@ -79,6 +86,7 @@
       <channel name="create-tool"/> 
       <channel name="delete-tool"/> 
       <channel name="measure-tool"/> 
+      <channel name="path-tool"/> 
       <channel name="location-tool"/> 
 <!--
       <channel name="create-tool"/> 
@@ -111,6 +119,11 @@
          <element value="Measure"/>
       </attribute>
    </channel>
+   <channel name="path-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Path"/>
+      </attribute>
+   </channel>
    <channel name="location-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Location"/>
@@ -122,6 +135,7 @@
       <source name="DMZ_Render_Main_Portal"/>
       <channel name="select-tool"/>
       <channel name="delete-tool"/>
+      <channel name="path-tool"/>
       <channel name="location-tool"/>
    </input>
    <target name="dmzObjectPluginHighlight"/>
@@ -266,6 +280,27 @@
       </state>
    </converter>
 </measure-tool>
+<path-tool>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+      <channel name="path-tool"/>
+   </input>
+   <deactivate message="Deactivate_Path_Tool_Message"/>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="position"
+               action="released"
+               message="Object_Path_Message"
+               next="first"
+         >
+            <attribute type="object" name="handle"/>
+            <attribute type="position" name="vector"/>
+         </condition>
+      </state>
+   </converter>
+</path-tool>
 <create-location-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>

@@ -30,6 +30,7 @@
       <glyph value="true"/>
    </object-type>
    <object-type name="bread-crumb" parent="glyph"/>
+   <object-type name="path" parent="glyph"/>
    <object-type name="measure-node" parent="glyph"/>
    <object-type name="environment"/>
    <object-type name="location" parent="glyph"/>
