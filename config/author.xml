@@ -8,7 +8,7 @@
    <plugin name="dmzObjectPluginUndo"/>
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
-   <plugin name="dmzInputPluginChannelSwitch" scope="tool-switch"/>
+   <plugin name="dmzInputPluginChannelSwitch" scope="tool-name"/>
    <plugin name="dmzInputPluginChannelMessage" scope="tool-name"/>
    <plugin name="dmzObjectModuleSelectBasic"/>
    <plugin name="dmzObjectPluginHighlight"/>
@@ -52,6 +52,7 @@
       </render>
    </object-type>
    <object-type name="path">
+      <center-offset y="0.15"/>
       <render>
          <model resource="path-node"/>
       </render>
@@ -79,20 +80,6 @@
       </converter>
    </channel>
 </key-messages>
-<tool-switch> 
-   <switch> 
-      <channel name="select-tool"/> 
-      <channel name="move-tool"/> 
-      <channel name="create-tool"/> 
-      <channel name="delete-tool"/> 
-      <channel name="measure-tool"/> 
-      <channel name="path-tool"/> 
-      <channel name="location-tool"/> 
-<!--
-      <channel name="create-tool"/> 
--->
-   </switch> 
-</tool-switch>
 <tool-name>
    <channel name="select-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">

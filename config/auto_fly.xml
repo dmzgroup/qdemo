@@ -12,9 +12,7 @@
    </input>
 </freefly>
 <spectator-switch>
-   <switch>
-      <channel name="freefly"/>
-      <channel name="bread-crumb-follow"/>
-   </switch>
+   <channel name="freefly"/>
+   <channel name="bread-crumb-follow"/>
 </spectator-switch>
 </dmz>
