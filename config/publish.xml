@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<plugin-list>
+   <plugin name="dmzPluginConsole"/>
+</plugin-list>
+<javascript>
+   <instance name="publish"/>
+</javascript>
+</dmz>
+

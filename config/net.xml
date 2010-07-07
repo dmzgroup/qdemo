@@ -22,16 +22,15 @@
    <packet id="1" name="NetCodecVehicle">
       <object-type name="emergency-vehicle"/>
    </packet>
-<!--
-   <packet id="2" name="NetCodecGlyph">
-      <object-type name="glyph"/>
+   <packet id="2" name="NetCodecReport">
+      <object-type name="field-report"/>
    </packet>
--->
    <packet id="3" name="NetCodecDetonation">
       <event-type name="Event_Detonation"/>
    </packet>
    <plugin-list>
       <plugin name="dmzNetExtPacketCodecObjectNative" unique="NetCodecVehicle"/>
+      <plugin name="dmzNetExtPacketCodecObjectNative" unique="NetCodecReport"/>
       <plugin name="dmzNetExtPacketCodecEventNative" unique="NetCodecDetonation"/>
    </plugin-list>
 </dmzNetModulePacketCodecBasic>
@@ -41,6 +40,11 @@
    <adapter type="velocity" lnv="true"/>
    <adapter type="state" lnv="true"/>
 </NetCodecVehicle>
+<NetCodecReport>
+   <adapter type="position" lnv="true"/>
+   <adapter type="state" lnv="true"/>
+   <adapter type="text" attribute="field-report-text" lnv="true"/>
+</NetCodecReport>
 <NetCodecDetonation>
    <adapter type="id" attribute="Event_Source_Attribute"/>
    <adapter type="id" attribute="Event_Target_Attribute"/>

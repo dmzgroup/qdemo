@@ -35,14 +35,16 @@
    <object-type name="environment"/>
    <object-type name="location" parent="glyph"/>
    <object-type name="field-report" parent="glyph">
-      <render>
-         <model resource="field-report"/>
-         <model resource="field-report-yellow" state="Yellow"/>
-         <model resource="field-report-red" state="Red"/>
-         <text font="news ticker font" height="10" attribute="field-report-text">
-            <offset y="5"/>
-         </text>
-      </render>
+      <net>
+         <enum value="2.1"/>
+         <state name="Yellow" mask="0x001"/>
+         <state name="Red" mask="0x002"/>
+         <rule type="heartbeat" value="2.0"/>
+         <rule type="rate-limit"/>
+         <rule type="skew" value="1.0"/>
+         <rule type="state"/>
+         <rule type="text" attribute="field-report-text"/>
+      </net>
    </object-type>
    <object-type name="field-report-point" parent="glyph">
       <center-offset y="5"/>

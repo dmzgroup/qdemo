@@ -29,8 +29,8 @@ http.createServer(function (req, res) {
             res.end();
          }
      });
+
      res.connection.addListener("end", function() { log("end"); });
-//     res.end();
   }
 
 }).listen(8124, "127.0.0.1");

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+<runtime>
+   <object-type name="field-report">
+      <render>
+         <model resource="field-report"/>
+         <model resource="field-report-yellow" state="Yellow"/>
+         <model resource="field-report-red" state="Red"/>
+         <text font="news ticker font" height="10" attribute="field-report-text">
+            <offset y="5"/>
+         </text>
+      </render>
+   </object-type>
+</runtime>
+</dmz>
