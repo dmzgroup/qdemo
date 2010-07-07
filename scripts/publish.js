@@ -39,7 +39,7 @@ dmz.object.create.observe(self, function (handle, type) {
       obj = {};
 
       obj.position = dmz.object.position(handle);
-      obj.text = "";
+      obj.text = dmz.object.text(handle, "field-report-text");
 
       reports[handle] = obj;
    }
@@ -64,7 +64,6 @@ dmz.object.position.observe(self, function (handle, attr, value) {
 });
 
 
-/*!
 dmz.object.state.observe(self, function (handle, attr, value) {
 
    var obj = reports[handle]
@@ -72,7 +71,6 @@ dmz.object.state.observe(self, function (handle, attr, value) {
 
    if (obj) { obj.state = value; }
 });
-*/
 
 
 dmz.object.text.observe(self, "field-report-text", function (handle, attr, value) {
