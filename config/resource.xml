@@ -47,12 +47,42 @@
    <resource name="cargo-ship" file="cship.ive"/>
    <resource name="school-bus" file="schoolbus_good.ive"/>
    <resource name="minivan" file="minivan_good.ive"/>
-   <resource name="police-car" file="police.ive">
+   <resource name="delorean" file="delorean.ive">
       <render>
          <articulate template="DMZ Vehicle"/>
       </render>
    </resource>
-   <resource name="newsvan" file="newsvan.ive"/>
+   <resource name="firetruck" file="firetruck.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
+   <resource name="firetruck-01" file="firetruck_01.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
+   <resource name="firetruck-ladder" file="firetruck_ladder.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
+   <resource name="firetruck-rescue" file="firetruck_rescue.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
+   <resource name="policecar" file="policecar.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
+   <resource name="newschopper" file="newschopper.ive"/>
+   <resource name="newsvan" file="newsvan.ive">
+      <render>
+         <articulate template="DMZ Vehicle"/>
+      </render>
+   </resource>
    <resource name="car" file="nissan_primera_good.ive"/>
    <resource name="car-black" file="nissan_primera_good_black.ive"/>
    <resource name="car-blue" file="nissan_primera_good_blue.ive"/>

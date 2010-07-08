@@ -11,7 +11,7 @@
    <offset x="0.0" y="0.0" z="0.0"/>
 </tether>
 <archive>
-   <object type="spectator">
+   <object type="newschopper">
       <attributes>
          <position x="0" y="0" z="0"/>
          <position x="-926.1310743113053" y="37.053293657834075" z="334.89533803576353"/>
@@ -35,6 +35,9 @@
          <acceleration x="0.0" y="0.0" z="0.0"/>
       </attributes>
       <attributes name="Object_Human_In_The_Loop">
+         <flag value="true"/>
+      </attributes>
+      <attributes name="Object_Hide_Attribute">
          <flag value="true"/>
       </attributes>
    </object>

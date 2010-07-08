@@ -54,6 +54,15 @@
    </object-type>
    <object-type name="spectator">
    </object-type>
+   <object-type name="plume">
+      <net>
+         <enum value="3.1"/>
+         <rule type="heartbeat" value="1.0"/>
+         <rule type="rate-limit"/>
+         <rule type="skew" value="1.0"/>
+         <rule type="scalar" attribute="plume-radius" value="1.0"/>
+      </net>
+   </object-type>
    <object-type name="cargo-ship">
       <render>
          <model resource="cargo-ship"/>
@@ -74,6 +83,25 @@
    </object-type>
    <object-type name="ground-vehicle" parent="vehicle">
    </object-type>
+   <object-type name="air-vehicle" parent="vehicle">
+      <net>
+         <enum value="1.2"/>
+         <rule type="heartbeat" value="2.0"/>
+         <rule type="zero-velocity"/>
+         <rule type="rate-limit"/>
+         <rule type="skew" value="1.0"/>
+         <rule type="orientation"/>
+         <rule type="velocity"/>
+      </net>
+   </object-type>
+   <object-type name="newschopper" parent="air-vehicle">
+      <net>
+         <enum value="1.2.1"/>
+      </net>
+      <render>
+         <model resource="newschopper"/>
+      </render>
+   </object-type>
    <object-type name="emergency-vehicle" parent="ground-vehicle">
       <net>
          <enum value="1.1"/>
@@ -89,12 +117,49 @@
          <rule type="state"/>
       </net>
    </object-type>
-   <object-type name="police-car" parent="emergency-vehicle">
+   <object-type name="policecar" parent="emergency-vehicle">
       <net>
          <enum value="1.1.1"/>
       </net>
       <render>
-         <model resource="police-car"/>
+         <model resource="policecar"/>
+      </render>
+      <wheels pairs="2" radius="0.34"/>
+   </object-type>
+   <object-type name="firetruck" parent="emergency-vehicle">
+      <center-offset x="0" y="2" z="-6.5"/>
+      <net>
+         <enum value="1.1.2"/>
+      </net>
+      <render>
+         <model resource="firetruck"/>
+      </render>
+      <wheels pairs="2" radius="0.6" width="2.3" length="5.3"/>
+   </object-type>
+   <object-type name="firetruck-01" parent="emergency-vehicle">
+      <net>
+         <enum value="1.1.3"/>
+      </net>
+      <render>
+         <model resource="firetruck-01"/>
+      </render>
+      <wheels pairs="2" radius="0.34"/>
+   </object-type>
+   <object-type name="firetruck-rescue" parent="emergency-vehicle">
+      <net>
+         <enum value="1.1.4"/>
+      </net>
+      <render>
+         <model resource="firetruck-rescue"/>
+      </render>
+      <wheels pairs="2" radius="0.34"/>
+   </object-type>
+   <object-type name="firetruck-ladder" parent="emergency-vehicle">
+      <net>
+         <enum value="1.1.5"/>
+      </net>
+      <render>
+         <model resource="firetruck-ladder"/>
       </render>
       <wheels pairs="2" radius="0.34"/>
    </object-type>

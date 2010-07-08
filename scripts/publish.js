@@ -11,10 +11,12 @@ var dmz =
   , inUpload = false
   , revInt = 0
   , reports = { _id: "data" }
+  , outData = { reports: reports, ship: {} }
   , publish = false
 //  Constants
   , DataFile = "http://localhost:5984/demo/data"
   , ReportType = dmz.objectType.lookup("field-report")
+  , ShipType = dmz.objectType.lookup("cargo-ship")
   , YellowState = dmz.defs.lookupState("Yellow")
   , RedState = dmz.defs.lookupState("Red")
 //  Functions 
@@ -41,7 +43,7 @@ timer = function (time) {
 
    if (publish && !inUpload) {
 
-      out = JSON.stringify(reports);
+      out = JSON.stringify(outData);
 
       inUpload = true;
 
@@ -60,7 +62,7 @@ timer = function (time) {
 
             if (crev > revInt) {
 
-               reports._rev = data.rev;
+               outData._rev = data.rev;
                revInt = crev;
             }
          }
@@ -97,7 +99,7 @@ dmz.http.download(self, DataFile, function(value, error) {
 
                if (data.rev) {
 
-                  reports._rev = data.rev
+                  outData._rev = data.rev
                   revInt = getRevInt(data.rev);
                   dmz.time.setRepeatingTimer(self, 2, timer);
                }
@@ -108,7 +110,7 @@ dmz.http.download(self, DataFile, function(value, error) {
       }
       else if (data._rev) {
 
-         reports._rev = data._rev
+         outData._rev = data._rev
          revInt = getRevInt(data._rev);
          dmz.time.setRepeatingTimer(self, 2, timer);
       }
@@ -137,6 +139,12 @@ dmz.object.create.observe(self, function (handle, type) {
       reports[handle] = obj;
       publish = true;
    }
+   else if (type.isOfType(ShipType)) {
+
+      outData.ship.handle = handle;
+      outData.ship.position = dmz.object.position(handle);
+      publish = true;
+   }
 });
 
 
@@ -146,6 +154,16 @@ dmz.object.destroy.observe(self, function (handle) {
      ;
 
    if (obj) { delete reports[handle]; publish = true; }
+   else if (outData.ship.handle === handle) {
+
+      outData.ship = {};
+      publish = true;
+   }
+   else if (outData.ship.plumeHandle === handle) {
+
+      outData.ship.plumeHandle = undefined;
+      outData.ship.radius = 1;
+   }
 });
 
 
@@ -155,6 +173,11 @@ dmz.object.position.observe(self, function (handle, attr, value) {
      ;
 
    if (obj) { obj.position = value; publish = true; }
+   else if (outData.ship.handle === handle) {
+
+      outData.ship.position = value;
+      publish = true;
+   }
 });
 
 
@@ -169,6 +192,17 @@ dmz.object.state.observe(self, function (handle, attr, value) {
       else if (value.and(RedState).bool()) { obj.state = "r"; }
       else { obj.state = "b"; }
 
+      publish = true;
+   }
+});
+
+
+dmz.object.scalar.observe(self, "plume-radius", function(handle, attr, value) {
+
+   if (outData.ship) {
+
+      outData.ship.plumeHandle = handle;
+      outData.ship.radius = value;
       publish = true;
    }
 });

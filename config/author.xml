@@ -22,6 +22,7 @@
    <plugin name="dmzInputPluginMouseEventToMessage" unique="delete-object"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="measure-tool"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="path-tool"/>
+   <plugin name="dmzInputPluginMouseEventToMessage" unique="assign-tool"/>
    <plugin name="dmzInputPluginMouseEventToMessage" unique="create-location-object"/>
    <plugin name="dmzMBRAPluginPropertyEditor" scope="location-properties"/>
    <plugin name="dmzToolsPluginSelectObjectType"/>
@@ -34,6 +35,7 @@
    <instance name="delete"/>
    <instance name="measure"/>
    <instance name="path"/>
+   <instance name="assign"/>
    <instance name="breadCrumbs"/>
 </javascript>
 <runtime>
@@ -111,6 +113,11 @@
          <element value="Path"/>
       </attribute>
    </channel>
+   <channel name="assign-tool" message="Update_Tool_Name"> 
+      <attribute type="string" name="String">
+         <element value="Assign"/>
+      </attribute>
+   </channel>
    <channel name="location-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Location"/>
@@ -123,6 +130,7 @@
       <channel name="select-tool"/>
       <channel name="delete-tool"/>
       <channel name="path-tool"/>
+      <channel name="assign-tool"/>
       <channel name="location-tool"/>
    </input>
    <target name="dmzObjectPluginHighlight"/>
@@ -288,6 +296,37 @@
       </state>
    </converter>
 </path-tool>
+<assign-tool>
+   <input>
+      <source name="DMZ_Render_Main_Portal"/>
+      <channel name="assign-tool"/>
+   </input>
+   <deactivate message="Deactivate_Assign_Tool_Message"/>
+   <converter start="first">
+      <state name="first" type="basic">
+         <condition
+               button="1"
+               result="object"
+               action="pressed"
+               message="Object_Assign_Source_Message"
+               next="next"
+         >
+            <attribute type="object" name="handle"/>
+         </condition>
+      </state>
+      <state name="next" type="basic">
+         <condition
+               button="1"
+               result="none"
+               action="released"
+               message="Object_Assign_Target_Message"
+               next="first"
+         >
+            <attribute type="object" name="handle"/>
+         </condition>
+      </state>
+   </converter>
+</assign-tool>
 <create-location-object>
    <input>
       <source name="DMZ_Render_Main_Portal"/>

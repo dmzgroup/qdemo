@@ -60,6 +60,14 @@
    <link attribute="Bread_Crumb_Attribute" r="1" g="0" b="0" radius="1" sides="3"/>
    <link attribute="Object_Path_Link_Attribute" r="0" g="1" b="0" radius="0.1" sides="5"/>
    <link
+      attribute="Object_Assign_Link_Attribute"
+      r="1"
+      g="0.5"
+      b="0"
+      radius="0.1"
+      sides="7"
+   />
+   <link
       attribute="Measure_Attribute"
       scale-attribute="Measure_Radius_Attribute"
       r="1" g="1" b="0"

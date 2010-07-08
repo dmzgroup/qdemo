@@ -22,15 +22,17 @@ var dmz =
   , YellowState = dmz.defs.lookupState("Yellow")
   , AllState = RedState.or(YellowState)
   , MaxHeight = 80
-  , PlumeRate = 2
+  , PlumeRate = 4
   , LinkAttr = dmz.defs.createNamedHandle("field-report")
   , TextAttr = dmz.defs.createNamedHandle("field-report-text")
   , NameAttr = dmz.defs.createNamedHandle("Location_Name")
   , PopulationAttr = dmz.defs.createNamedHandle("Location_Population")
   , CasualtiesAttr = dmz.defs.createNamedHandle("Location_Casualties")
   , ProbablityAttr = dmz.defs.createNamedHandle("Location_Probability")
+  , PlumeRadiusAttr = dmz.defs.createNamedHandle("plume-radius")
   , LocationType = dmz.objectType.lookup("location")
   , ReportType = dmz.objectType.lookup("field-report")
+  , PlumeType = dmz.objectType.lookup("plume")
   , ReportPointType = dmz.objectType.lookup("field-report-point")
 //  Functions 
   , createReport
@@ -83,7 +85,9 @@ dmz.time.setRepeatingTimer(self, function (time) {
 
       plume.radius += PlumeRate * time;
 
-      r2 = plume.radius * plume.radius;
+      dmz.object.scalar(plume.handle, PlumeRadiusAttr, plume.radius);
+
+      r2 = (plume.radius - 40) * (plume.radius - 40);
 
       keys = Object.keys(location);
 
@@ -126,7 +130,7 @@ dmz.time.setRepeatingTimer(self, function (time) {
 
                if (!casualties) { casualties = 0; }
 
-               casualties = Math.floor((1 - (dist * dist)) * population);
+               casualties = Math.floor((1 - dist) * (1 - dist) * population);
             }
 
             if (obj.report && obj.report.top) {
@@ -138,12 +142,15 @@ dmz.time.setRepeatingTimer(self, function (time) {
                if (state) { state = state.unset(AllState); }
                else { state = dmz.mask.create(); }
 
-               if (percent > 80) { state = state.or(RedState); }
-               else if (percent > 50) { state = state.or(YellowState); }
+               if (percent > 40) { state = state.or(RedState); }
+               else if (percent > 10) { state = state.or(YellowState); }
 
                dmz.object.state(obj.report.top.handle, null, state);
 
-               dmz.object.text(obj.report.top.handle, TextAttr, name + ": " + percent.toFixed() + "%");
+               dmz.object.text(
+                  obj.report.top.handle,
+                  TextAttr,
+                  name + ": " + percent.toFixed() + "%");
             }
          }
       });
@@ -213,8 +220,19 @@ dmz.object.flag.observe(self, "Plume_Source", function (object, attr, value) {
 
    if (value) {
 
-      plume = { handle: object, pos: dmz.object.position(object), radius: 320 };
+      plume =
+         { handle: dmz.object.create(PlumeType)
+         , pos: dmz.object.position(object)
+         , radius: 330
+         };
 
       if (!plume.pos) { plume.pos = dmz.vector.create(); }
+
+      if (plume.handle) {
+
+         dmz.object.position(plume.handle, null, plume.pos);
+         dmz.object.scalar(plume.handle, PlumeRadiusAttr, plume.radius);
+         dmz.object.activate(plume.handle);
+      }
    }
 });
