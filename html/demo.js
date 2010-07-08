@@ -80,11 +80,41 @@ tick = function () {
 
    var req = new XMLHttpRequest()
      , reports
+     , canvas
+     , context
      ;
 
-   req.open("GET", "http://localhost:5984/demo/data", false);
-//   req.open("GET", "/demo/data", false);
-   req.send();
+   try {
+
+      req.open("GET", "http://localhost:5984/demo/data", false);
+//      req.open("GET", "/demo/data", false);
+      req.send();
+   }
+   catch (e) {
+
+      canvas = document.getElementById("view");
+
+      if (canvas) {
+
+         context = canvas.getContext("2d");
+
+         if (context) {
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            context.save();
+            //context.moveTo(canvas.width * 0.5, canvas.height * 0.5);
+            context.textBaseline = "middle";
+            context.textAlign = "center";
+            context.fillStyle = "black";
+            context.fillText(
+               "Attempting to connect to server.",
+               canvas.width * 0.5,
+               canvas.height * 0.5);
+            context.restore();
+         }
+      }
+   }
 
    if (req.responseText) {
 
