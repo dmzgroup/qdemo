@@ -83,7 +83,7 @@ dmz.http.download(self, DataFile, function(value, error) {
 
       data = JSON.parse(value);
 
-      if (data.error && (result.error === "not_found")) {
+      if (data.error && (data.error === "not_found")) {
 
          inUpload = true;
          dmz.http.upload(self, DataFile, "{}", function(value, addr, error) {
@@ -95,10 +95,10 @@ dmz.http.download(self, DataFile, function(value, error) {
 
                data = JSON.parse(value);
 
-               if (data._rev) {
+               if (data.rev) {
 
-                  reports._rev = data._rev
-                  revInt = getRevInt(data._rev);
+                  reports._rev = data.rev
+                  revInt = getRevInt(data.rev);
                   dmz.time.setRepeatingTimer(self, 2, timer);
                }
             }
@@ -180,5 +180,6 @@ dmz.object.text.observe(self, "field-report-text", function (handle, attr, value
      ;
 
    if (obj) { obj.text = value; publish = true; }
+   else { self.log.error("Got text:", value, "for unmapped object:", handle); }
 });
 
