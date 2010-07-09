@@ -118,6 +118,7 @@ processShip = function (obj) {
       if (obj.radius) {
 
          context.save();
+
          context.beginPath();
          context.fillStyle = "red";
          context.globalAlpha = "0.2";
@@ -129,7 +130,12 @@ processShip = function (obj) {
 
          context.save();
          context.fillStyle = "black";
-         context.fillText("Plume Radius: " + obj.radius.toFixed(), 2, canvas.height - 2);
+
+         context.fillText(
+            "Plume Radius: " + obj.radius.toFixed() + "m",
+            2,
+            canvas.height - 2);
+
          context.restore();
       }
 
