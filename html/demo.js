@@ -1,6 +1,8 @@
 (function () {
 
-var clearCanvas
+var onload
+  , writeText
+  , clearCanvas
   , processReports
   , processShip
   , tick
@@ -10,12 +12,40 @@ var clearCanvas
   , Scale = 0.381621621621622
   , XOffset = 1902
   , YOffset = 1246
-  , prevRadius = 0
-//  , Scale = 2.616621983914209
+  , imagesLoading = 2
   ;
 
 map.src = "map.png";
 ship.src = "ship.png";
+
+onload = function () { imagesLoading--; }
+
+map.onload = onload;
+ship.onload = onload;
+
+writeText = function (str) {
+
+   var canvas = document.getElementById("view")
+     ;
+
+   if (canvas) {
+
+      context = canvas.getContext("2d");
+
+      if (context) {
+
+         context.clearRect(0, 0, canvas.width, canvas.height);
+
+         context.save();
+         context.textBaseline = "middle";
+         context.textAlign = "center";
+         context.fillStyle = "black";
+         context.fillText(str, canvas.width * 0.5, canvas.height * 0.5);
+         context.restore();
+      }
+   }
+};
+
 
 clearCanvas = function() {
 
@@ -23,7 +53,7 @@ clearCanvas = function() {
      , context
      ;
 
-   if (canvas) {
+   if ((imagesLoading === 0) && canvas) {
 
       context = canvas.getContext("2d");
 
@@ -47,7 +77,7 @@ processReports = function (reports) {
      , context
      ;
 
-   if (canvas) {
+   if ((imagesLoading === 0) && canvas) {
 
       context = canvas.getContext("2d");
 
@@ -70,7 +100,7 @@ processReports = function (reports) {
                z = Math.floor(canvas.height + ((obj.position.z - YOffset) * Scale));
                context.moveTo(x, z);
                context.fillStyle = "black";
-               context.arc(x, z, 6, 0, Math.PI * 2);
+               context.arc(x, z, 6, 0, Math.PI * 2, true);
                context.fill();
 
                context.beginPath();
@@ -78,10 +108,10 @@ processReports = function (reports) {
                else if (obj.state === "y") { context.fillStyle = "yellow"; }
                else { context.fillStyle = "blue"; }
 
-               context.arc(x, z, 5, 0, Math.PI * 2);
-
+               context.arc(x, z, 5, 0, Math.PI * 2, true);
                context.fill();
 
+               context.beginPath();
                context.textBaseline = "middle";
                context.moveTo (x + 10, z);
                context.lineWidth = lineWidth + 2;
@@ -91,6 +121,7 @@ processReports = function (reports) {
                context.lineWidth = lineWidth;
                context.fillStyle = "black";
                context.fillText(obj.text, x + 10, z);
+
                context.restore();
             }
          });
@@ -109,7 +140,7 @@ processShip = function (obj) {
 
    if (canvas) { context = canvas.getContext("2d"); }
 
-   if (context && obj.position) {
+   if ((imagesLoading === 0) && context && obj.position) {
 
 
       x = Math.floor((obj.position.x + XOffset) * Scale);
@@ -122,9 +153,9 @@ processShip = function (obj) {
          context.beginPath();
          context.fillStyle = "red";
          context.globalAlpha = "0.2";
-         context.arc(x, z, obj.radius * Scale * 0.5, 0, Math.PI * 2);
+         context.arc(x, z, obj.radius * Scale * 0.5, 0, Math.PI * 2, true);
          context.fill();
-         context.arc(x, z, obj.radius * Scale, 0, Math.PI * 2);
+         context.arc(x, z, obj.radius * Scale, 0, Math.PI * 2, true);
          context.fill();
          context.restore();
 
@@ -163,36 +194,16 @@ tick = function () {
    }
    catch (e) {
 
-      canvas = document.getElementById("view");
-
-      if (canvas) {
-
-         context = canvas.getContext("2d");
-
-         if (context) {
-
-            context.clearRect(0, 0, canvas.width, canvas.height);
-
-            context.save();
-            context.textBaseline = "middle";
-            context.textAlign = "center";
-            context.fillStyle = "black";
-            context.fillText(
-               "Attempting to connect to server. " + e,
-               canvas.width * 0.5,
-               canvas.height * 0.5);
-            context.restore();
-         }
-      }
+      writeText("Attempting to connect to server. " + e);
+      window.console.log("Caught: " + e);
    }
 
    if (req.responseText) {
 
-//      window.console.log(req.responseText);
-
       data = JSON.parse(req.responseText);
 
       clearCanvas();
+      if (imagesLoading > 0) { writeText ("Now Loading..."); }
       if (data.reports) { processReports(data.reports); }
       if (data.ship) { processShip(data.ship); }
    }
