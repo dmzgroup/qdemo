@@ -32,6 +32,7 @@ move = function (time, obj) {
    var pos = dmz.object.position(obj.handle)
      , ori = dmz.object.orientation(obj.handle)
      , vel = dmz.object.velocity(obj.handle)
+//     , targetPos = getTargetPos(obj)
      , speed
      ;
 
@@ -43,7 +44,7 @@ move = function (time, obj) {
       vel = ori.transform(vel);
    }
 
-   pos = pos.add(vel.multiplyConst(time));
+   pos = pos.add(vel.multiply(time));
    pos = clamp (obj, pos, ori);
 
    dmz.object.position(obj.handle, null, pos);

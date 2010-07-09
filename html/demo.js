@@ -13,6 +13,8 @@ var onload
   , XOffset = 1902
   , YOffset = 1246
   , imagesLoading = 2
+  , showPlume = true
+  , showReports = true
   ;
 
 map.src = "map.png";
@@ -148,18 +150,22 @@ processShip = function (obj) {
 
       if (obj.radius) {
 
-         context.save();
+         if (showPlume) {
 
+            context.save();
+            context.beginPath();
+            context.fillStyle = "red";
+            context.globalAlpha = "0.2";
+            context.arc(x, z, obj.radius * Scale * 0.5, 0, Math.PI * 2, true);
+            context.fill();
+            context.arc(x, z, obj.radius * Scale, 0, Math.PI * 2, true);
+            context.fill();
+            context.restore();
+         }
+
+         context.save();
          context.beginPath();
-         context.fillStyle = "red";
-         context.globalAlpha = "0.2";
-         context.arc(x, z, obj.radius * Scale * 0.5, 0, Math.PI * 2, true);
-         context.fill();
-         context.arc(x, z, obj.radius * Scale, 0, Math.PI * 2, true);
-         context.fill();
-         context.restore();
 
-         context.save();
          context.fillStyle = "black";
 
          context.fillText(
@@ -176,7 +182,6 @@ processShip = function (obj) {
       context.restore();
    }
 };
-
 
 tick = function () {
 
@@ -204,7 +209,7 @@ tick = function () {
 
       clearCanvas();
       if (imagesLoading > 0) { writeText ("Now Loading..."); }
-      if (data.reports) { processReports(data.reports); }
+      if (showReports && data.reports) { processReports(data.reports); }
       if (data.ship) { processShip(data.ship); }
    }
 
