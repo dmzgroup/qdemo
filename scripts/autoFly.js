@@ -14,8 +14,7 @@ var dmz =
   , BreadCrumbAttr = dmz.defs.createNamedHandle("Bread_Crumb_Attribute")
   // Functions
   , updateDistance
-  , rotate
-  , newOri
+  , newHeading
   , timeSlice
   ;
 
@@ -39,73 +38,35 @@ updateDistance = function () {
    }
 };
 
-rotate = function (time, orig, target) {
 
-   var result = target
-     , diff = target - orig
-     , max = time * Math.PI * 0.5
+newHeading = function (time, ori, dir) {
+
+   var MaxTurn = time * Math.PI * 0.5
+     , cdir = ori.transform(dmz.vector.Forward)
+     , tdir = dir.copy()
+     , result
+     , angle = 0
      ;
 
-   if (diff > Math.PI) { diff -= Math.PI * 2; }
-   else if (diff < -Math.PI)  { diff += Math.PI * 2; }
+   if (time > 1) { time = 1; }
 
-   if (Math.abs (diff) > max) {
+   cdir.y = 0;
+   cdir = cdir.normalize();
+   tdir.y = 0;
+   tdir = tdir.normalize();
 
-      if (diff > 0) { result = orig + max; }
-      else { result = orig - max; }
+   if (!cdir.isZero() && !tdir.isZero()) {
+
+      angle = cdir.getSignedAngle(tdir) * time;
+
+      result = dmz.matrix.create();
+      result.fromAxisAndAngle(dmz.vector.Up, angle);
+      result = result.multiply(ori);
    }
+   else { result = ori; }
 
    return result;
-};
-
-
-newOri = function (time, ori, targetVec) {
-
-   var result = dmz.matrix.create()
-     , hvec = targetVec.copy()
-     , hpr = ori.toEuler()
-     , heading
-     , hcross
-     , pitch
-     , pcross
-     , ncross
-     , pm
-     ;
-
-   hvec.y = 0.0;
-   hvec = hvec.normalize();
-   heading = dmz.vector.Forward.getAngle(hvec);
-
-   hcross = dmz.vector.Forward.cross(hvec).normalize();
-
-   if (hcross.y < 0.0) { heading = (Math.PI * 2) - heading; }
-
-   if (heading > Math.PI) { heading = heading - (Math.PI * 2); }
-   else if (heading < -Math.PI) { heading = heading + (Math.PI * 2); }
-
-   pitch = targetVec.getAngle(hvec);
-   pcross = targetVec.cross(hvec).normalize();
-   ncross = hvec.cross(pcross);
-
-   if (ncross.y < 0.0) { pitch = (Math.PI * 2) - pitch; }
-
-   heading = rotate(time, hpr[0], heading);
-
-   pitch = rotate(time, hpr[1], pitch);
-
-   if (dmz.util.isZero(pitch - hpr[1]) && dmz.util.isZero(heading - hpr[0])) {
-
-//      obj.onTarget = true;
-   }
-
-   pm = dmz.matrix.create().fromAxisAndAngle(dmz.vector.Right, pitch);
-
-   result = result.fromAxisAndAngle(dmz.vector.Up, heading);
-
-   result = result.multiply(pm);
-
-   return result;
-};
+}
 
 
 timeSlice = function (time) {
@@ -142,21 +103,18 @@ timeSlice = function (time) {
          if (!startPos) { startPos = dmz.vector.create(); }
 
          dir = target.subtract(pos).normalize();
-
-         ori = newOri(time, ori, dir);
-
-         vel = ori.transform(dmz.vector.Forward).multiplyConst(Speed);
+         ori = newHeading(time, ori, dir);
+         vel = dir.multiply(Speed);
 
          pos = pos.add(vel.multiplyConst(time));
 
          if (pos.subtract(startPos).magnitude() > distance) {
 
-self.log.error("Reached target");
+            //self.log.error("Reached target");
             links = dmz.object.subLinks(current, "Bread_Crumb_Attribute");
 
             if (links) { current = links[0]; }
-
-            if (!links) { current = start; }
+            else { current = start; }
 
             updateDistance();
          }
@@ -168,6 +126,7 @@ self.log.error("Reached target");
    }
 };
 
+
 dmz.object.flag.observe(self, "Bread_Crumb_Attribute", function (obj, attr, value) {
 
    if (value) { start = obj; }
@@ -176,6 +135,15 @@ dmz.object.flag.observe(self, "Bread_Crumb_Attribute", function (obj, attr, valu
 
 dmz.input.channel.observe(self, "bread-crumb-follow", function (channel, state) {
 
-   if (state) { dmz.time.setRepeatingTimer(self, timeSlice); self.log.error ("Start"); }
-   else { dmz.time.cancleTimer(self, timeSlice); self.log.error ("Stop"); }
+   if (state) {
+
+      dmz.object.orientation(dmz.object.hil(), null, dmz.matrix.create());
+      dmz.time.setRepeatingTimer(self, timeSlice);
+     // self.log.error ("Start");
+   }
+   else {
+
+      dmz.time.cancleTimer(self, timeSlice);
+      // self.log.error ("Stop");
+   }
 });
