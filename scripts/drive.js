@@ -10,20 +10,50 @@ var dmz =
        , util: require("dmz/types/util")
        }
   , list = {}
+  , clampCount = 0
+  , currentClamp = 0
   // Constants
   , Speed = 20
   , PathAttr = dmz.defs.createNamedHandle("Object_Path_Link_Attribute")
   , AssignAttr = dmz.defs.createNamedHandle("Object_Assign_Link_Attribute")
-  , StartPositionAttr = dmz.defs.createNamedHandle("Object_Start_Position_Attribute")
+  , StartStateAttr = dmz.defs.createNamedHandle("Object_Start_State_Attribute")
   , CurrentNodeAttr = dmz.defs.createNamedHandle("Object_Current_Node_Attribute")
+  , SirenState = dmz.defs.lookupState("Siren")
   // Functions
+  , randomTime
   , startNode
   , nextNode
   , targetPosition
   , clamp
   , newHeading
+  , updateSiren
   , move
   ;
+
+
+self.shutdown = function () {
+
+   var keys = Object.keys(list)
+     ;
+
+   keys.forEach(function (key) {
+
+      var handle = list[key].handle
+        ;
+
+      dmz.object.position(handle, null, dmz.object.position(handle, StartStateAttr));
+      dmz.object.orientation(
+         handle,
+         null,
+         dmz.object.orientation(handle, StartStateAttr));
+      dmz.object.unlinkSubObjects(handle, CurrentNodeAttr);
+   });
+}
+
+randomTime = function () {
+
+   return Math.random() * 15 + 15;
+};
 
 
 startNode = function (obj) {
@@ -91,27 +121,31 @@ clamp = function (obj, pos, ori) {
      , value
      ;
 
-   start.y += 5;
+   if (obj.clampId === currentClamp) {
 
-   dmz.isect.disable(obj.handle);
+      start.y += 5;
 
-   value = dmz.isect.doIsect({ start: start, end: dmz.vector.Up.multiply(-10).add(pos) });
+      dmz.isect.disable(obj.handle);
 
-   if (!value) {
+      value = dmz.isect.doIsect({ start: start, end: dmz.vector.Up.multiply(-10).add(pos) });
 
-      start.y -= 6;
+      if (!value) {
+
+         start.y -= 6;
 //      value = dmz.isect.doIsect({ start: start, direction: dmz.vector.Up });
-   }
+      }
 
-   dmz.isect.enable(obj.handle);
+      dmz.isect.enable(obj.handle);
 
-   if (value) {
+      if (value) {
 
-      result.pos = value[0].point;
+         result.pos = value[0].point;
 
-      result.ori = dmz.matrix.create().fromTwoVectors(
-         dmz.vector.Up,
-         value[0].normal).multiply(ori);
+         result.ori = dmz.matrix.create().fromTwoVectors(
+            dmz.vector.Up,
+            value[0].normal).multiply(ori);
+      }
+      else { result.pos = pos; result.ori = ori; }
    }
    else { result.pos = pos; result.ori = ori; }
 
@@ -152,9 +186,42 @@ newHeading = function (time, dir, ori) {
 };
 
 
+updateSiren = function (time, obj) {
+
+   dmz.object.state(obj.handle, null, SirenState);
+/*
+   if (dmz.util.isDefined(obj.startSiren)) {
+
+      obj.startSiren -= time;
+
+      if (obj.startSiren <= 0) {
+
+         obj.startSiren = undefined;
+         obj.stopSiren = randomTime();
+
+         dmz.object.state(obj.handle, null, SirenState);
+      }
+   }
+   if (dmz.util.isDefined(obj.stopSiren)) {
+
+      obj.stopSiren -= time;
+
+      if (obj.stopSiren <= 0) {
+
+         obj.stopSiren = undefined;
+         obj.startSiren = randomTime();
+
+         dmz.object.state(obj.handle, null, "");
+      }
+   }
+*/
+};
+
+
 move = function (time, obj) {
 
    var pos = dmz.object.position(obj.handle)
+     , origPos = pos.copy()
      , ori = dmz.object.orientation(obj.handle)
      , vel = dmz.object.velocity(obj.handle)
      , target = targetPosition(obj)
@@ -178,6 +245,8 @@ move = function (time, obj) {
 
    view = clamp (obj, pos, ori);
 
+   updateSiren(time, obj);
+
    dmz.object.position(obj.handle, null, view.pos);
    dmz.object.velocity(obj.handle, null, vel);
    dmz.object.orientation(obj.handle, null, view.ori);
@@ -189,7 +258,10 @@ dmz.time.setRepeatingTimer(self, function (time) {
    var keys = Object.keys(list)
      ;
 
-   keys.forEach(function (key) { move(time, list[key]); });
+   if (time > 0) { keys.forEach(function (key) { move(time, list[key]); }); }
+
+   currentClamp++;
+   if (currentClamp >= clampCount) { currentClamp = 0; }
 });
 
 
@@ -200,9 +272,13 @@ dmz.object.link.observe(self, AssignAttr, function (link, attr, super, sub) {
 
    obj.handle = super;
    obj.startNode = sub;
-   dmz.object.position(super, StartPositionAttr, dmz.object.position(super));
+   dmz.object.position(super, StartStateAttr, dmz.object.position(super));
+   dmz.object.orientation(super, StartStateAttr, dmz.object.orientation(super));
    obj.wheelLength = dmz.object.type(super).config().number("wheels.length", 5);
    obj.width = dmz.object.type(super).config().number("wheels.width", 5);
+   obj.startSiren = randomTime();
+   obj.clampId = clampCount;
+   clampCount++;
 
    //self.log.error(JSON.stringify(obj));
 
@@ -215,6 +291,5 @@ dmz.object.unlink.observe(self, AssignAttr, function (link, attr, super, sub) {
    var obj = list[super]
      ;
 
-self.log.error("Unlinking", super);
    if (obj && (obj.startNode === sub)) { delete list[super]; }
 });

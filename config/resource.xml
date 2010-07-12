@@ -11,6 +11,10 @@
       <path value="../../assets/qdemo/fonts"/>
       <path value="./assets/"/>
    </search>
+   <search name="sounds">
+      <path value="../../assets/qdemo/sounds"/>
+      <path value="./assets/"/>
+   </search>
    <search name="images">
       <path value="../../assets/qdemo/images"/>
       <path value="./assets/"/>
@@ -27,6 +31,8 @@
    </resource>
    <resource name="smoke" file="particle.png" path="images"/>
    <resource name="fire" file="particle.png" path="images"/>
+   <resource name="firetruck-siren" file="firetrucksirenAmp.wav" path="sounds"/>
+   <resource name="policecar-siren" file="policesiren1.wav" path="sounds"/>
    <resource name="city" file="city.ive"/>
    <resource name="sky dome" file="skydome.ive"/>
    <resource name="heightmap" file="heightmap.png"/>

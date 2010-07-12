@@ -10,7 +10,7 @@ var dmz =
   , start
   , current
   // Constants
-  , Speed = 100
+  , Speed = 50
   , BreadCrumbAttr = dmz.defs.createNamedHandle("Bread_Crumb_Attribute")
   // Functions
   , updateDistance

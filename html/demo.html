@@ -16,6 +16,15 @@ div.canvas {
    border-width:5;
 }
 
+div.controls {
+   margin:0 auto;
+   width:799px;
+   border-style:solid;
+   border-color:black;
+   border-width:5;
+   background-color:white;
+}
+
 </style>
 <script type="text/javascript" src="ECMA5Patch.js"></script>
 <script type="text/javascript" src="demo.js"></script>
@@ -24,5 +33,14 @@ div.canvas {
 <div class="canvas">
 <canvas id="view" width="799" height="600"></canvas>
 </div> <!-- class="canvas" -->
+<br />
+<div class="controls">
+<form>
+   <br />
+   <input type="checkbox" id="reports" checked="true">Show Reports<br />
+   <input type="checkbox" id="vehicles" checked="true">Show Vehicles<br />
+   <input type="checkbox" id="plume" checked="true">Show Plume<br />
+</form>
+</div> <!-- class="controls" -->
 </body>
 </html>

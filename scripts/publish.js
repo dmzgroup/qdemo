@@ -10,13 +10,16 @@ var dmz =
        }
   , inUpload = false
   , revInt = 0
-  , reports = { _id: "data" }
-  , outData = { reports: reports, ship: {} }
+  , reports = {}
+  , vehicles = {}
+  , outData = { _id: "data", reports: reports, vehicles: vehicles, ship: {} }
   , publish = false
 //  Constants
   , DataFile = "http://localhost:5984/demo/data"
   , ReportType = dmz.objectType.lookup("field-report")
   , ShipType = dmz.objectType.lookup("cargo-ship")
+  , FireTruckType = dmz.objectType.lookup("firetruck")
+  , PoliceCarType = dmz.objectType.lookup("policecar")
   , YellowState = dmz.defs.lookupState("Yellow")
   , RedState = dmz.defs.lookupState("Red")
 //  Functions 
@@ -139,6 +142,18 @@ dmz.object.create.observe(self, function (handle, type) {
       reports[handle] = obj;
       publish = true;
    }
+   else if (type.isOfType(FireTruckType)) {
+
+      obj = { type: 1 };
+      obj.position = dmz.object.position(handle);
+      vehicles[handle] = obj;
+   }
+   else if (type.isOfType(PoliceCarType)) {
+
+      obj = { type: 2 };
+      obj.position = dmz.object.position(handle);
+      vehicles[handle] = obj;
+   }
    else if (type.isOfType(ShipType)) {
 
       outData.ship.handle = handle;
@@ -150,10 +165,8 @@ dmz.object.create.observe(self, function (handle, type) {
 
 dmz.object.destroy.observe(self, function (handle) {
 
-   var obj = reports[handle]
-     ;
-
-   if (obj) { delete reports[handle]; publish = true; }
+   if (reports[handle]) { delete reports[handle]; publish = true; }
+   else if (vehicles[handle]) { delete vehicles[handle]; publish = true; }
    else if (outData.ship.handle === handle) {
 
       outData.ship = {};
@@ -169,10 +182,8 @@ dmz.object.destroy.observe(self, function (handle) {
 
 dmz.object.position.observe(self, function (handle, attr, value) {
 
-   var obj = reports[handle]
-     ;
-
-   if (obj) { obj.position = value; publish = true; }
+   if (reports[handle]) { reports[handle].position = value; publish = true; }
+   else if (vehicles[handle]) { vehicles[handle].position = value; publish = true; }
    else if (outData.ship.handle === handle) {
 
       outData.ship.position = value;

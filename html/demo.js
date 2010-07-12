@@ -1,29 +1,89 @@
 (function () {
 
-var onload
+var log
+  , setupUi
+  , onload
   , writeText
   , clearCanvas
   , processReports
+  , processVehicles
   , processShip
+  , render
   , tick
   , timeout
   , map = new Image()
   , ship = new Image()
+  , police = new Image()
+  , fire = new Image()
   , Scale = 0.381621621621622
   , XOffset = 1902
   , YOffset = 1246
-  , imagesLoading = 2
+  , imagesLoading = 4
   , showPlume = true
   , showReports = true
+  , showVehicles = true
+  , data
+  , uiList = {}
+  , ui = {}
   ;
+
+log = function (value) {
+
+   if (window && window.console && window.console.log) {
+
+      window.console.log(value);
+   }
+};
+
+
+uiList.plume = { onclick: function () { showPlume = ui.plume.checked; render(); } };
+uiList.reports = { onclick: function () { showReports = ui.reports.checked; render(); } };
+uiList.vehicles = { onclick: function () { showVehicles = ui.vehicles.checked; render(); } };
+
+setupUi = function () {
+
+   var keys = Object.keys(uiList)
+     ;
+
+   keys.forEach(function(key) {
+
+      var element = document.getElementById(key)
+        , init
+        , list
+        ;
+
+      if (element) {
+
+         init = uiList[key];
+         ui[key] = element;
+         delete uiList[key];
+
+         list = Object.keys(init);
+
+         list.forEach(function(value) { element[value] = init[value]; });
+      }
+   });
+
+   keys = Object.keys(uiList);
+
+   log("Trying to setup ui");
+
+   if (keys.length > 0) { setTimeout(setupUi, 1000); }
+};
+
+setupUi();
 
 map.src = "map.png";
 ship.src = "ship.png";
+police.src = "police.png";
+fire.src = "fire.png";
 
 onload = function () { imagesLoading--; }
 
 map.onload = onload;
 ship.onload = onload;
+police.onload = onload;
+fire.onload = onload;
 
 writeText = function (str) {
 
@@ -34,6 +94,7 @@ writeText = function (str) {
 
       context = canvas.getContext("2d");
 
+log("Writing text: " + str);
       if (context) {
 
          context.clearRect(0, 0, canvas.width, canvas.height);
@@ -132,6 +193,45 @@ processReports = function (reports) {
 };
 
 
+processVehicles = function (vehicles) {
+
+   var canvas = document.getElementById("view")
+     , keys = Object.keys(vehicles)
+     , context
+     ;
+
+   if ((imagesLoading === 0) && canvas) {
+
+      context = canvas.getContext("2d");
+
+      if (context) {
+
+         keys.forEach(function (key) {
+
+            var obj = vehicles[key]
+              , x
+              , z
+              , lineWidth = context.lineWidth
+              ;
+
+            if (obj.position) {
+
+               context.save();
+
+               context.beginPath();
+               x = Math.floor((obj.position.x + XOffset) * Scale);
+               z = Math.floor(canvas.height + ((obj.position.z - YOffset) * Scale));
+               context.moveTo(x, z);
+               if (obj.type === 1) { context.drawImage(fire, x - 10, z - 10); }
+               else { context.drawImage(police, x - 10, z - 10); }
+
+               context.restore();
+            }
+         });
+      }
+   }
+};
+
 processShip = function (obj) {
 
    var canvas = document.getElementById("view")
@@ -143,7 +243,6 @@ processShip = function (obj) {
    if (canvas) { context = canvas.getContext("2d"); }
 
    if ((imagesLoading === 0) && context && obj.position) {
-
 
       x = Math.floor((obj.position.x + XOffset) * Scale);
       z = Math.floor(canvas.height + ((obj.position.z - YOffset) * Scale));
@@ -183,40 +282,52 @@ processShip = function (obj) {
    }
 };
 
+
+render = function () {
+
+   clearCanvas();
+
+   if (imagesLoading > 0) { writeText ("Now Loading..."); }
+
+   if (data) {
+
+      if (showVehicles && data.vehicles) { processVehicles(data.vehicles); }
+      if (showReports && data.reports) { processReports(data.reports); }
+      if (data.ship) { processShip(data.ship); }
+   }
+};
+
+
 tick = function () {
 
    var req = new XMLHttpRequest()
-     , data
      , canvas
      , context
      ;
 
    try {
 
-//      req.open("GET", "http://127.0.0.1:5984/demo/data", false);
-      req.open("GET", "/demo/data", false);
+      req.open("GET", "http://localhost:5984/demo/data", false);
+//      req.open("GET", "/demo/data", false);
       req.send();
    }
    catch (e) {
 
       writeText("Attempting to connect to server. " + e);
-      window.console.log("Caught: " + e);
+      log("Caught: " + e);
    }
 
    if (req.responseText) {
 
       data = JSON.parse(req.responseText);
 
-      clearCanvas();
-      if (imagesLoading > 0) { writeText ("Now Loading..."); }
-      if (showReports && data.reports) { processReports(data.reports); }
-      if (data.ship) { processShip(data.ship); }
+      render();
    }
 
    timeout = setTimeout(tick, 2000);
 };
 
 
-timeout = setTimeout(tick, 0);
+tick();
 
 })();

@@ -28,6 +28,7 @@
       <attribute name="Object_Select_Attribute"/>
       <object-type-set>
          <object-type name="spectator" exclude="true"/>
+         <object-type name="measure-node" exclude="true"/>
       </object-type-set>
    </archive>
 </dmzArchivePluginObject>
