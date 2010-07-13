@@ -24,6 +24,9 @@ dmz.messaging.subscribe("Object_Path_Message", self,  function (data) {
      , undo
      , type
      , createPath = true
+     , info
+     , p1
+     , p2
      ;
 
    if (data) {
@@ -40,13 +43,47 @@ dmz.messaging.subscribe("Object_Path_Message", self,  function (data) {
          }
          else {
 
-            type = dmz.object.type(obj);
+            if (dmz.object.isObject(obj)) {
 
-            if (type && type.isOfType(PathType)) {
+               type = dmz.object.type(obj);
 
-               currentPath = obj;
-               dmz.object.select(obj);
-               createPath = false;
+               if (type && type.isOfType(PathType)) {
+
+                  currentPath = obj;
+                  dmz.object.select(obj);
+                  createPath = false;
+               }
+            }
+            else if (dmz.object.isLink(obj)) {
+
+               info = dmz.object.linkedObjects(obj);
+
+               if (info.attribute === PathAttr) {
+
+                  currentPath = undefined;
+                  createPath = false;
+                  p1 = dmz.object.position(info.super);
+                  p2 = dmz.object.position(info.sub);
+
+                  if (p1 && p2) {
+
+                     undo = dmz.undo.startRecord("Insert Path Node");
+
+                     dmz.object.unlink(obj);
+
+                     path = dmz.object.create(PathType);
+                     dmz.object.position(
+                        path,
+                        null,
+                        p1.subtract(p2).multiply(0.5).add(p2));
+                     dmz.object.activate(path);
+                     dmz.object.select(path);
+                     dmz.object.link(PathAttr, info.super, path);
+                     dmz.object.link(PathAttr, path, info.sub);
+
+                     if (undo) { dmz.undo.stopRecord(); }
+                  }
+               }
             }
          }
       }
