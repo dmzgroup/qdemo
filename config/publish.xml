@@ -5,9 +5,6 @@
       <frequency value="30.0"/>
    </time>
 </runtime>
-<plugin-list>
-   <plugin name="dmzPluginConsole"/>
-</plugin-list>
 <javascript>
    <instance name="publish"/>
 </javascript>
