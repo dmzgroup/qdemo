@@ -166,7 +166,7 @@ tickerText = [
    , list:
       [ "President visits foreign nation."
       , "Schools enjoy a day at the City Park."
-      , "Stock market down on reports of eminent terrorist attack."
+      , "Stock market down on reports of imminent terrorist attack."
       , "Dog learns to ride skateboard."
       ]
    }
@@ -199,7 +199,7 @@ tickerText = [
    , list:
       [ "Smoke from the ship contains unknown biological agent."
       , "Airspace over city closed by the FAA."
-      , "Paramedics unable to respond high number of causalities."
+      , "Paramedics unable to respond high number of casualties."
       ]
    }
  , { radius: 1000
