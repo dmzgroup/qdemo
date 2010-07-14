@@ -26,14 +26,12 @@
    <!-- <showUnifiedTitleAndToolBar value="true"/> -->
    <window title="DMZ Authoring"/>
    <central-widget name="dmzRenderExtViewerQtOSG"/>
-<!--
    <menu-bar>
       <menu text="&amp;File"/>
-      <menu text="&amp;Edit"/>
+      <!-- <menu text="&amp;Edit"/> -->
       <menu text="&amp;Window"/>
-      <menu text="&amp;Help"/>
+      <!-- <menu text="&amp;Help"/> -->
    </menu-bar>
--->
    <statusbar-hidden value="True"/>
 </main-window>
 <render>

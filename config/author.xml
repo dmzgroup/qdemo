@@ -9,7 +9,9 @@
    <plugin name="dmzRenderModulePickBasic"/>
    <plugin name="dmzRenderPluginPickOSG" scope="pick"/>
    <plugin name="dmzInputPluginChannelSwitch" scope="tool-name"/>
+   <plugin name="dmzInputPluginChannelRules" scope="tool-name"/>
    <plugin name="dmzInputPluginChannelMessage" scope="tool-name"/>
+   <plugin name="dmzQtPluginButtonToChannel" scope="tool-name"/>
    <plugin name="dmzObjectModuleSelectBasic"/>
    <plugin name="dmzObjectPluginHighlight"/>
    <plugin name="dmzObjectPluginSelect"/>
@@ -60,6 +62,15 @@
       </render>
    </object-type>
 </runtime>
+<main-window>
+   <dock-windows>
+      <group area="top">
+         <widget name="dmzQtPluginButtonToChannel" title="Tools" visible="false" floating="true">
+            <allowed-areas top="true"/>
+         </widget>
+      </group>
+   </dock-windows>
+</main-window>
 <key-messages>
    <channel>
       <converter key="u">
@@ -83,45 +94,126 @@
    </channel>
 </key-messages>
 <tool-name>
-   <channel name="select-tool" message="Update_Tool_Name"> 
+   <!-- <layout vertical="true"/> -->
+   <channel name="select-tool" message="Update_Tool_Name" default="true"> 
       <attribute type="string" name="String">
          <element value="Select"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Select" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="move-tool" message="Update_Tool_Name" isect="false"> 
       <attribute type="string" name="String">
          <element value="Move"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Move" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="create-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Create"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Create" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="delete-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Delete"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Delete" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="measure-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Measure"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Measure" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="path-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Path"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Path" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="assign-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Assign"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Assign" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
    <channel name="location-tool" message="Update_Tool_Name"> 
       <attribute type="string" name="String">
          <element value="Location"/>
       </attribute>
+      <toolButton autoRaise="True">
+         <button>
+            <iconSize width="32" height="32"/>
+         </button>
+         <action text="Location" checkable="True" checked="True">
+            <!-- <icon>
+               <image file="images:Button_Edit.png"/>
+            </icon> -->
+         </action>
+      </toolButton>
    </channel>
 </tool-name>
 <mouse-move-event>
