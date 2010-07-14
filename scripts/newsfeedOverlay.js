@@ -16,6 +16,9 @@ var dmz =
   , timeTicker = {}
   , screen = { x: 0, y: 0 }
   , timeCounter = 0
+  , tickerText
+  , currentTickerText
+  , currentTicker = 0
 //  Constants
   , SizeHandle = dmz.defs.createNamedHandle("DMZ_Render_Portal_Resize_Portal_Size")
 //  Functions 
@@ -84,6 +87,7 @@ updateTickerPlace = function (time) {
      , target
      , posX
      , timeOffset = 0
+     , nextText
      ;
 
    timeCounter -= time;
@@ -107,24 +111,12 @@ updateTickerPlace = function (time) {
       ticker[0] = ticker[1];
       ticker[1] = ticker[2];
       ticker[2] = tmp;
-      setupTicker (ticker[2], ticker[2].text.text(), posX + timeOffset);
+      if (currentTickerText.list.length <= currentTicker) { currentTicker = 0; }
+      nextText = currentTickerText.list[currentTicker];
+      setupTicker (ticker[2], nextText, posX + timeOffset);
+      currentTicker++;
    }
 };
-
-setupTicker(
-   ticker[0],
-   "A long string of text about a news story that is breaking now.",
-   0);
-
-setupTicker(
-   ticker[1],
-   "Orange crops adversly affected by early freeze in Florida.",
-   ticker[0].length);
-
-setupTicker(
-   ticker[2],
-   "No news is good news.",
-   ticker[0].length + ticker[1].length);
 
 self.shutdown = function () {
 
@@ -162,5 +154,53 @@ dmz.message.subscribe("DMZ_Render_Portal_Resize_Message", self, function (data) 
 
    screen.x = data.number(SizeHandle, 0);
    screen.y = data.number(SizeHandle, 1);
+});
+
+
+tickerText = [
+
+   { radius: 0
+   , list:
+      [ "President visits foreign nation."
+      , "Stock market down on reports of eminent terrorist attack."
+      , "Dog learns to ride skateboard."
+      ]
+   }
+ , { radius: 400
+   , list:
+      [ "Cargo ship fire reported in harbor."
+      , "Schools enjoy a day at the City Park."
+      , "Construct begins on new amusement park."
+      , "Dog quits skateboarding over creative differences with owner."
+      ]
+   }
+];
+
+
+currentTickerText = tickerText[0];
+
+
+setupTicker(
+   ticker[0],
+   currentTickerText.list[0],
+   0);
+
+setupTicker(
+   ticker[1],
+   currentTickerText.list[1],
+   ticker[0].length);
+
+setupTicker(
+   ticker[2],
+   currentTickerText.list[2],
+   ticker[0].length + ticker[1].length);
+
+
+dmz.object.scalar.observe(self, "plume-radius", function (handle, attr, value) {
+
+   tickerText.forEach(function (info) {
+
+      if (info.radius <= value) { currentTickerText = info; }
+   });
 });
 

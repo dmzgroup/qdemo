@@ -30,5 +30,16 @@ if (!window.JSON.parse) {
    }
 }
 
+if (!Array.prototype.forEach) {
+
+   Array.prototype.forEach = function (callback) {
+
+      var ix = 0
+        ;
+
+      for (ix = 0; ix < this.length; ix++) { callback (this[ix]); }
+   };
+}
+
 })();
 

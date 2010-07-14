@@ -23,12 +23,27 @@
       <x ratio="1.01"/>
       <y type="fixed"/>
    </auto-scale>
+<!--
+   <node type="switch" name="start image">
+      <node type="transform" name="start transform">
+         <node type="box">
+            <max x="200" y="200"/>
+            <color r="0" g="0" b="0"/>
+            <depth value="1"/>
+         </node>
+      </node>
+   </node>
+   <auto-scale node="start transform">
+      <x ratio="1.01"/>
+      <y type="1.01"/>
+   </auto-scale>
+-->
    <node type="transform" name="logo">
       <node type="box">
          <max x="200" y="200"/>
          <color r="1" g="1" b="1"/>
          <texture resource="logo"/>
-         <depth value="1"/>
+         <depth value="4"/>
       </node>
    </node>
    <layout node="logo">
@@ -41,7 +56,7 @@
          <max x="256" y="64"/>
          <color r="1" g="1" b="1"/>
          <texture resource="breaking"/>
-         <depth value="1"/>
+         <depth value="0"/>
       </node>
    </node>
    <layout node="breaking">
@@ -54,7 +69,7 @@
          <max x="1" y="100"/>
          <color r="1" g="1" b="1"/>
          <texture resource="red"/>
-         <depth value="1"/>
+         <depth value="2"/>
       </node>
    </node>
    <auto-scale node="red bar">
@@ -82,6 +97,7 @@
          <max x="0" y="0"/>
          <color r="1" g="1" b="1"/>
          <texture resource="live"/>
+         <depth value="0"/>
       </node>
    </node>
    <layout node="live">

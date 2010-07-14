@@ -303,12 +303,18 @@ tick = function () {
    var req = new XMLHttpRequest()
      , canvas
      , context
+     , uniqueStr
      ;
+
+   // Require so that IE will actually fetch a new document and not just read it from
+   // the cache -rb
 
    try {
 
-      req.open("GET", "http://localhost:5984/demo/data", false);
-//      req.open("GET", "/demo/data", false);
+      uniqueStr = (new Date()).getTime().toString();
+
+//      req.open("GET", "http://localhost:5984/demo/data", false);
+      req.open("GET", "/demo/data?" + uniqueStr, false);
       req.send();
    }
    catch (e) {
