@@ -12,6 +12,8 @@ var dmz =
        , util: require("dmz/types/util")
        }
   , root = dmz.overlay.lookup("ticker group")
+  , startImage = dmz.overlay.lookup("start image")
+  , caption = dmz.overlay.lookup("breaking text")
   , ticker = [{}, {}, {}]
   , timeTicker = {}
   , screen = { x: 0, y: 0 }
@@ -160,6 +162,7 @@ dmz.message.subscribe("DMZ_Render_Portal_Resize_Message", self, function (data) 
 tickerText = [
 
    { radius: 0
+   , caption: "SUMMER IN KRAKOW"
    , list:
       [ "President visits foreign nation."
       , "Stock market down on reports of eminent terrorist attack."
@@ -167,6 +170,7 @@ tickerText = [
       ]
    }
  , { radius: 400
+   , caption: "CONTAINER SHIP ERUPTS INTO FLAMES"
    , list:
       [ "Cargo ship fire reported in harbor."
       , "Schools enjoy a day at the City Park."
@@ -197,6 +201,9 @@ setupTicker(
 
 
 dmz.object.scalar.observe(self, "plume-radius", function (handle, attr, value) {
+
+   if (value < 400) { startImage.setSwitchStateAll(true); }
+   else { startImage.setSwitchStateAll(false); }
 
    tickerText.forEach(function (info) {
 

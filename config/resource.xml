@@ -50,6 +50,7 @@
    <resource name="logo" file="newslogo.png" path="images"/>
    <resource name="breaking" file="breaking.png" path="images"/>
    <resource name="red" file="red.png" path="images"/>
+   <resource name="start-image" file="krakowTexture.png" path="images"/>
    <resource name="cargo-ship" file="cship.ive"/>
    <resource name="school-bus" file="schoolbus_good.ive"/>
    <resource name="minivan" file="minivan_good.ive"/>

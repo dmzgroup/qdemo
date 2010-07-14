@@ -23,21 +23,20 @@
       <x ratio="1.01"/>
       <y type="fixed"/>
    </auto-scale>
-<!--
    <node type="switch" name="start image">
       <node type="transform" name="start transform">
          <node type="box">
-            <max x="200" y="200"/>
-            <color r="0" g="0" b="0"/>
+            <max x="1" y="1"/>
+            <color r="1" g="1" b="1"/>
             <depth value="1"/>
+            <texture resource="start-image"/> 
          </node>
       </node>
    </node>
    <auto-scale node="start transform">
       <x ratio="1.01"/>
-      <y type="1.01"/>
+      <y ratio="1.01"/>
    </auto-scale>
--->
    <node type="transform" name="logo">
       <node type="box">
          <max x="200" y="200"/>
@@ -78,7 +77,7 @@
    </auto-scale>
    <node type="transform" name="breaking text transform">
       <node type="text" name="breaking text">
-         <text value="CONTAINER SHIP ENGULFED IN FLAMES"/>
+         <text value="SUMMER IN KRAKOW"/>
          <alignment value="center"/>
          <font resource="news ticker font"/>
          <color name="ticker text color"/>
