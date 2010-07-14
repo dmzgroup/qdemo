@@ -94,7 +94,7 @@
    </channel>
 </key-messages>
 <tool-name>
-   <!-- <layout vertical="true"/> -->
+   <layout vertical="true"/>
    <channel name="select-tool" message="Update_Tool_Name" default="true"> 
       <attribute type="string" name="String">
          <element value="Select"/>
@@ -104,9 +104,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Select" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_select.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -119,9 +119,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Move" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_move.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -134,9 +134,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Create" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_create.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -149,9 +149,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Delete" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_delete.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -164,9 +164,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Measure" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_measure.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -179,9 +179,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Path" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_path.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -194,9 +194,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Assign" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_assign.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
@@ -209,9 +209,9 @@
             <iconSize width="32" height="32"/>
          </button>
          <action text="Location" checkable="True" checked="True">
-            <!-- <icon>
-               <image file="images:Button_Edit.png"/>
-            </icon> -->
+            <icon>
+               <image file="images/icon_location.png"/>
+            </icon>
          </action>
       </toolButton>
    </channel>
