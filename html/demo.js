@@ -313,8 +313,8 @@ tick = function () {
 
       uniqueStr = (new Date()).getTime().toString();
 
-//      req.open("GET", "http://localhost:5984/demo/data", false);
-      req.open("GET", "/demo/data?" + uniqueStr, false);
+      req.open("GET", "http://localhost:5984/demo/data", false);
+//      req.open("GET", "/demo/data?" + uniqueStr, false);
       req.send();
    }
    catch (e) {

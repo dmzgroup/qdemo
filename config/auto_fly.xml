@@ -26,8 +26,8 @@
 </orbit-portal>
 <spectator-switch>
    <channel name="freefly"/>
-   <channel name="orbit-portal"/>
    <channel name="bread-crumb-follow"/>
+   <channel name="orbit-portal"/>
 </spectator-switch>
 <key-messages>
    <channel>

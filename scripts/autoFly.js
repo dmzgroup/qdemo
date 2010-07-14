@@ -137,7 +137,7 @@ dmz.input.channel.observe(self, "bread-crumb-follow", function (channel, state) 
 
    if (state) {
 
-      dmz.object.orientation(dmz.object.hil(), null, dmz.matrix.create());
+//      dmz.object.orientation(dmz.object.hil(), null, dmz.matrix.create());
       dmz.time.setRepeatingTimer(self, timeSlice);
      // self.log.error ("Start");
    }

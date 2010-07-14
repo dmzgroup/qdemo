@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmz>
+   <archive>
+      <object type="school-bus" uuid="da05d199-9bfd-45dc-a298-f35a8628fab3">
+         <attributes>
+            <position x="-902.564691" y="11.052847" z="834.151221"/>
+            <orientation v0="0.608761" v1="0.000000" v2="0.793353" v3="0.000000" v4="1.000000" v5="0.000000" v6="-0.793353" v7="0.000000" v8="0.608761"/>
+         </attributes>
+      </object>
+      <object type="school-bus" uuid="bdb85918-2441-49c1-b04e-5c90fe009ccb">
+         <attributes>
+            <position x="-893.665199" y="11.053016" z="841.367964"/>
+            <orientation v0="0.615661" v1="0.000000" v2="0.788011" v3="0.000000" v4="1.000000" v5="0.000000" v6="-0.788011" v7="0.000000" v8="0.615661"/>
+         </attributes>
+      </object>
+      <object type="school-bus" uuid="24f34ed8-963b-40e2-ad72-4dab04e4a7ee">
+         <attributes>
+            <position x="-885.256114" y="11.052834" z="848.059938"/>
+            <orientation v0="0.615661" v1="0.000000" v2="0.788011" v3="0.000000" v4="1.000000" v5="0.000000" v6="-0.788011" v7="0.000000" v8="0.615661"/>
+         </attributes>
+      </object>
+      <object type="school-bus" uuid="3d398c5d-12e5-4ef8-9d2a-8a268f91d8e9">
+         <attributes>
+            <position x="-876.627361" y="11.052508" z="854.874507"/>
+            <orientation v0="0.615661" v1="0.000000" v2="0.788011" v3="0.000000" v4="1.000000" v5="0.000000" v6="-0.788011" v7="0.000000" v8="0.615661"/>
+         </attributes>
+      </object>
+      <object type="car-blue" uuid="922b12dc-8c1f-4022-b863-14db903d6756">
+         <attributes>
+            <position x="-839.350891" y="10.957543" z="849.425720"/>
+            <orientation v0="0.199361" v1="0.002406" v2="0.979923" v3="-0.003491" v4="0.999992" v5="-0.001745" v6="-0.979920" v7="-0.003073" v8="0.199368"/>
+         </attributes>
+      </object>
+      <object type="car-blue" uuid="882d8dc2-f590-49d8-a8db-20c0dbe9149e">
+         <attributes>
+            <position x="-830.335902" y="11.007637" z="866.620853"/>
+            <orientation v0="-0.833877" v1="-0.003874" v2="0.551936" v3="-0.003491" v4="0.999992" v5="0.001745" v6="-0.551939" v7="-0.000471" v8="-0.833885"/>
+         </attributes>
+      </object>
+      <object type="car-green" uuid="fcd86a2a-b6a6-4042-a6fe-829fc02773f1">
+         <attributes>
+            <position x="-876.255506" y="10.986873" z="830.697240"/>
+            <orientation v0="-0.803859" v1="0.000673" v2="0.594819" v3="-0.001745" v4="0.999992" v5="-0.003491" v6="-0.594817" v7="-0.003844" v8="-0.803852"/>
+         </attributes>
+      </object>
+      <object type="suv-red" uuid="67c01b7d-b64d-435e-a4f3-d674638b95e9">
+         <attributes>
+            <position x="-879.742067" y="11.013995" z="838.008823"/>
+            <orientation v0="0.838671" v1="0.000513" v2="-0.544638" v3="-0.001745" v4="0.999997" v5="-0.001745" v6="0.544636" v7="0.002414" v8="0.838669"/>
+         </attributes>
+      </object>
+      <object type="wagon-brown" uuid="5e20dc2d-1c38-4de0-ace5-580b44c67f86">
+         <attributes>
+            <position x="-822.018921" y="11.026720" z="869.454102"/>
+            <orientation v0="0.814111" v1="0.003448" v2="-0.580699" v3="-0.001745" v4="0.999992" v5="0.003491" v6="0.580707" v7="-0.001828" v8="0.814111"/>
+         </attributes>
+      </object>
+      <object type="truck" uuid="2a742894-8da5-4261-b619-51915672abe9">
+         <attributes>
+            <position x="-835.457500" y="10.930448" z="841.220238"/>
+            <orientation v0="-0.233438" v1="-0.002512" v2="-0.972368" v3="-0.003491" v4="0.999992" v5="-0.001745" v6="0.972365" v7="0.002987" v8="-0.233445"/>
+         </attributes>
+      </object>
+      <object type="van" uuid="6298fc1c-b6d0-4e03-98f5-f6df2331f97a">
+         <attributes>
+            <position x="-857.524963" y="10.999228" z="850.361755"/>
+            <orientation v0="-0.258817" v1="-0.000903" v2="-0.965926" v3="-0.003491" v4="0.999994" v5="0.000000" v6="0.965920" v7="0.003372" v8="-0.258819"/>
+         </attributes>
+      </object>
+      <object type="tardis" uuid="33bf4350-db44-4d40-b75a-e37b50a85e1a">
+         <attributes>
+            <position x="-901.534668" y="11.296834" z="805.710327"/>
+            <orientation v0="-0.165041" v1="-0.003731" v2="0.986280" v3="-0.001745" v4="0.999992" v5="0.003491" v6="-0.986285" v7="-0.001145" v8="-0.165047"/>
+         </attributes>
+      </object>
+      <object type="truck-green" uuid="11e5a2fb-17a4-44fc-8ca9-4e025c433e5f">
+         <attributes>
+            <position x="-850.987736" y="10.993620" z="853.525266"/>
+            <orientation v0="0.233445" v1="0.000000" v2="0.972370" v3="0.000000" v4="1.000000" v5="0.000000" v6="-0.972370" v7="0.000000" v8="0.233445"/>
+         </attributes>
+      </object>
+   </archive>
+</dmz>

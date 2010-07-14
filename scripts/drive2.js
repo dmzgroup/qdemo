@@ -12,6 +12,7 @@ var dmz =
   , list = {}
   // Constants
   , Speed = 20
+  , Acceleration = 2
   , PathAttr = dmz.defs.createNamedHandle("Object_Path_Link_Attribute")
   , AssignAttr = dmz.defs.createNamedHandle("Object_Assign_Link_Attribute")
   , StartStateAttr = dmz.defs.createNamedHandle("Object_Start_State_Attribute")
@@ -132,6 +133,9 @@ move = function (time, obj) {
 
    var v1
      , v2
+     , v3
+     , v4
+     , angle
      , length
      , distance
      , scale
@@ -161,7 +165,6 @@ move = function (time, obj) {
    distance = obj.pos.subtract(obj.target.prev.pos).magnitude();
 
    obj.ori = dmz.matrix.create().fromVector(v1);
-   obj.vel = v1.normalize().multiply(Speed);
 
    if ((length - distance) <= obj.wheelLength) {
 
@@ -182,6 +185,28 @@ move = function (time, obj) {
 
       obj.ori.fromEuler(currentHPR);
    }
+
+   if ((length - distance) <= (obj.wheelLength * 3)) {
+
+      scale = 1 - ((length - distance) / (obj.wheelLength * 3));
+      v3 = obj.target.next.pos.subtract(obj.target.current.pos);
+      v4 = obj.target.prev.pos.subtract(obj.target.current.pos);
+
+      angle = v3.getAngle(v4);
+
+      if (angle < (Math.PI * 0.75)) {
+
+         obj.speedMod = (1 - (angle / (Math.PI * 0.75))) * 15 * scale;
+      }
+      else { obj.speedMod = 0; }
+   }
+   else if (obj.speedMod > 0) {
+
+      obj.speedMod -= Acceleration * time;
+      if (obj.speedMod < 0) { obj.speedMod = 0; }
+   }
+
+   obj.vel = v1.normalize().multiply(Speed - obj.speedMod);
 
    obj.pos = obj.pos.add(obj.vel.multiply(time));
 
@@ -214,6 +239,7 @@ dmz.object.link.observe(self, AssignAttr, function (link, attr, super, sub) {
    obj.wheelLength = dmz.object.type(super).config().number("wheels.length", 5);
    obj.width = dmz.object.type(super).config().number("wheels.width", 5);
    obj.startSiren = randomTime();
+   obj.speedMod = Speed;
    obj.target = {};
 
    startNode(obj);
