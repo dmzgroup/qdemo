@@ -223,6 +223,8 @@ dmz.time.setRepeatingTimer(self, function (time) {
    var keys = Object.keys(list)
      ;
 
+   if (time > (0.066666666666667)) { time = 0.066666666666667; }
+
    if (time > 0) { keys.forEach(function (key) { move(time, list[key]); }); }
 });
 
