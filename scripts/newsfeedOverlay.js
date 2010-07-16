@@ -152,7 +152,7 @@ dmz.time.setRepeatingTimer (self,  function (time) {
 });
 
 
-dmz.message.subscribe("DMZ_Render_Portal_Resize_Message", self, function (data) {
+dmz.message.subscribe(self, "DMZ_Render_Portal_Resize_Message", function (data) {
 
    screen.x = data.number(SizeHandle, 0);
    screen.y = data.number(SizeHandle, 1);

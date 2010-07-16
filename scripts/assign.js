@@ -15,7 +15,7 @@ var dmz =
 //  Functions 
   ;
 
-dmz.messaging.subscribe("Object_Assign_Source_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_Assign_Source_Message",  function (data) {
 
    var handle
      , type
@@ -35,7 +35,7 @@ dmz.messaging.subscribe("Object_Assign_Source_Message", self,  function (data) {
 });
 
 
-dmz.messaging.subscribe("Object_Assign_Target_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_Assign_Target_Message",  function (data) {
 
    var handle
      , type
@@ -60,7 +60,7 @@ dmz.messaging.subscribe("Object_Assign_Target_Message", self,  function (data) {
 });
 
 
-dmz.messaging.subscribe("Deactivate_Assign_Tool_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Deactivate_Assign_Tool_Message",  function (data) {
 
    source = undefined;
 });
