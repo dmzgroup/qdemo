@@ -75,6 +75,7 @@ dmz.messaging.subscribe(self, "Create_Location_Message",  function (data) {
    }
 });
 
+
 dmz.object.text.observe(self, "Location_Name", function (obj, attr, value) {
 
    var pop = dmz.object.scalar(obj, "Location_Population")
