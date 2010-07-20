@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>DMZ: Demo</title>
+<!-- <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=5.0; user-scalable=1;" /> -->
+<!-- <meta name="apple-mobile-web-app-capable" content="yes"/> -->
+<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/> -->
+<style>
+
+body {
+   background-color:gray;
+}
+
+#holder {
+   margin:0 auto;
+   width:799px;
+   border-style:solid;
+   border-color:black;
+   border-width:5;
+}
+
+#controls {
+   margin:0 auto;
+   width:799px;
+   border-style:solid;
+   border-color:black;
+   border-width:5;
+   background-color:white;
+}
+
+</style>
+<script type="text/javascript" src="ECMA5Patch.js"></script>
+<script type="text/javascript" src="raphael-min.js"></script> 
+<script type="text/javascript" src="g.raphael-min.js"></script> 
+<script type="text/javascript" src="map.js"></script>
+</head>
+<body>
+<div id="holder"> 
+   <img id="photo" src="map.png" width="799" height="600" alt="Map" /> 
+</div>
+<br />
+<div id="controls">
+<form>
+   <br />
+   <input type="checkbox" id="reports" checked="true">Show Reports<br />
+   <input type="checkbox" id="vehicles" checked="true">Show Vehicles<br />
+   <input type="checkbox" id="plume" checked="true">Show Plume<br />
+</form>
+</div> <!-- class="controls" -->
+</body>
+</html>
