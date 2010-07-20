@@ -8,7 +8,7 @@ var dmz =
 //  Functions 
   ;
 
-dmz.messaging.subscribe("Object_Delete_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_Delete_Message",  function (data) {
 
    var handle = dmz.data.unwrapHandle(data)
      , undo

@@ -52,7 +52,7 @@ dmz.time.setRepeatingTimer (self,  function (time) {
    }
 });
 
-dmz.messaging.subscribe("Update_Tool_Name", self, function (data) {
+dmz.messaging.subscribe(self, "Update_Tool_Name", function (data) {
 
    var text = dmz.data.unwrapString(data);
 

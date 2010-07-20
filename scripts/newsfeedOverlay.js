@@ -79,7 +79,7 @@ setupTimeTicker = function (time, offset) {
 
 moveTicker = function (time, ticker) {
 
-   ticker.pos[0] -= time * 60;
+   ticker.pos[0] -= time * 80;
    ticker.transform.position(ticker.pos[0], ticker.pos[1]);
 };
 
@@ -152,7 +152,7 @@ dmz.time.setRepeatingTimer (self,  function (time) {
 });
 
 
-dmz.message.subscribe("DMZ_Render_Portal_Resize_Message", self, function (data) {
+dmz.message.subscribe(self, "DMZ_Render_Portal_Resize_Message", function (data) {
 
    screen.x = data.number(SizeHandle, 0);
    screen.y = data.number(SizeHandle, 1);
@@ -165,7 +165,8 @@ tickerText = [
    , caption: "SUMMER IN KRAKOW"
    , list:
       [ "President visits foreign nation."
-      , "Stock market down on reports of eminent terrorist attack."
+      , "Schools enjoy a day at the City Park."
+      , "Stock market down on reports of imminent terrorist attack."
       , "Dog learns to ride skateboard."
       ]
    }
@@ -173,9 +174,40 @@ tickerText = [
    , caption: "CONTAINER SHIP ERUPTS INTO FLAMES"
    , list:
       [ "Cargo ship fire reported in harbor."
-      , "Schools enjoy a day at the City Park."
-      , "Construct begins on new amusement park."
+      , "Construction begins on new amusement park."
       , "Dog quits skateboarding over creative differences with owner."
+      ]
+   }
+ , { radius: 600
+   , caption: "SHIP SPEWING TOXIC SMOKE"
+   , list:
+      [ "Hospitals reporting unusual respiratory symptoms."
+      , "Governor calls for citizens to stay in their homes."
+      , "All sporting events have been canceled."
+      ]
+   }
+ , { radius: 700
+   , caption: "MASS CAUSALITIES REPORTED THROUGHOUT THE CITY"
+   , list:
+      [ "School trip in City Park turns to a field of horrors."
+      , "Governor call for state of emergency."
+      , "Looting reported through out the city."
+      ]
+   }
+ , { radius: 800
+   , caption: "TERRORIST GROUP CLAIMS RESPONSIBILITY FOR SHIP EXPLOSION"
+   , list:
+      [ "Smoke from the ship contains unknown biological agent."
+      , "Airspace over city closed by the FAA."
+      , "Paramedics unable to respond high number of casualties."
+      ]
+   }
+ , { radius: 1000
+   , caption: "HOSPITALS AT CAPACITY"
+   , list:
+      [ "Libraries and schools being used for triage."
+      , "President deploys National Guard to biological hot zone."
+      , "European leaders condemn cowardly attack on port city."
       ]
    }
 ];
@@ -209,5 +241,7 @@ dmz.object.scalar.observe(self, "plume-radius", function (handle, attr, value) {
 
       if (info.radius <= value) { currentTickerText = info; }
    });
+
+   caption.text(currentTickerText.caption);
 });
 

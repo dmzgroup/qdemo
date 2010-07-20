@@ -16,7 +16,7 @@ var dmz =
 //  Functions 
   ;
 
-dmz.messaging.subscribe("Object_Path_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_Path_Message",  function (data) {
 
    var pos
      , obj
@@ -102,7 +102,7 @@ dmz.messaging.subscribe("Object_Path_Message", self,  function (data) {
    }
 });
 
-dmz.messaging.subscribe("Deactivate_Path_Tool_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Deactivate_Path_Tool_Message",  function (data) {
 
    currentPath = undefined;
 });

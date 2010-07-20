@@ -13,7 +13,7 @@ var dmz =
 //  Functions 
   ;
 
-dmz.messaging.subscribe("Object_Create_Object_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_Create_Object_Message",  function (data) {
 
    var pos
      , obj
@@ -37,7 +37,7 @@ dmz.messaging.subscribe("Object_Create_Object_Message", self,  function (data) {
 });
 
 
-dmz.messaging.subscribe("Tools_Current_Object_Type_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Tools_Current_Object_Type_Message",  function (data) {
 
    var type = dmz.objectType.lookup(dmz.data.unwrapString(data));
      ;

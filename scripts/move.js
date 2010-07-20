@@ -87,7 +87,7 @@ move = function (pos) {
 };
 
 
-dmz.messaging.subscribe("Object_First_Move_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_First_Move_Message",  function (data) {
 
    var pos
      , undo
@@ -110,7 +110,7 @@ dmz.messaging.subscribe("Object_First_Move_Message", self,  function (data) {
 });
 
 
-dmz.messaging.subscribe("Object_Move_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Object_Move_Message",  function (data) {
 
    var pos = toVector(data);
      ;

@@ -69,7 +69,7 @@ toVector = function (data) {
 };
 
 
-dmz.messaging.subscribe("First_Measure_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "First_Measure_Message",  function (data) {
 
    var pos
      ;
@@ -86,7 +86,7 @@ dmz.messaging.subscribe("First_Measure_Message", self,  function (data) {
 });
 
 
-dmz.messaging.subscribe("Measure_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Measure_Message",  function (data) {
 
    var pos = toVector(data)
      , start = dmz.object.position(tail)
@@ -117,7 +117,7 @@ dmz.messaging.subscribe("Measure_Message", self,  function (data) {
 });
 
 
-dmz.messaging.subscribe("Activate_Measure_Tool_Message", self,  function () {
+dmz.messaging.subscribe(self, "Activate_Measure_Tool_Message",  function () {
 
    if (head && tail) {
 
@@ -129,7 +129,7 @@ dmz.messaging.subscribe("Activate_Measure_Tool_Message", self,  function () {
 });
 
 
-dmz.messaging.subscribe("Deactivate_Measure_Tool_Message", self,  function () {
+dmz.messaging.subscribe(self, "Deactivate_Measure_Tool_Message",  function () {
 
    if (head && tail) {
 

@@ -26,7 +26,7 @@ self.shutdown = function () {
 };
 
 
-dmz.messaging.subscribe("Create_Location_Message", self,  function (data) {
+dmz.messaging.subscribe(self, "Create_Location_Message",  function (data) {
 
    var pos
      , obj
@@ -74,6 +74,7 @@ dmz.messaging.subscribe("Create_Location_Message", self,  function (data) {
       }
    }
 });
+
 
 dmz.object.text.observe(self, "Location_Name", function (obj, attr, value) {
 

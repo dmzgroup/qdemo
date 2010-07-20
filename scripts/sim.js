@@ -16,6 +16,7 @@ var dmz =
   , location = {}
   , animate = {}
   , plume //  = { pos: dmz.vector.create(), handle: 0, radius: 0}
+  , start = false
   , reportCount = 0
 //  Constants
   , InitialRadius = 330
@@ -82,7 +83,7 @@ dmz.time.setRepeatingTimer(self, function (time) {
      , r2
      ;
 
-   if (plume) {
+   if (start && plume) {
 
       plume.radius += PlumeRate * time;
 
@@ -262,4 +263,11 @@ dmz.object.flag.observe(self, "Plume_Source", function (object, attr, value) {
          dmz.object.activate(plume.handle);
       }
    }
+});
+
+
+dmz.input.channel.observe(self, "bread-crumb-follow", function (channel, value) {
+
+   if (!start && value) { start = true; }
+
 });
