@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmz>
    <archive>
+      <object type="firetruck" uuid="5b23c6a4-9b7c-4873-9c3e-c64cd77817a2">
+         <attributes>
+            <position x="-617.487854" y="10.545596" z="972.281860"/>
+            <orientation v0="0.642788" v1="0.000000" v2="0.766044" v3="0.000000" v4="1.000000" v5="-0.000000" v6="-0.766044" v7="0.000000" v8="0.642788"/>
+         </attributes>
+         <attributes name="Object_Assign_Link_Attribute">
+            <links>
+               <object name="c99f20ac-155b-4128-903b-ec31850f5693"/>
+            </links>
+         </attributes>
+      </object>
       <object type="path" uuid="9e3dc2b8-185c-4227-a9cb-7c786cb62199">
          <attributes>
             <position x="-1151.181641" y="10.805558" z="-23.575878"/>
@@ -3065,17 +3076,6 @@
          <attributes>
             <position x="-639.763123" y="10.545597" z="955.092590"/>
             <orientation v0="1.000000" v1="0.000000" v2="0.000000" v3="0.000000" v4="1.000000" v5="-0.000000" v6="0.000000" v7="0.000000" v8="1.000000"/>
-         </attributes>
-      </object>
-      <object type="firetruck" uuid="5b23c6a4-9b7c-4873-9c3e-c64cd77817a2">
-         <attributes>
-            <position x="-617.487854" y="10.545596" z="972.281860"/>
-            <orientation v0="0.642788" v1="0.000000" v2="0.766044" v3="0.000000" v4="1.000000" v5="-0.000000" v6="-0.766044" v7="0.000000" v8="0.642788"/>
-         </attributes>
-         <attributes name="Object_Assign_Link_Attribute">
-            <links>
-               <object name="c99f20ac-155b-4128-903b-ec31850f5693"/>
-            </links>
          </attributes>
       </object>
       <object type="path" uuid="0beae662-55ce-424b-9e02-bcb1c1b6f90b">

@@ -170,7 +170,7 @@ tickerText = [
       , "Dog learns to ride skateboard."
       ]
    }
- , { radius: 400
+ , { radius: 350
    , caption: "CONTAINER SHIP ERUPTS INTO FLAMES"
    , list:
       [ "Cargo ship fire reported in harbor."
@@ -187,7 +187,7 @@ tickerText = [
       ]
    }
  , { radius: 700
-   , caption: "MASS CAUSALITIES REPORTED THROUGHOUT THE CITY"
+   , caption: "MASS CASUALTIES REPORTED THROUGHOUT THE CITY"
    , list:
       [ "School trip in City Park turns to a field of horrors."
       , "Governor call for state of emergency."
@@ -234,7 +234,7 @@ setupTicker(
 
 dmz.object.scalar.observe(self, "plume-radius", function (handle, attr, value) {
 
-   if (value < 400) { startImage.setSwitchStateAll(true); }
+   if (value < 350) { startImage.setSwitchStateAll(true); }
    else { startImage.setSwitchStateAll(false); }
 
    tickerText.forEach(function (info) {

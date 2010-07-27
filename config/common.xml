@@ -10,6 +10,7 @@
    <plugin name="dmzEntityPluginWheels"/>
    <plugin name="dmzEventModuleCommonBasic"/>
 <!--
+   <plugin name="dmzQtPluginMessageInspector"/>
    <plugin name="dmzQtPluginObjectInspector" unique="object-inspector"/>
    <plugin name="dmzPluginMsgDump"/>
    <plugin name="dmzPluginDefinitionsDump"/>
