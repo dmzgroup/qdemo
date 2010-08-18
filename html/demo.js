@@ -8,6 +8,7 @@ var log
   , processReports
   , processVehicles
   , processShip
+  , processPlumes
   , render
   , tick
   , timeout
@@ -283,6 +284,47 @@ processShip = function (obj) {
 };
 
 
+processPlumes = function (plumes) {
+
+   var canvas = document.getElementById("view")
+     , keys = Object.keys(plumes)
+     , context
+     ;
+
+   if ((imagesLoading === 0) && canvas) {
+
+      context = canvas.getContext("2d");
+
+      if (context) {
+
+         keys.forEach(function (key) {
+
+            var obj = plumes[key]
+              , x
+              , z
+              ;
+
+            if (obj.position) {
+
+               x = Math.floor((obj.position.x + XOffset) * Scale);
+               z = Math.floor(canvas.height + ((obj.position.z - YOffset) * Scale));
+
+               context.save();
+
+               context.save();
+               context.beginPath();
+               context.fillStyle = "red";
+               context.globalAlpha = 0.1 + (0.1 * (obj.radius / 300));
+               context.arc(x, z, obj.radius * Scale, 0, Math.PI * 2, true);
+               context.fill();
+
+               context.restore();
+            }
+         });
+      }
+   }
+};
+
 render = function () {
 
    clearCanvas();
@@ -294,6 +336,7 @@ render = function () {
       if (showVehicles && data.vehicles) { processVehicles(data.vehicles); }
       if (showReports && data.reports) { processReports(data.reports); }
       if (data.ship) { processShip(data.ship); }
+      if (showPlume && data.plumes) { processPlumes(data.plumes); }
    }
 };
 

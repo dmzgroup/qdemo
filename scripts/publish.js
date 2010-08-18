@@ -10,18 +10,21 @@ var dmz =
        }
   , inUpload = false
   , revInt = 0
+  , plumes = {}
   , reports = {}
   , vehicles = {}
-  , outData = { _id: "data", reports: reports, vehicles: vehicles, ship: {} }
+  , outData = { _id: "data", reports: reports, vehicles: vehicles, plumes: plumes, ship: {} }
   , publish = false
 //  Constants
   , DataFile = "http://localhost:5984/demo/data"
+  , PlumeType = dmz.objectType.lookup("plume")
   , ReportType = dmz.objectType.lookup("field-report")
   , ShipType = dmz.objectType.lookup("cargo-ship")
   , FireTruckType = dmz.objectType.lookup("firetruck")
   , PoliceCarType = dmz.objectType.lookup("policecar")
   , YellowState = dmz.defs.lookupState("Yellow")
   , RedState = dmz.defs.lookupState("Red")
+  , PlumeRadiusAttr = dmz.defs.createNamedHandle("plume-radius")
 //  Functions 
   , getRevInt
   , timer
@@ -132,7 +135,17 @@ dmz.object.create.observe(self, function (handle, type) {
    var obj
      ;
 
-   if (type.isOfType(ReportType)) {
+   if (type.isOfType(PlumeType)) {
+
+      obj =
+         { position: dmz.object.position(handle)
+         , radius: dmz.object.scalar(handle, PlumeRadiusAttr)
+         };
+
+      plumes[handle] = obj;
+      publish = true;
+   }
+   else if (type.isOfType(ReportType)) {
 
       obj = {};
 
@@ -165,7 +178,8 @@ dmz.object.create.observe(self, function (handle, type) {
 
 dmz.object.destroy.observe(self, function (handle) {
 
-   if (reports[handle]) { delete reports[handle]; publish = true; }
+   if (plumes[handle]) { delete plumes[handle]; publish = true; }
+   else if (reports[handle]) { delete reports[handle]; publish = true; }
    else if (vehicles[handle]) { delete vehicles[handle]; publish = true; }
    else if (outData.ship.handle === handle) {
 
@@ -182,7 +196,8 @@ dmz.object.destroy.observe(self, function (handle) {
 
 dmz.object.position.observe(self, function (handle, attr, value) {
 
-   if (reports[handle]) { reports[handle].position = value; publish = true; }
+   if (plumes[handle]) { plumes[handle].position = value; publish = true; }
+   else if (reports[handle]) { reports[handle].position = value; publish = true; }
    else if (vehicles[handle]) { vehicles[handle].position = value; publish = true; }
    else if (outData.ship.handle === handle) {
 
@@ -208,12 +223,11 @@ dmz.object.state.observe(self, function (handle, attr, value) {
 });
 
 
-dmz.object.scalar.observe(self, "plume-radius", function(handle, attr, value) {
+dmz.object.scalar.observe(self, PlumeRadiusAttr, function(handle, attr, value) {
 
-   if (outData.ship) {
+   if (plumes[handle]) {
 
-      outData.ship.plumeHandle = handle;
-      outData.ship.radius = value;
+      plumes[handle].radius = value;
       publish = true;
    }
 });
