@@ -314,7 +314,7 @@ processPlumes = function (plumes) {
                context.save();
                context.beginPath();
                context.fillStyle = "red";
-               context.globalAlpha = 0.1 + (0.1 * (obj.radius / 300));
+               context.globalAlpha = 0.1 - (1 / obj.radius);
                context.arc(x, z, obj.radius * Scale, 0, Math.PI * 2, true);
                context.fill();
 
