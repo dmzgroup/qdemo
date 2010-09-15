@@ -143,7 +143,7 @@ dmz.input.channel.observe(self, "bread-crumb-follow", function (channel, state) 
    }
    else {
 
-      dmz.time.cancleTimer(self, timeSlice);
+      dmz.time.cancelTimer(self, timeSlice);
       // self.log.error ("Stop");
    }
 });
